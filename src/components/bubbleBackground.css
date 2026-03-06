@@ -1,0 +1,71 @@
+/* Full screen gradient background */
+.bubble_background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+
+  background: linear-gradient(
+    180deg,
+    var(--bg-gradient-top, rgba(45,23,76,1)),
+    var(--bg-gradient-bottom, rgba(22,11,38,1))
+  );
+}
+
+/* Base bubble */
+.bouncing_bubble {
+  position: absolute;
+  border-radius: 50%;
+}
+
+
+.pink-bubble {
+
+  box-shadow:
+    0 0 4px var(--bubble-pink-glow),
+    inset 0 0 30px var(--bubble-pink-glow, --bubble-rim-light);
+
+  /*border: 1px solid rgba(255,255,255,0.2);*/
+  border-radius: 50%;
+}
+
+
+.pink-bubble::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.6) 0%,
+    rgba(255,255,255,0) 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+
+
+/* Purple bubble 
+.purple-bubble {
+  background: rgba(155, 120, 255, 0.15);
+  box-shadow:
+    0 0 40px rgba(160, 120, 255, 0.6),
+    inset 0 0 20px rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* Blue bubble 
+.blue-bubble {
+  background: rgba(120, 200, 255, 0.15);
+  box-shadow:
+    0 0 40px rgba(100, 180, 255, 0.5),
+    inset 0 0 15px rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.1);
+}*/
