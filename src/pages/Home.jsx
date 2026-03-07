@@ -50,8 +50,8 @@ export default function Home() {
 
       {/* TITLE BUBBLE */}
       <div className={`home_header_bubble ${scrolled ? "scrolled" : ""}`}>
-        <h1 className="home_title">Katarina Grantham</h1>
-        <h2 className="home_subtitle">FULL STACK DEVELOPER</h2>
+        <h1 className="home_title">KATY GRANTHAM</h1>
+        <h2 className="home_subtitle">Full Stack Developer</h2>
       </div>
 
       {/* PROJECTS */}
