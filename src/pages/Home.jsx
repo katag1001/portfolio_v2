@@ -3,6 +3,7 @@ import ProjectGrid from "../components/ProjectGrid";
 import ProjectCard from "../components/ProjectCard";
 import BubbleBackground from "../components/BubbleBackground";
 import "./Home.css";
+import ContactForm from "../components/ContactForm";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -70,6 +71,9 @@ export default function Home() {
         )}
 
       </div>
+
+      {/* CONTACT */}
+      <ContactForm />
 
     </div>
   );
