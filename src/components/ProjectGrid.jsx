@@ -1,12 +1,14 @@
 import React from "react";
-import  "./ProjectGrid.css";
+import "./ProjectGrid.css";
 
 export default function ProjectGrid({ projects, onSelectProject }) {
+
   return (
     <div className="project-grid-container">
-  <h2 className="project-grid-title">Featured Projects</h2>
 
-  <div className="project-grid">
+      <h2 className="project-grid-title">Featured Projects</h2>
+
+      <div className="project-grid">
         {projects.map((project) => (
           <div
             key={project.id}
@@ -18,6 +20,7 @@ export default function ProjectGrid({ projects, onSelectProject }) {
           </div>
         ))}
       </div>
+
     </div>
   );
 }
