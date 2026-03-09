@@ -73,7 +73,9 @@ export default function Home() {
       </div>
 
       {/* CONTACT */}
+      <div className="home_contact">
       <ContactForm />
+      </div>
 
     </div>
   );

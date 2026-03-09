@@ -1,6 +1,6 @@
 .home_container {
   position: relative;
-  min-height: 200vh;
+  
   width: 100%;
 }
 
@@ -112,14 +112,19 @@
 .home_projects {
 
   position: relative;
-
   margin-top: 70vh;
-
   padding-bottom: 120px;
-
   display: flex;
-
   justify-content: center;
+  z-index: 2;
+}
 
+
+.home_contact {
+
+  position: relative;
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: center;
   z-index: 2;
 }
