@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import ProjectGrid from "../components/ProjectGrid";
+import ProjectGrid, { projects } from "../components/ProjectGrid";
 import ProjectCard from "../components/ProjectCard";
 import BubbleBackground from "../components/BubbleBackground";
-import "./Home.css";
 import ContactForm from "../components/ContactForm";
+import "./Home.css";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -17,28 +17,6 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const projects = [
-    {
-      id: 1,
-      title: "Portfolio Website",
-      image: "/images/portfolio.png",
-      overview: "A personal portfolio website showcasing projects.",
-      technologies: ["React", "CSS", "Vite"],
-      links: [
-        { label: "GitHub", url: "https://github.com/example" },
-        { label: "Live Site", url: "https://example.com" }
-      ]
-    },
-    {
-      id: 2,
-      title: "Task Manager",
-      image: "/images/taskmanager.png",
-      overview: "A task management web application.",
-      technologies: ["React", "Node.js", "MongoDB"],
-      links: [{ label: "GitHub", url: "https://github.com/example" }]
-    }
-  ];
 
   return (
     <div className="home_container">
@@ -65,7 +43,6 @@ export default function Home() {
           />
         ) : (
           <ProjectGrid
-            projects={projects}
             onSelectProject={setSelectedProject}
           />
         )}
@@ -74,7 +51,7 @@ export default function Home() {
 
       {/* CONTACT */}
       <div className="home_contact">
-      <ContactForm />
+        <ContactForm />
       </div>
 
     </div>

@@ -43,6 +43,8 @@
   z-index: 10;
 }
 
+/* FLOAT ANIMATION */
+
 @keyframes dip {
 
   0% {
@@ -67,6 +69,18 @@
   }
 
 }
+
+/* SECTION CONTAINERS */
+
+.home-section-container{
+  background: var(--bg-deep-purple);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  width: 900px;
+  height: 560px;
+    z-index: 2;
+}
+
 
 
 

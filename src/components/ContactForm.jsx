@@ -31,7 +31,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="contact-section-container">
+    <div className="home-section-container contact-section-container">
       <div className="contact-left">
         <h2 className="contact-left-title">GET IN TOUCH</h2>
         <h3 className="contact-left-subtitle">LET'S COLLABORATE</h3>

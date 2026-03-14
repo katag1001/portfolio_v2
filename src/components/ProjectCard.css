@@ -1,16 +1,12 @@
 .project-card-container {
   width: 900px;
   height: 560px;
-
   margin: auto;
   padding: 28px;
-
   background: var(--bg-deep-purple);
   border: 1px solid var(--card-border);
   border-radius: 16px;
-
   overflow-y: auto;
-
   font-family: var(--font-main);
 }
 
@@ -20,7 +16,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   margin-bottom: 18px;
 }
 
@@ -68,7 +63,6 @@
 .project-section h3 {
   font-size: var(--fs-ui);
   color: var(--text-muted);
-
   margin-bottom: 10px;
 
   text-transform: uppercase;

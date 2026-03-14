@@ -6,29 +6,29 @@
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: 'Fira Code', monospace;
 
-  --fs-h1: 2.5rem;      /* "AVA SYNTAX" */
-  --fs-h2: 1.5rem;      /* Section Titles */
-  --fs-body: 0.95rem;   /* Paragraphs */
-  --fs-ui: 0.85rem;     /* Navigation & Labels */
+  --fs-h1: 2.5rem;      
+  --fs-h2: 1.5rem;      
+  --fs-body: 0.95rem;   
+  --fs-ui: 0.85rem;     
 
 /* Primary Backgrounds */
---bg-deep-purple: rgba(236, 232, 248, 1);       /* Light base background */
---bg-gradient-top: rgb(214, 224, 255);      /* Soft sky/lavender gradient top */
---bg-gradient-bottom: rgba(255, 214, 235, 1);   /* Warm pastel pink bottom */
+--bg-deep-purple: rgba(236, 232, 248, 1);      
+--bg-gradient-top: rgb(214, 224, 255);     
+--bg-gradient-bottom: rgba(255, 214, 235, 1);   
 
 /* Bubble & Glass Effects */
---bubble-pink-fill: rgba(255, 160, 210, 0.15);  /* Slightly stronger pastel fill for visibility */
---bubble-pink-glow: rgba(255, 150, 200, 0.45);  /* Softer daytime glow */
---bubble-rim-light: rgba(255, 255, 255, 0.8);   /* Brighter highlight for daylight bubbles */
+--bubble-pink-fill: rgba(255, 160, 210, 0.15);  
+--bubble-pink-glow: rgba(255, 150, 200, 0.45);  
+--bubble-rim-light: rgba(255, 255, 255, 0.8);   
 
 /* UI Components (Cards/Windows) */
---card-bg: rgba(255, 255, 255, 0.7);            /* Frosted glass look */
---card-border: rgba(180, 170, 210, 0.25);       /* Soft pastel border */
+--card-bg: rgba(255, 255, 255, 0.7);           
+--card-border: rgba(180, 170, 210, 0.25);       
 
 /* Typography & Icons */
---text-main: rgba(45, 35, 65, 1);               /* Dark violet for readability */
---text-muted: rgba(90, 80, 120, 0.75);          /* Muted lavender body text */
---accent-pink: rgba(255, 120, 185, 1);          /* Bright daytime accent */
+--text-main: rgba(45, 35, 65, 1);              
+--text-muted: rgba(90, 80, 120, 0.75);         
+--accent-pink: rgba(255, 120, 185, 1);         
 }
 
 
