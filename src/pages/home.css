@@ -83,7 +83,6 @@
 
 
 
-
 /* SCROLLED STATE */
 
 .home_header_bubble.scrolled {
@@ -105,40 +104,24 @@
 .home_header_bubble::before {
 
   content: '';
-
   position: absolute;
-
   inset: 0;
-
   border-radius: inherit;
-
   background: linear-gradient(
     135deg,
     rgba(255,255,255,0.6) 0%,
     rgba(255,255,255,0) 70%
   );
-
   pointer-events: none;
 }
 
 /* PROJECT SECTION */
 
-.home_projects {
-
+.home-sections {
   position: relative;
-  margin-top: 70vh;
-  padding-bottom: 120px;
+  padding-bottom: 60px;
   display: flex;
   justify-content: center;
   z-index: 2;
 }
 
-
-.home_contact {
-
-  position: relative;
-  padding-bottom: 120px;
-  display: flex;
-  justify-content: center;
-  z-index: 2;
-}

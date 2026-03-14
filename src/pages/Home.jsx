@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
-import ProjectGrid, { projects } from "../components/ProjectGrid";
-import ProjectCard from "../components/ProjectCard";
-import BubbleBackground from "../components/BubbleBackground";
-import ContactForm from "../components/ContactForm";
 import "./Home.css";
+
+import BubbleBackground from "../components/BubbleBackground";
+
+import ContactForm from "../components/ContactForm";
+import ProjectGrid from "../components/ProjectGrid";
+import ProjectCard from "../components/ProjectCard";
+import AboutMe from "../components/AboutMe";
+import BubbleGameSection from "../components/BubbleGameSection";
+
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -34,7 +39,7 @@ export default function Home() {
       </div>
 
       {/* PROJECTS */}
-      <div className="home_projects">
+      <div className="home-sections">
 
         {selectedProject ? (
           <ProjectCard
@@ -50,9 +55,19 @@ export default function Home() {
       </div>
 
       {/* CONTACT */}
-      <div className="home_contact">
+      <div className="home-sections">
         <ContactForm />
       </div>
+
+      {/* ABOUT ME */}
+      <div className="home-sections">
+        <AboutMe />
+      </div>
+
+      {/* BUBBLE GAME */}
+      <div className="home-sections">
+        <BubbleGameSection />
+      </div>      
 
     </div>
   );

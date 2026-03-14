@@ -1,0 +1,91 @@
+/* ---------------- GAME SIZE (LOCKED) ---------------- */
+
+/* Desktop */
+
+.game_window {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 2px solid var(--bg-deep-purple);
+  border-radius: 8px;
+  background-color: transparent;
+  box-shadow: 0 6px 20px var(--bubble-rim-light);
+  touch-action: manipulation;
+  z-index: 100;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .game_window {
+    width: 300px;
+    height: 600px;
+  }
+}
+
+/* ---------------------------------------------------- */
+
+
+
+.game_bubble_layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.game_bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--bg-gradient-top);
+  filter: blur(2px);
+  pointer-events: auto;
+  touch-action: manipulation;
+  opacity: 0.4;
+  z-index: 100;
+}
+
+.game_bubble_popped {
+  animation: game_pop 0.3s forwards;
+  z-index: 100;
+}
+
+/* ---------------- POPUP ---------------- */
+
+.game_overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(60, 32, 40, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.game_popup {
+  background: var(--bg-gradient-top);
+  padding: 2.5rem 3rem;
+  border-radius: 15px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.game_go {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: var(--bg-deep-purple);
+  color: var(--text-main);
+}
+
+/* ---------------- ANIMATIONS ---------------- */
+
+@keyframes game_pop {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.7; }
+  100% { transform: scale(0); opacity: 0; }
+}
