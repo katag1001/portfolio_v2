@@ -90,3 +90,14 @@
   transform: rotate(-135deg);
 }
 
+/* ==============================
+   SECTION CONTAINERS (Consistency)
+============================== */
+.home-section-container {
+  background: var(--bg-deep-purple);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  width: 750px;
+  height: 400px;
+  z-index: 2;
+}

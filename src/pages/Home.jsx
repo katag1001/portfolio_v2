@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react"; 
 import "./Home.css";
 import ".././index.css";
 
@@ -11,7 +11,10 @@ import BubbleGameSection from "../components/BubbleGameSection";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
   const sectionsRef = useRef([]);
+  const containerRef = useRef(null);
 
   // Scroll to a section smoothly
   const scrollToSection = (index) => {
@@ -20,6 +23,26 @@ export default function Home() {
       section.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
+
+  // Track scroll progress (0 → 1 for first section)
+  useEffect(() => {
+    const container = containerRef.current;
+
+    const handleScroll = () => {
+      if (!container) return;
+
+      const scrollTop = container.scrollTop;
+      const sectionHeight = window.innerHeight;
+
+      // Only animate during first section scroll
+      const progress = Math.min(scrollTop / sectionHeight, 1);
+      setScrollProgress(progress);
+    };
+
+    container.addEventListener("scroll", handleScroll);
+
+    return () => container.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Bounce animation when section comes into view
   useEffect(() => {
@@ -48,30 +71,49 @@ export default function Home() {
     };
   }, []);
 
-  return (
-    <div className="home_container">
+  // 🔥 Transform calculations
+  const translateX = -40 * scrollProgress; // move left
+  const translateY = -40 * scrollProgress; // move up
+  const scale = 1 - 0.5 * scrollProgress; // shrink to 50%
 
-      {/* BUBBLE BACKGROUND */}
+  return (
+    <div>
+    {/* BUBBLE BACKGROUND */}
       <BubbleBackground numBubbles={22} minSize={12} maxSize={200} />
+    <div className="home_container" ref={containerRef}>
+
+
 
       {/* SECTIONS */}
       {[
+
         /* HOME TITLE */
         <div
           key="home"
           className="home-section"
           ref={(el) => (sectionsRef.current[0] = el)}
         >
-          <div className="home_header_bubble">
+          <div
+            className="home_header_bubble"
+            style={{
+              transform: `
+                translate(calc(-50% + ${translateX}vw), calc(-50% + ${translateY}vh))
+                scale(${scale})
+              `,
+              position: "fixed",
+              top: "50%",
+              left: "50%",
+            }}
+          >
             <h1 className="home_title">KATY GRANTHAM</h1>
             <h2 className="home_subtitle">Full Stack Developer</h2>
-            
           </div>
+
           <button
             className="scroll-arrow down"
             onClick={() => scrollToSection(1)}
           >
-            <span class="theme-arrow down"></span>
+            <span className="theme-arrow down"></span>
           </button>
         </div>,
 
@@ -93,13 +135,13 @@ export default function Home() {
             className="scroll-arrow up"
             onClick={() => scrollToSection(0)}
           >
-            <span class="theme-arrow up"></span>
+            <span className="theme-arrow up"></span>
           </button>
           <button
             className="scroll-arrow down"
             onClick={() => scrollToSection(2)}
           >
-            <span class="theme-arrow down"></span>
+            <span className="theme-arrow down"></span>
           </button>
         </div>,
 
@@ -114,13 +156,13 @@ export default function Home() {
             className="scroll-arrow up"
             onClick={() => scrollToSection(1)}
           >
-            <span class="theme-arrow up"></span>
+            <span className="theme-arrow up"></span>
           </button>
           <button
             className="scroll-arrow down"
             onClick={() => scrollToSection(3)}
           >
-            <span class="theme-arrow down"></span>
+            <span className="theme-arrow down"></span>
           </button>
         </div>,
 
@@ -135,13 +177,13 @@ export default function Home() {
             className="scroll-arrow up"
             onClick={() => scrollToSection(2)}
           >
-            <span class="theme-arrow up"></span>
+            <span className="theme-arrow up"></span>
           </button>
           <button
             className="scroll-arrow down"
             onClick={() => scrollToSection(4)}
           >
-            <span class="theme-arrow down"></span>
+            <span className="theme-arrow down"></span>
           </button>
         </div>,
 
@@ -156,10 +198,11 @@ export default function Home() {
             className="scroll-arrow up"
             onClick={() => scrollToSection(3)}
           >
-            <span class="theme-arrow up"></span>
+            <span className="theme-arrow up"></span>
           </button>
         </div>,
       ]}
+    </div>
     </div>
   );
 }
