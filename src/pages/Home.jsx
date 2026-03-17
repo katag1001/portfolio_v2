@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
+import ".././index.css";
 
 import BubbleBackground from "../components/BubbleBackground";
 import ContactForm from "../components/ContactForm";
@@ -64,12 +65,13 @@ export default function Home() {
           <div className="home_header_bubble">
             <h1 className="home_title">KATY GRANTHAM</h1>
             <h2 className="home_subtitle">Full Stack Developer</h2>
+            
           </div>
           <button
             className="scroll-arrow down"
             onClick={() => scrollToSection(1)}
           >
-            ⬇️
+            <span class="theme-arrow down"></span>
           </button>
         </div>,
 
@@ -91,13 +93,13 @@ export default function Home() {
             className="scroll-arrow up"
             onClick={() => scrollToSection(0)}
           >
-            ⬆️
+            <span class="theme-arrow up"></span>
           </button>
           <button
             className="scroll-arrow down"
             onClick={() => scrollToSection(2)}
           >
-            ⬇️
+            <span class="theme-arrow down"></span>
           </button>
         </div>,
 
@@ -112,13 +114,13 @@ export default function Home() {
             className="scroll-arrow up"
             onClick={() => scrollToSection(1)}
           >
-            ⬆️
+            <span class="theme-arrow up"></span>
           </button>
           <button
             className="scroll-arrow down"
             onClick={() => scrollToSection(3)}
           >
-            ⬇️
+            <span class="theme-arrow down"></span>
           </button>
         </div>,
 
@@ -133,13 +135,13 @@ export default function Home() {
             className="scroll-arrow up"
             onClick={() => scrollToSection(2)}
           >
-            ⬆️
+            <span class="theme-arrow up"></span>
           </button>
           <button
             className="scroll-arrow down"
             onClick={() => scrollToSection(4)}
           >
-            ⬇️
+            <span class="theme-arrow down"></span>
           </button>
         </div>,
 
@@ -154,7 +156,7 @@ export default function Home() {
             className="scroll-arrow up"
             onClick={() => scrollToSection(3)}
           >
-            ⬆️
+            <span class="theme-arrow up"></span>
           </button>
         </div>,
       ]}
