@@ -27,7 +27,7 @@ export default function Home() {
     }
   };
 
-  // 🔥 Update bubble transform WITHOUT React re-render
+  // Update bubble transform WITHOUT React re-render
   const updateBubbleTransform = () => {
     const progress = scrollProgress.current;
 
@@ -43,7 +43,7 @@ export default function Home() {
     }
   };
 
-  // 🔥 Optimised scroll handler (no React state updates)
+  //  Optimised scroll handler (no React state updates)
   useEffect(() => {
     const container = containerRef.current;
     let ticking = false;
@@ -72,7 +72,6 @@ export default function Home() {
     return () => container.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Bounce animation when section comes into view
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -101,7 +100,7 @@ export default function Home() {
 
   return (
     <>
-      {/* BUBBLE BACKGROUND (outside scroll container) */}
+      {/* BUBBLE BACKGROUND  */}
       <BubbleBackground numBubbles={22} minSize={12} maxSize={200} />
 
       <div className="home_container" ref={containerRef}>
@@ -113,11 +112,13 @@ export default function Home() {
           <div
             key="home"
             className="home-section"
+            id="home"
             ref={(el) => (sectionsRef.current[0] = el)}
           >
             <div
               ref={bubbleRef}
               className="home_header_bubble"
+              id="home"
               style={{
                 position: "fixed",
                 top: "50%",
@@ -140,6 +141,7 @@ export default function Home() {
           <div
             key="projects"
             className="home-section"
+            id="projects"
             ref={(el) => (sectionsRef.current[1] = el)}
           >
             {selectedProject ? (
@@ -164,31 +166,11 @@ export default function Home() {
             </button>
           </div>,
 
-          /* CONTACT */
-          <div
-            key="contact"
-            className="home-section"
-            ref={(el) => (sectionsRef.current[2] = el)}
-          >
-            <ContactForm />
-            <button
-              className="scroll-arrow up"
-              onClick={() => scrollToSection(1)}
-            >
-              <span className="theme-arrow up"></span>
-            </button>
-            <button
-              className="scroll-arrow down"
-              onClick={() => scrollToSection(3)}
-            >
-              <span className="theme-arrow down"></span>
-            </button>
-          </div>,
-
           /* ABOUT ME */
           <div
             key="about"
             className="home-section"
+            id="about"
             ref={(el) => (sectionsRef.current[3] = el)}
           >
             <AboutMe />
@@ -206,10 +188,33 @@ export default function Home() {
             </button>
           </div>,
 
+          /* CONTACT */
+          <div
+            key="contact"
+            className="home-section"
+            id="contact"
+            ref={(el) => (sectionsRef.current[2] = el)}
+          >
+            <ContactForm />
+            <button
+              className="scroll-arrow up"
+              onClick={() => scrollToSection(1)}
+            >
+              <span className="theme-arrow up"></span>
+            </button>
+            <button
+              className="scroll-arrow down"
+              onClick={() => scrollToSection(3)}
+            >
+              <span className="theme-arrow down"></span>
+            </button>
+          </div>,
+
           /* BUBBLE GAME */
           <div
             key="game"
             className="home-section"
+            id="game"
             ref={(el) => (sectionsRef.current[4] = el)}
           >
             <BubbleGameSection />
