@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react"; 
 import "./Home.css";
 import ".././index.css";
+import ".././App.css";
+
 
 import BubbleBackground from "../components/BubbleBackground";
 import ContactForm from "../components/ContactForm";
@@ -11,10 +13,11 @@ import BubbleGameSection from "../components/BubbleGameSection";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [scrollProgress, setScrollProgress] = useState(0);
 
   const sectionsRef = useRef([]);
   const containerRef = useRef(null);
+  const bubbleRef = useRef(null);
+  const scrollProgress = useRef(0);
 
   // Scroll to a section smoothly
   const scrollToSection = (index) => {
@@ -24,19 +27,44 @@ export default function Home() {
     }
   };
 
-  // Track scroll progress (0 → 1 for first section)
+  // 🔥 Update bubble transform WITHOUT React re-render
+  const updateBubbleTransform = () => {
+    const progress = scrollProgress.current;
+
+    const translateX = -40 * progress;
+    const translateY = -40 * progress;
+    const scale = 1 - 0.5 * progress;
+
+    if (bubbleRef.current) {
+      bubbleRef.current.style.transform = `
+        translate(calc(-50% + ${translateX}vw), calc(-50% + ${translateY}vh))
+        scale(${scale})
+      `;
+    }
+  };
+
+  // 🔥 Optimised scroll handler (no React state updates)
   useEffect(() => {
     const container = containerRef.current;
+    let ticking = false;
 
     const handleScroll = () => {
       if (!container) return;
 
-      const scrollTop = container.scrollTop;
-      const sectionHeight = window.innerHeight;
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollTop = container.scrollTop;
+          const sectionHeight = window.innerHeight;
 
-      // Only animate during first section scroll
-      const progress = Math.min(scrollTop / sectionHeight, 1);
-      setScrollProgress(progress);
+          scrollProgress.current = Math.min(scrollTop / sectionHeight, 1);
+
+          updateBubbleTransform();
+
+          ticking = false;
+        });
+
+        ticking = true;
+      }
     };
 
     container.addEventListener("scroll", handleScroll);
@@ -71,138 +99,129 @@ export default function Home() {
     };
   }, []);
 
-  // 🔥 Transform calculations
-  const translateX = -40 * scrollProgress; // move left
-  const translateY = -40 * scrollProgress; // move up
-  const scale = 1 - 0.5 * scrollProgress; // shrink to 50%
-
   return (
-    <div>
-    {/* BUBBLE BACKGROUND */}
+    <>
+      {/* BUBBLE BACKGROUND (outside scroll container) */}
       <BubbleBackground numBubbles={22} minSize={12} maxSize={200} />
-    <div className="home_container" ref={containerRef}>
 
+      <div className="home_container" ref={containerRef}>
 
+        {/* SECTIONS */}
+        {[
 
-      {/* SECTIONS */}
-      {[
-
-        /* HOME TITLE */
-        <div
-          key="home"
-          className="home-section"
-          ref={(el) => (sectionsRef.current[0] = el)}
-        >
+          /* HOME TITLE */
           <div
-            className="home_header_bubble"
-            style={{
-              transform: `
-                translate(calc(-50% + ${translateX}vw), calc(-50% + ${translateY}vh))
-                scale(${scale})
-              `,
-              position: "fixed",
-              top: "50%",
-              left: "50%",
-            }}
+            key="home"
+            className="home-section"
+            ref={(el) => (sectionsRef.current[0] = el)}
           >
-            <h1 className="home_title">KATY GRANTHAM</h1>
-            <h2 className="home_subtitle">Full Stack Developer</h2>
-          </div>
+            <div
+              ref={bubbleRef}
+              className="home_header_bubble"
+              style={{
+                position: "fixed",
+                top: "50%",
+                left: "50%",
+              }}
+            >
+              <h1 className="home_title">KATY GRANTHAM</h1>
+              <h2 className="home_subtitle">Full Stack Developer</h2>
+            </div>
 
-          <button
-            className="scroll-arrow down"
-            onClick={() => scrollToSection(1)}
-          >
-            <span className="theme-arrow down"></span>
-          </button>
-        </div>,
+            <button
+              className="scroll-arrow down"
+              onClick={() => scrollToSection(1)}
+            >
+              <span className="theme-arrow down"></span>
+            </button>
+          </div>,
 
-        /* PROJECTS */
-        <div
-          key="projects"
-          className="home-section"
-          ref={(el) => (sectionsRef.current[1] = el)}
-        >
-          {selectedProject ? (
-            <ProjectCard
-              project={selectedProject}
-              onBack={() => setSelectedProject(null)}
-            />
-          ) : (
-            <ProjectGrid onSelectProject={setSelectedProject} />
-          )}
-          <button
-            className="scroll-arrow up"
-            onClick={() => scrollToSection(0)}
+          /* PROJECTS */
+          <div
+            key="projects"
+            className="home-section"
+            ref={(el) => (sectionsRef.current[1] = el)}
           >
-            <span className="theme-arrow up"></span>
-          </button>
-          <button
-            className="scroll-arrow down"
-            onClick={() => scrollToSection(2)}
-          >
-            <span className="theme-arrow down"></span>
-          </button>
-        </div>,
+            {selectedProject ? (
+              <ProjectCard
+                project={selectedProject}
+                onBack={() => setSelectedProject(null)}
+              />
+            ) : (
+              <ProjectGrid onSelectProject={setSelectedProject} />
+            )}
+            <button
+              className="scroll-arrow up"
+              onClick={() => scrollToSection(0)}
+            >
+              <span className="theme-arrow up"></span>
+            </button>
+            <button
+              className="scroll-arrow down"
+              onClick={() => scrollToSection(2)}
+            >
+              <span className="theme-arrow down"></span>
+            </button>
+          </div>,
 
-        /* CONTACT */
-        <div
-          key="contact"
-          className="home-section"
-          ref={(el) => (sectionsRef.current[2] = el)}
-        >
-          <ContactForm />
-          <button
-            className="scroll-arrow up"
-            onClick={() => scrollToSection(1)}
+          /* CONTACT */
+          <div
+            key="contact"
+            className="home-section"
+            ref={(el) => (sectionsRef.current[2] = el)}
           >
-            <span className="theme-arrow up"></span>
-          </button>
-          <button
-            className="scroll-arrow down"
-            onClick={() => scrollToSection(3)}
-          >
-            <span className="theme-arrow down"></span>
-          </button>
-        </div>,
+            <ContactForm />
+            <button
+              className="scroll-arrow up"
+              onClick={() => scrollToSection(1)}
+            >
+              <span className="theme-arrow up"></span>
+            </button>
+            <button
+              className="scroll-arrow down"
+              onClick={() => scrollToSection(3)}
+            >
+              <span className="theme-arrow down"></span>
+            </button>
+          </div>,
 
-        /* ABOUT ME */
-        <div
-          key="about"
-          className="home-section"
-          ref={(el) => (sectionsRef.current[3] = el)}
-        >
-          <AboutMe />
-          <button
-            className="scroll-arrow up"
-            onClick={() => scrollToSection(2)}
+          /* ABOUT ME */
+          <div
+            key="about"
+            className="home-section"
+            ref={(el) => (sectionsRef.current[3] = el)}
           >
-            <span className="theme-arrow up"></span>
-          </button>
-          <button
-            className="scroll-arrow down"
-            onClick={() => scrollToSection(4)}
-          >
-            <span className="theme-arrow down"></span>
-          </button>
-        </div>,
+            <AboutMe />
+            <button
+              className="scroll-arrow up"
+              onClick={() => scrollToSection(2)}
+            >
+              <span className="theme-arrow up"></span>
+            </button>
+            <button
+              className="scroll-arrow down"
+              onClick={() => scrollToSection(4)}
+            >
+              <span className="theme-arrow down"></span>
+            </button>
+          </div>,
 
-        /* BUBBLE GAME */
-        <div
-          key="game"
-          className="home-section"
-          ref={(el) => (sectionsRef.current[4] = el)}
-        >
-          <BubbleGameSection />
-          <button
-            className="scroll-arrow up"
-            onClick={() => scrollToSection(3)}
+          /* BUBBLE GAME */
+          <div
+            key="game"
+            className="home-section"
+            ref={(el) => (sectionsRef.current[4] = el)}
           >
-            <span className="theme-arrow up"></span>
-          </button>
-        </div>,
-      ]}
-    </div>
-    </div>
+            <BubbleGameSection />
+            <button
+              className="scroll-arrow up"
+              onClick={() => scrollToSection(3)}
+            >
+              <span className="theme-arrow up"></span>
+            </button>
+          </div>,
+        ]}
+      </div>
+    </>
   );
 }
