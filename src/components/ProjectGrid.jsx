@@ -7,8 +7,8 @@ const projects = [
     logo: "/src/assets/images/wearable_logo.png",
     main: "/src/assets/images/wearable_main.png",
     overview:
-      "A full-stack outfit planning app that allows users to upload clothing, automatically generate outfit combinations, and receive daily suggestions based on weather and location.",
-    technologies: ["React", "Node.js", "MongoDB", "Weather API"],
+      "Wearable is a full-stack web app designed to streamline outfit planning by allowing users to upload and categorize their clothing. Leveraging a React frontend and a Node.js backend with Express, the app uses a bespoke algorithm to automatically generate outfit combinations based on factors like color, print, season, and type. It integrates with a weather API to provide daily, weather-aware outfit recommendations by pulling real-time temperature data. User wardrobes and outfit matches are collected in a MongoDB database. The app ensures variety in outfit suggestions by storing the most recently worn date for both items and outfits. It incorporates user authentication with JWT for secure access and personalized recommendations.",
+    technologies: ["React", "Vite", "Node.js", "Express", "MongoDB", "JWT", "Weather API"],
     links: [
       { label: "GitHub", url: "https://github.com/katag1001/Wearable" },
       { label: "Site", url: "https://wearable-psi.vercel.app/" }
@@ -20,7 +20,7 @@ const projects = [
     logo: "/src/assets/images/sta_logo.png",
     main: "/src/assets/images/sta_main.png",
     overview:
-      "An official website for the orchestra, featuring event information, rehearsal schedules, galleries, and integrated maps for venue locations.",
+      "The official website for the St Albans Evening Rehearsal Crchestra, featuring event information, rehearsal schedules, galleries, and integrated maps for venue locations.",
     technologies: ["React", "CSS", "Google Maps API"],
     links: [
       { label: "GitHub", url: "https://github.com/katag1001/sta_rehearsal_orchestra" },
