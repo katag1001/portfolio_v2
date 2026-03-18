@@ -33,9 +33,12 @@ const projects = [
     logo: "/src/assets/images/travlr_logo.png",
     main: "/src/assets/images/travlr_logo.png",
     overview:
-      "A travel planning mobile app that helps users organise trips, manage itineraries, track budgets, and maintain packing lists with dynamic destination-based UI themes.",
-    technologies: ["React Native", "JavaScript", "State Management"],
-    links: []
+      "Travelr is a comprehensive travel organization app built with React Native and Expo Go that allows users to manage trips, itineraries, packing lists, and budgets with automated cross-module data syncing. It features a dual-view itinerary system (Calendar/List), automated budgeting that tracks expenses across transport and accommodation, and seamless syncing between modules using AsyncStorage. The app’s modular architecture uses a relational logic model, where actions like adding flights or hotels auto-generate related entries in the budget and itinerary. React Native Paper powers the UI with Material Design components, while a custom Dynamic Theming Engine adapts the interface based on geographic keywords in trip names. The app is built using React Context API for global state management, with utilities like uuid for ID generation and date-fns for date manipulation, ensuring a smooth and dynamic user experience.",
+    technologies: ["React Native", "Expo Go", "React Context API", "React Native Paper", "async-storage", "uuid"],
+   links: [
+      { label: "GitHub", url: "https://github.com/katag1001/Travlr" },
+    ]
+
   },
   {
     id: 4,
@@ -43,11 +46,11 @@ const projects = [
     logo: "/src/assets/images/soul_logo.png",
     main: "/src/assets/images/soul_main.png",
     overview:
-      "A task management web application that allows users to create, track, and manage tasks efficiently.",
-    technologies: ["React", "Node.js", "MongoDB"],
+      "Soul Subconscious Hypnotherapy is a client-facing website built with React that offers an informative, calming experience for users seeking hypnotherapy services. The site includes pages like Home, About, Services, Blog, and FAQs, providing visitors with easy access to content about hypnotherapy, self-care strategies, and session booking. It features a Vite-powered development setup, CSS Modules for scoped component styling, and react-router for page navigation. The design integrates soothing, animated background elements for a calming user experience, with a mobile-friendly, accessible interface for all users.",
+    technologies: ["React", "Vite", "CSS Modules", "react-router", "Javascript"],
     links: [
-      { label: "GitHub", url: "https://github.com/example" },
-      { label: "GitHub", url: "https://github.com/example" },
+      { label: "GitHub", url: "https://github.com/katag1001/soul_subconscious" },
+      { label: "Site", url: "https://soul-subconscious.vercel.app/" },
     ]
   },
 
