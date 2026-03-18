@@ -105,11 +105,11 @@
 /* Layout for Web App Cards ------------------------------------------------------------------*/
 .project-card-container.web-card .project-card-body {
   display: flex;
-  flex-direction: column;  /* Image above the text for web apps */
+  flex-direction: column; 
 }
 
 .project-card-container.web-card .project-card-image {
-  width: 100%;  /* Image takes full width for web apps */
+  width: 100%;  
   max-height: 240px;
   object-fit: cover;
   margin-bottom: 24px;
@@ -120,29 +120,41 @@
 }
 
 /* Image */
-.project-card-image {
+.project-card-image.web-card {
   width: 100%;
   max-height: 240px; 
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 24px;
 }
-
-
 /* Layout for Mobile App Cards ------------------------------------------------------------------*/
 .project-card-container.mobile-card .project-card-body {
   display: flex;
   flex-direction: row; 
-  justify-content: flex-start;
   align-items: flex-start;
+  justify-content: flex-start;
 }
 
+/* Image container */
+.project-card-container.mobile-card .project-card-image-container {
+  width: 40%;      /* Container takes 40% of card width */
+  margin: 0;       /* Remove any margin */
+  padding: 0;      /* Remove any padding */
+}
+
+/* Image itself */
 .project-card-container.mobile-card .project-card-image {
-  width: 40%; 
-  margin-right: 16px;
-  object-fit: contain;
+  width: 90%;     /* Fill the container width */
+  height: 90%;  
+  border-radius: 10px;
+  object-fit: cover; /* Make sure image covers container */
+  margin: 0;       /* Remove any margin */
+  padding: 0;      /* Remove any padding */
 }
 
+/* Details container */
 .project-card-container.mobile-card .project-card-details {
-  width: 60%;  
+  width: 60%;      /* Take the remaining 60% */
+  margin: 0;       /* Remove any margin */
+  padding: 0;      /* Remove any padding */
 }
