@@ -133,7 +133,7 @@
 
 .form-status {
   margin-top: 15px;
-  color: var(--accent-strong);
+  color: var(--text-muted);
   font-size: var(--fs-ui);
 }
 

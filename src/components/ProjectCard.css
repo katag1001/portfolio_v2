@@ -113,6 +113,7 @@
   max-height: 240px;
   object-fit: cover;
   margin-bottom: 24px;
+  border-radius: 10px;
 }
 
 .project-card-container.web-card .project-card-details {

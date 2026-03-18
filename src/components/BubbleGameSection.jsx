@@ -40,14 +40,9 @@ export default function BubbleGameSection() {
           <h3 className="bubble-info-title">How to Play</h3>
 
           <p className="bubble-description">
-            Bubbles will slowly rise from the bottom of the screen.
-            Pop them before they reach the top!
+            Hover you mouse over the bubbles to pop them before they get to the top!
           </p>
 
-          <p className="bubble-description">
-            Each bubble you pop keeps the game alive. As time goes on,
-            bubbles will appear faster and move quicker.
-          </p>
 
 
           <div className="bubble-score-panel">

@@ -81,3 +81,26 @@
 .about-text::-webkit-scrollbar-corner {
   background: var(--bg-deep-purple); 
 }
+
+
+.download-cv-button {
+  display: inline-block;          
+  background: var(--accent-blue);
+  color: white;
+  border: 1px solid var(--card-border);
+  padding: 6px 10px;
+  font-size: var(--fs-ui);
+  border-radius: 4px;
+  text-decoration: none;          
+  text-align: center;
+  margin: 20px auto 0;            
+  display: block;                 
+  transition: background 0.3s, transform 0.2s;
+  width: 93%;
+  margin-bottom: 20px;
+}
+
+.download-cv-button:hover {           /* Darker blue on hover */
+  transform: scale(1.05);          /* Slight zoom effect */
+  cursor: pointer;                 /* Show pointer on hover */
+}

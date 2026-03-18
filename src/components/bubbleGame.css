@@ -86,14 +86,13 @@
 }
 
 .game_popup {
-  background: var(--accent-blue-light);
+  background: var(--card-bg);
   padding: 2.5rem 3rem;
   border-radius: 15px;
   text-align: center;
   width: 90%;
   max-width: 400px;
   color: white;
-  box-shadow: 0 4px 15px var(--card-border);
 }
 
 .game_go {
@@ -103,9 +102,8 @@
   border: none;
   cursor: pointer;
   font-weight: 600;
-  background: var(--accent-blue-light);
+  background: var(--card-bg);
   color: white;
-  box-shadow: 0 4px 15px var(--card-border);
 }
 
 /* ---------------- ANIMATIONS ---------------- */
