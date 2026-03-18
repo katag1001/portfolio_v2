@@ -76,11 +76,11 @@
 }
 
 .tech-item {
-  background: var(--accent-pink-strong);
+    background: var(--accent-blue);
+  color: white;
   border: 1px solid var(--card-border);
   padding: 6px 10px;
   font-size: var(--fs-ui);
-  color: white;
   border-radius: 4px;
 }
 
@@ -105,12 +105,12 @@
 
 
 .project-link-btn {
+  background: var(--accent-blue);
+  color: white;
   text-decoration: none;
-  color: var(--font-main);
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--bubble-pink-glow);
   border-radius: 50%;
   padding: 10px;
   transition: transform 0.3s ease, opacity 0.3s ease;

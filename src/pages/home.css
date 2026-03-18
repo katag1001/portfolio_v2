@@ -120,7 +120,7 @@
   height: 540px;
   box-sizing: border-box;
   z-index: 2;
-  background: var(--bg-deep-purple);
+  background: var(--card-bg);
   border-radius: 20px;
   padding: 20px;
   backdrop-filter: blur(14px);

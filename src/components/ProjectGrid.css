@@ -24,7 +24,6 @@
   overflow: hidden;
   cursor: pointer;
   background: var(--card-bg);
-  border: 1px solid var(--card-border);
   backdrop-filter: blur(10px);
   transition: 0.25s ease;
 }

@@ -20,16 +20,17 @@
 --bubble-rim-light: rgba(255, 255, 255, 0.8);   
 
 /* UI Components (Cards/Windows) */
---card-bg: rgba(255, 255, 255, 0.7);           
+--card-bg: rgba(236, 232, 248, 0.6);            
 --card-border: rgba(240, 237, 249, 0.863);       
 
 /* Typography & Icons */
 --text-main: rgba(45, 35, 65, 1);              
---text-muted: rgba(90, 80, 120, 0.75);         
---accent-pink: rgba(255, 120, 185, 1); 
+--text-muted: rgba(90, 80, 120, 0.75); 
 
---accent-pink-soft: rgba(255, 120, 185, 0.15);
---accent-pink-strong: rgba(255, 120, 185, 0.6);
+--accent-soft: rgba(255, 120, 185, 0.2);
+--accent-strong: rgba(255, 120, 185, 1);
+
+--accent-blue:  rgba(100, 80, 120, 0.8);   
 
 --glass-blur: blur(14px);
 --shadow-soft: 0 10px 30px rgba(45, 35, 65, 0.15);
@@ -86,7 +87,7 @@
   content: '';
   width: 12px;
   height: 12px;
-  border: solid var(--accent-pink);
+  border: solid var(--accent-strong);
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
