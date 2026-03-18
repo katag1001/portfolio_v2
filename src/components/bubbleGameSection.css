@@ -78,3 +78,65 @@
   color: white;
 
 }
+
+
+/* General small screen adjustments */
+@media (max-width: 768px) {
+  .bubble-section-container {
+    padding: 16px; /* Reduce padding on smaller screens */
+  }
+
+  /* Title */
+  .bubble-section-title {
+    font-size: var(--fs-h3); /* Slightly smaller title on small screens */
+    margin-bottom: 15px; /* Adjust margin for better spacing */
+  }
+
+  /* Layout */
+  .bubble-section-content {
+    flex-direction: column; /* Stack content vertically */
+    gap: 20px; /* Reduce gap between elements */
+    height: auto; /* Adjust height to auto */
+  }
+
+  /* ---------------- GAME AREA ---------------- */
+  .bubble-game-area {
+    width: 100%; /* Ensure the game area takes full width */
+    height: auto; /* Adjust height to auto */
+    margin-bottom: 20px; /* Provide some space below the game area */
+  }
+
+  /* ---------------- INFO PANEL ---------------- */
+  .bubble-info-panel {
+    width: 100%; /* Make the info panel take up full width */
+    height: auto; /* Adjust height to auto */
+    overflow: visible; /* Allow content to overflow when needed */
+    margin: 0; /* Remove margins */
+    padding: 10px; /* Adjust padding for smaller devices */
+  }
+
+  /* Panel title */
+  .bubble-info-title {
+    font-size: var(--fs-h4); /* Smaller font for titles on small screens */
+    margin-bottom: 10px; /* Reduce space below the title */
+  }
+
+  /* Description */
+  .bubble-description {
+    font-size: var(--fs-small); /* Make the description font smaller */
+    line-height: 1.4; /* Adjust line-height for readability */
+    margin-bottom: 10px; /* Adjust margin for better spacing */
+  }
+
+  /* ---------------- SCORE PANEL ---------------- */
+  .bubble-score-panel {
+    padding: 12px; /* Smaller padding */
+    font-size: var(--fs-small); /* Adjust font size for smaller screens */
+  }
+
+  .bubble-score {
+    flex-direction: column; /* Stack score items vertically */
+    font-size: var(--fs-small); /* Adjust font size for readability */
+    gap: 10px; /* Reduce space between score items */
+  }
+}

@@ -191,3 +191,98 @@
 .project-card-container::-webkit-scrollbar-corner {
   background: var(--bg-deep-purple); 
 }
+
+
+
+
+/* Mobile Adjustments */
+@media only screen and (max-width: 768px) {
+
+  /* General Styles for Both Cards */
+  .project-card-container {
+    margin: 0 10px;
+    font-family: var(--font-main);
+    padding: 10px; /* Optional: Add padding on mobile to prevent edge-to-edge content */
+  }
+
+  /* Header */
+  .project-card-header {
+    flex-direction: column; /* Stack header items vertically */
+    align-items: flex-start; /* Align header items to the start */
+    margin-bottom: 12px;
+  }
+
+  /* Back Button */
+  .back-button {
+    font-size: var(--fs-ui-small); /* Reduce font size */
+    margin-bottom: 10px; /* Optional: Add margin at the bottom for better spacing */
+  }
+
+  /* Sections */
+  .project-section h3 {
+    font-size: var(--fs-ui-small); /* Adjust the font size for headings */
+  }
+
+  .project-section p {
+    font-size: var(--fs-body-small); /* Reduce font size for body text */
+  }
+
+  /* Tech Grid */
+  .tech-grid {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Adjust grid for mobile */
+    gap: 6px;
+  }
+
+  /* Links Grid */
+  .links-grid {
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Maintain grid but with smaller columns */
+    margin-top: 10px;
+  }
+
+  /* Project Link Button */
+  .project-link-btn {
+    padding: 8px; /* Reduce padding on buttons */
+    font-size: 28px; /* Adjust the icon size for better fit */
+  }
+
+  /* Image */
+  .project-card-container.mobile-card .project-card-image {
+    width: 100%; /* Make image take full width on mobile */
+    height: auto; /* Allow height to adjust proportionally */
+    border-radius: 8px; /* Slightly smaller border radius for mobile */
+  }
+
+  /* Layout for Mobile App Cards */
+  .project-card-container.mobile-card .project-card-body {
+    flex-direction: column; /* Stack image and text vertically on smaller screens */
+    align-items: center; /* Center the content */
+  }
+
+  /* Image container */
+  .project-card-container.mobile-card .project-card-image-container {
+    width: 100%; /* Make the image container take full width */
+    margin-bottom: 12px; /* Add some spacing below the image */
+  }
+
+  /* Details container */
+  .project-card-container.mobile-card .project-card-details {
+    width: 100%; /* Let the details container take full width */
+    padding: 0 10px; /* Add padding for better spacing */
+  }
+}
+
+/* Additional: Optionally, for very small screens (e.g., under 480px) */
+@media only screen and (max-width: 480px) {
+  .project-card-container {
+    padding: 8px; /* Reduce padding for very small screens */
+  }
+
+  .project-link-btn {
+    font-size: 24px; /* Further reduce icon size on very small screens */
+    padding: 6px; /* Adjust padding for very small screens */
+  }
+
+  .back-button {
+    font-size: var(--fs-ui-small);
+  }
+}

@@ -124,7 +124,7 @@ export default function Home() {
                 left: "50%",
               }}
             >
-              <h1 className="home_title">Katy Grantham</h1>
+              <h1 className="home_title">Katarina Grantham</h1>
               <h2 className="home_subtitle">FULL STACK DEVELOPER</h2>
             </div>
 
