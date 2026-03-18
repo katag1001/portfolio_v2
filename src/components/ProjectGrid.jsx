@@ -11,7 +11,7 @@ const projects = [
     technologies: ["React", "Node.js", "MongoDB", "Weather API"],
     links: [
       { label: "GitHub", url: "https://github.com/katag1001/Wearable" },
-      { label: "Live Site", url: "https://wearable-psi.vercel.app/" }
+      { label: "Site", url: "https://wearable-psi.vercel.app/" }
     ]
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     technologies: ["React", "CSS", "Google Maps API"],
     links: [
       { label: "GitHub", url: "https://github.com/katag1001/sta_rehearsal_orchestra" },
-      { label: "Live Site", url: "https://sta-rehearsal-orchestra.vercel.app/" }
+      { label: "Site", url: "https://sta-rehearsal-orchestra.vercel.app/" }
     ]
   },
   {

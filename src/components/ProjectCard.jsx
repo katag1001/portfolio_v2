@@ -1,5 +1,7 @@
 import React from "react";
 import "./projectCard.css";
+import { FaGithub } from 'react-icons/fa';
+import { CiGlobe } from 'react-icons/ci';
 
 export default function ProjectCard({ project, onBack }) {
   return (
@@ -37,24 +39,33 @@ export default function ProjectCard({ project, onBack }) {
 
       </div>
 
-      <div className="project-section">
-        <h3>Project Links</h3>
+<div className="project-section">
+  <h3>Project Links</h3>
 
-        <div className="links-grid">
-          {project.links.map((link, i) => (
-            <a
-              key={i}
-              href={link.url}
-              target="_blank"
-              rel="noreferrer"
-              className="project-link-btn"
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
+  <div className="links-grid">
+    {project.links.map((link, i) => {
+      let IconComponent;
 
-      </div>
+      if (link.label.toLowerCase() === 'github') {
+        IconComponent = FaGithub;
+      } else if (link.label.toLowerCase() === 'site') {
+        IconComponent = CiGlobe;
+      }
+
+      return (
+        <a
+          key={i}
+          href={link.url}
+          target="_blank"
+          rel="noreferrer"
+          className="project-link-btn"
+        >
+          {IconComponent ? <IconComponent size={40} /> : link.label}
+        </a>
+      );
+    })}
+  </div>
+</div>
 
     </div>
   );

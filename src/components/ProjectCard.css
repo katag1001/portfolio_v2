@@ -26,7 +26,7 @@
 }
 
 .back-button:hover {
-  color: var(--accent-pink);
+  font-weight: 600;
 }
 
 /* Image */
@@ -59,6 +59,14 @@
   line-height: 1.6;
 }
 
+/* Tech Grid */
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 8px;
+}
+
 /* Technologies */
 
 .tech-list {
@@ -68,82 +76,51 @@
 }
 
 .tech-item {
-  background: rgba(45, 23, 76, 0.9);
+  background: var(--accent-pink-strong);
   border: 1px solid var(--card-border);
-
   padding: 6px 10px;
-
   font-size: var(--fs-ui);
-  color: var(--text-main);
-
+  color: white;
   border-radius: 4px;
 }
 
 /* Links */
-
+/* Links */
 .project-links {
   display: flex;
-  gap: 10px;
+  gap: 5px;
   flex-wrap: wrap;
 }
 
-.project-link-btn {
-  background: var(--accent-pink);
-  color: var(--bg-deep-purple);
-  font-size: var(--fs-ui);
-  padding: 8px 14px;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: transform 0.15s ease, opacity 0.2s ease;
-}
-
-.project-link-btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
-
-/* Tech Grid */
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
-  gap: 8px;
-}
-
-.tech-item {
-  background: rgba(45, 23, 76, 0.9);
-  border: 1px solid var(--card-border);
-
-  padding: 8px 10px;
-
-  font-size: var(--fs-ui);
-  color: var(--text-main);
-
-  border-radius: 4px;
-
-  text-align: center;
-}
-
-/* Links Grid */
-
 .links-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  grid-gap: 16px;
+  display: flex; 
+  justify-items: end;
+  width: 100%; 
+  max-width: 100%; 
+  margin: 0 auto; 
 }
 
+
 .project-link-btn {
-  background: var(--accent-pink);
-  color: var(--bg-deep-purple);
-  font-size: var(--fs-ui);
-  padding: 8px 14px;
-  border-radius: 20px;
-  text-align: center;
   text-decoration: none;
-  transition: transform 0.15s ease, opacity 0.2s ease;
+  color: var(--font-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bubble-pink-glow);
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.project-link-btn svg {
+  font-size: 32px; /* Increase icon size */
 }
 
 .project-link-btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px); /* Hover effect */
   opacity: 0.9;
 }
