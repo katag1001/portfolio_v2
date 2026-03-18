@@ -1,3 +1,4 @@
+/* General Styles for Both Cards */
 .project-card-container {
   margin: auto;
   overflow-y: auto;
@@ -5,7 +6,6 @@
 }
 
 /* Header */
-
 .project-card-header {
   display: flex;
   justify-content: space-between;
@@ -13,9 +13,7 @@
   margin-bottom: 18px;
 }
 
-
 /* Back Button */
-
 .back-button {
   background: none;
   border: none;
@@ -29,17 +27,7 @@
   font-weight: 600;
 }
 
-/* Image */
-.project-card-image {
-  width: 100%;
-  max-height: 240px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 24px;
-}
-
 /* Sections */
-
 .project-section {
   margin-bottom: 28px;
 }
@@ -48,7 +36,6 @@
   font-size: var(--fs-ui);
   color: var(--text-muted);
   margin-bottom: 10px;
-
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -60,23 +47,14 @@
 }
 
 /* Tech Grid */
-
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 8px;
 }
 
-/* Technologies */
-
-.tech-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
 .tech-item {
-    background: var(--accent-blue);
+  background: var(--accent-blue);
   color: white;
   border: 1px solid var(--card-border);
   padding: 6px 10px;
@@ -84,7 +62,6 @@
   border-radius: 4px;
 }
 
-/* Links */
 /* Links */
 .project-links {
   display: flex;
@@ -96,13 +73,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
   grid-gap: 16px;
-  display: flex; 
+  display: flex;
   justify-items: end;
-  width: 100%; 
-  max-width: 100%; 
-  margin: 0 auto; 
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
 }
-
 
 .project-link-btn {
   background: var(--accent-blue);
@@ -123,4 +99,50 @@
 .project-link-btn:hover {
   transform: translateY(-4px); /* Hover effect */
   opacity: 0.9;
+}
+
+
+/* Layout for Web App Cards ------------------------------------------------------------------*/
+.project-card-container.web-card .project-card-body {
+  display: flex;
+  flex-direction: column;  /* Image above the text for web apps */
+}
+
+.project-card-container.web-card .project-card-image {
+  width: 100%;  /* Image takes full width for web apps */
+  max-height: 240px;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.project-card-container.web-card .project-card-details {
+  width: 100%;  /* Text section takes full width for web apps */
+}
+
+/* Image */
+.project-card-image {
+  width: 100%;
+  max-height: 240px; 
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+
+/* Layout for Mobile App Cards ------------------------------------------------------------------*/
+.project-card-container.mobile-card .project-card-body {
+  display: flex;
+  flex-direction: row; 
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.project-card-container.mobile-card .project-card-image {
+  width: 40%; 
+  margin-right: 16px;
+  object-fit: contain;
+}
+
+.project-card-container.mobile-card .project-card-details {
+  width: 60%;  
 }
