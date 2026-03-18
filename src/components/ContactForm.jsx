@@ -33,32 +33,33 @@ export default function ContactForm() {
   return (
     <div className="home-section-container contact-section-container">
       <div className="contact-left">
-        <h2 className="contact-left-title">GET IN TOUCH</h2>
+        <h2 className="contact-left-title">Get in touch</h2>
         <h3 className="contact-left-subtitle">LET'S COLLABORATE</h3>
-        <div className="contact-links">
+        <div className="links-grid"> 
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/katag1001"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-link"
+            className="contact-link-btn"  
           >
             <FaGithub size={30} className="contact-icon" />
-            GitHub
           </a>
           <a
-            href="https://www.linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/katarina-grantham-1b54a45b/"
             target="_blank"
             rel="noopener noreferrer"
-            className="contact-link"
+            className="contact-link-btn" 
           >
             <FaLinkedin size={30} className="contact-icon" />
-            LinkedIn
           </a>
         </div>
       </div>
 
+      <div className="divider"></div> 
+
       <div className="contact-right">
-        <h2>Get in touch</h2>
+
+
         <form className="contact-form" onSubmit={handleSubmit}>
           <label>
             Your email:

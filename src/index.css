@@ -31,6 +31,8 @@
 --accent-strong: rgba(255, 120, 185, 1);
 
 --accent-blue:  rgba(100, 80, 120, 0.8);   
+--accent-blue-light:  rgba(100, 80, 120, 0.2);   
+
 
 --glass-blur: blur(14px);
 --shadow-soft: 0 10px 30px rgba(45, 35, 65, 0.15);

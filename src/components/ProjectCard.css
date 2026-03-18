@@ -93,11 +93,11 @@
 }
 
 .project-link-btn svg {
-  font-size: 32px; /* Increase icon size */
+  font-size: 32px; 
 }
 
 .project-link-btn:hover {
-  transform: translateY(-4px); /* Hover effect */
+  transform: translateY(-4px);
   opacity: 0.9;
 }
 
@@ -116,7 +116,7 @@
 }
 
 .project-card-container.web-card .project-card-details {
-  width: 100%;  /* Text section takes full width for web apps */
+  width: 100%;  
 }
 
 /* Image */
@@ -137,24 +137,24 @@
 
 /* Image container */
 .project-card-container.mobile-card .project-card-image-container {
-  width: 40%;      /* Container takes 40% of card width */
-  margin: 0;       /* Remove any margin */
-  padding: 0;      /* Remove any padding */
+  width: 40%;     
+  margin: 0;      
+  padding: 0;   
 }
 
 /* Image itself */
 .project-card-container.mobile-card .project-card-image {
-  width: 90%;     /* Fill the container width */
+  width: 90%;   
   height: 90%;  
   border-radius: 10px;
-  object-fit: cover; /* Make sure image covers container */
-  margin: 0;       /* Remove any margin */
-  padding: 0;      /* Remove any padding */
+  object-fit: cover;
+  margin: 0;     
+  padding: 0;      
 }
 
 /* Details container */
 .project-card-container.mobile-card .project-card-details {
-  width: 60%;      /* Take the remaining 60% */
-  margin: 0;       /* Remove any margin */
-  padding: 0;      /* Remove any padding */
+  width: 60%;      
+  margin: 0;       
+  padding: 0;      
 }
