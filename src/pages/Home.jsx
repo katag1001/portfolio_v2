@@ -27,11 +27,11 @@ export default function Home() {
     }
   };
 
-  // Update bubble transform WITHOUT React re-render
+  // Update bubble transform 
   const updateBubbleTransform = () => {
     const progress = scrollProgress.current;
 
-    const translateX = -40 * progress;
+    const translateX = -41.5 * progress;
     const translateY = -40 * progress;
     const scale = 1 - 0.5 * progress;
 

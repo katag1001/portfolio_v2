@@ -26,7 +26,7 @@
 /* ==============================
    TITLE BUBBLE
 ============================== */
-.home_header_bubble {
+/*.home_header_bubble {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -46,20 +46,22 @@
 
   z-index: 100;
   will-change: transform, border-radius;
+}*/
+
+.home_header_bubble {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 80px 120px;
+  text-align: center;
+  animation:
+    dip 24s infinite ease-in-out alternate,
+    float 18s infinite ease-in-out alternate;
+  z-index: 100;
+  will-change: transform, border-radius;
 }
 
-.home_header_bubble::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.6) 0%,
-    rgba(255,255,255,0) 70%
-  );
-  pointer-events: none;
-}
 
 /* FLOAT ANIMATION */
 @keyframes dip {
@@ -114,10 +116,9 @@
 }
 
 
-
 .home-section-container {
-  width: 850px;
-  height: 540px;
+  width: 910px;
+  height: 530px;
   box-sizing: border-box;
   z-index: 2;
   background: var(--card-bg);
