@@ -64,9 +64,10 @@
   margin-top: 20px;
   padding: 16px;
   border-radius: 10px;
-  border: 1px solid white;
-  background: var(--accent-blue);
-  color: white;
+  color: var(--text-muted);
+  outline: none;
+  background: var(--accent-blue-light);
+  box-shadow: 0 0 8px white;
 }
 
 .bubble-score {
@@ -75,4 +76,5 @@
   font-size: var(--fs-body);
   margin-bottom: 10px;
   color: white;
+
 }

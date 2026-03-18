@@ -13,6 +13,8 @@
   box-shadow: 0 6px 20px var(--bubble-rim-light);
   touch-action: manipulation;
   z-index: 100;
+    background:
+    var(--bg-gradient-top)
 }
 
 /* Mobile */
@@ -36,14 +38,35 @@
 
 .game_bubble {
   position: absolute;
-  border-radius: 50%;
-  background: var(--bg-gradient-top);
-  filter: blur(2px);
   pointer-events: auto;
   touch-action: manipulation;
-  opacity: 0.4;
+
   z-index: 100;
+    box-shadow:
+    0 0 4px var(--bubble-pink-glow),
+    inset 0 0 30px var(--bubble-pink-glow, --bubble-rim-light);
+  border-radius: 50%;
 }
+
+.game_bubble::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.6) 0%,
+    rgba(255,255,255,0) 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+
+
+
 
 .game_bubble_popped {
   animation: game_pop 0.3s forwards;
@@ -63,12 +86,14 @@
 }
 
 .game_popup {
-  background: var(--bg-gradient-top);
+  background: var(--accent-blue-light);
   padding: 2.5rem 3rem;
   border-radius: 15px;
   text-align: center;
   width: 90%;
   max-width: 400px;
+  color: white;
+  box-shadow: 0 4px 15px var(--card-border);
 }
 
 .game_go {
@@ -78,8 +103,9 @@
   border: none;
   cursor: pointer;
   font-weight: 600;
-  background: var(--bg-deep-purple);
-  color: var(--text-main);
+  background: var(--accent-blue-light);
+  color: white;
+  box-shadow: 0 4px 15px var(--card-border);
 }
 
 /* ---------------- ANIMATIONS ---------------- */

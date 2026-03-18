@@ -147,7 +147,7 @@ const BubbleGame = () => {
     localStorage.setItem(LAST_SCORE_KEY, finalTime);
     if (finalTime > bestScore) {
       localStorage.setItem(BEST_SCORE_KEY, finalTime);
-      setScoreMessage(`New best score! 🎉 ${finalTime} seconds`);
+      setScoreMessage(`New best score!  ${finalTime} seconds 🎉`);
     } else if (finalTime > lastScore) {
       setScoreMessage(`Nice! ${finalTime - lastScore}s better than last time 👏`);
     } else {
@@ -219,7 +219,6 @@ useEffect(() => {
         <div className="game_overlay">
           <div className="game_popup">
             <h2>Oh no, you lose 😢</h2>
-            <p>You survived {timePlayed} seconds</p>
             {scoreMessage && <p><strong>{scoreMessage}</strong></p>}
             <button className="game_go" onClick={startGame}>
               Play again
