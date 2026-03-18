@@ -11,7 +11,7 @@
 
 /* Primary Backgrounds */
 --bg-deep-purple: rgba(236, 232, 248, 0.7);    
---bg-gradient-top: rgb(214, 224, 255);     
+--bg-gradient-top: rgb(194, 209, 254);     
 --bg-gradient-bottom: rgba(255, 214, 235, 1);   
 
 /* Bubble & Glass Effects */
@@ -26,7 +26,17 @@
 /* Typography & Icons */
 --text-main: rgba(45, 35, 65, 1);              
 --text-muted: rgba(90, 80, 120, 0.75);         
---accent-pink: rgba(255, 120, 185, 1);         
+--accent-pink: rgba(255, 120, 185, 1); 
+
+--accent-pink-soft: rgba(255, 120, 185, 0.15);
+--accent-pink-strong: rgba(255, 120, 185, 0.6);
+
+--glass-blur: blur(14px);
+--shadow-soft: 0 10px 30px rgba(45, 35, 65, 0.15);
+--shadow-hover: 0 15px 40px rgba(255, 120, 185, 0.25);
+
+--transition-main: 0.25s ease;
+--overlay: rgba(12, 9, 17, 0);
 }
 
 

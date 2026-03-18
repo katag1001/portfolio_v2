@@ -113,16 +113,20 @@
   bottom: 16px;
 }
 
-/* ==============================
-   SECTION CONTAINERS
-==============================
+
+
 .home-section-container {
-  background: var(--bg-deep-purple);
-  border-radius: 16px;
-  width: 780px;
-  height: 450px;
+  width: 800px;
+  height: 500px;
+  box-sizing: border-box;
   z-index: 2;
-} */
+  background: var(--bg-deep-purple);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(45, 35, 65, 0.15);
+  border: 1px solid var(--card-border);
+}
 
 /* ==============================
    HOME SECTIONS PADDING

@@ -1,6 +1,5 @@
 import React from "react";
 import "./projectCard.css";
-/*import ".././pages/home.css";*/
 
 export default function ProjectCard({ project, onBack }) {
   return (

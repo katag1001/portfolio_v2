@@ -49,7 +49,9 @@ const projects = [
       { label: "GitHub", url: "https://github.com/example" },
       { label: "GitHub", url: "https://github.com/example" },
     ]
-  }
+  },
+
+  
 ];
 
 export default function ProjectGrid({ onSelectProject }) {
