@@ -58,7 +58,7 @@ export default function ProjectGrid({ onSelectProject }) {
   return (
     <div className="home-section-container project-grid-container">
 
-      <h2 className="project-grid-title">Featured Projects</h2>
+      <h2 className="card-title">Featured Projects</h2>
 
       <div className="project-grid">
         {projects.map((project) => (

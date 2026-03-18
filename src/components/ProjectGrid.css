@@ -4,15 +4,6 @@
   flex-direction: column;
 }
 
-/* Title */
-.project-grid-title {
-  font-family: var(--font-main);
-  font-size: var(--fs-h2);
-  font-weight: 600;
-  color: var(--text-main);
-  margin-bottom: 16px;
-}
-
 /* Grid Layout */
 .project-grid {
   display: grid;
@@ -61,7 +52,6 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 5px;
   width: 95%;
   font-family: var(--font-main);
   font-size: var(--fs-h2);

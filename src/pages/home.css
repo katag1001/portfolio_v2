@@ -106,18 +106,18 @@
 }
 
 .scroll-arrow.up {
-  top: 16px;
+  top: 0px;
 }
 
 .scroll-arrow.down {
-  bottom: 16px;
+  bottom: 0px;
 }
 
 
 
 .home-section-container {
-  width: 800px;
-  height: 500px;
+  width: 850px;
+  height: 540px;
   box-sizing: border-box;
   z-index: 2;
   background: var(--bg-deep-purple);
@@ -126,6 +126,14 @@
   backdrop-filter: blur(14px);
   box-shadow: 0 10px 30px rgba(45, 35, 65, 0.15);
   border: 1px solid var(--card-border);
+}
+
+/* Title */
+.card-title {
+  font-family: var(--font-main);
+  font-size: var(--fs-h2);
+  font-weight: 600;
+  color: var(--text-main);
 }
 
 /* ==============================

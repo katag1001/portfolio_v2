@@ -6,7 +6,7 @@ export default function ProjectCard({ project, onBack }) {
     <div className=" home-section-container project-card-container">
 
       <div className="project-card-header">
-        <h2 className="project-card-title">{project.title}</h2>
+        <h2 className="card-title">{project.title}</h2>
 
         <button className="back-button" onClick={onBack}>
           ← Back
