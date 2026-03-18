@@ -76,7 +76,7 @@
    TITLES
 ============================== */
 .home_title {
-  font-size: var(--fs-h1);
+  font-size: var(--fs-title);
   color: var(--text-main);
   font-family: var(--font-main);
 }
@@ -150,8 +150,52 @@
 
 
 
+
+  
+.theme-arrow {
+  width: 40px;
+  height: 40px;
+  /*box-shadow:
+    0 0 4px var(--bubble-pink-glow),
+    inset 0 0 30px var(--bubble-pink-glow, --bubble-rim-light);
+  box-shadow: 0 0 10px var(--bubble-pink-glow), inset 0 0 15px var(--bubble-rim-light);
+  border-radius: 50%;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  cursor: pointer;
+  margin: 10px auto;
+  position: relative;
+}
+
+/* The arrow inside the circle */
+.theme-arrow::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: solid var(--accent-blue);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+/* Down arrow */
+.theme-arrow.down::after {
+  transform: rotate(45deg);
+}
+
+/* Up arrow */
+.theme-arrow.up::after {
+  transform: rotate(-135deg);
+}
+
+
+
+
+
 /* ==============================
-   SIDE NAV - MOBILE VERSION
+   MOBILE VERSION
 ============================== */
 @media (max-width: 768px) {
 

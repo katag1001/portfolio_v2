@@ -22,16 +22,16 @@
 }
 
 .contact-left-title {
-  font-size: var(--fs-h2);
+  font-size: var(--fs-h1);
   font-weight: bold;
   color: var(--text-muted);
   margin-bottom: 15px;
 }
 
 .contact-left-subtitle {
-  font-size: var(--fs-h1);
+  font-size: var(--fs-title);
   color: var(--text-main);
-  margin-bottom: 150px;
+  margin-bottom: 120px;
 }
 
 /* Contact Links --------------------------------------------------------------------------*/
@@ -84,11 +84,6 @@
   align-items: center;
 }
 
-.contact-right h2 {
-  font-size: var(--fs-h2);
-  color: var(--text-main);
-  margin-bottom: 20px;
-}
 
 .contact-form label {
   display: block;
