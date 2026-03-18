@@ -158,3 +158,35 @@
   margin: 0;       
   padding: 0;      
 }
+
+
+/* unique scroll bar ------------------------------------------------------------------*/
+
+/* Style the scrollbar */
+.project-card-container::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  height: 12px; /* Height for horizontal scrollbar */
+}
+
+/* Track of the scrollbar */
+.project-card-container::-webkit-scrollbar-track {
+  background: var(--bg-deep-purple); /* Color of the track */
+  border-radius: 6px;
+}
+
+/* Thumb (the draggable part of the scrollbar) */
+.project-card-container::-webkit-scrollbar-thumb {
+  background-color: var(--accent-blue); /* Color of the thumb */
+  border-radius: 6px;
+  border: 3px solid var(--bg-deep-purple); /* Border around thumb */
+}
+
+/* Thumb on hover */
+.project-card-container::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent-dark-blue); /* Darker color on hover */
+}
+
+/* Optional: Style for the corner (if both horizontal and vertical scrollbars appear) */
+.project-card-container::-webkit-scrollbar-corner {
+  background: var(--bg-deep-purple); 
+}

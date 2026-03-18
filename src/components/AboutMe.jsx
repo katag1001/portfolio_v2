@@ -7,7 +7,7 @@ export default function AboutMe() {
 
       <div className="about-left">
         <img
-          src="/images/katy.jpg"
+          src="/src/assets/images/katy.jpg"
           alt="Katy"
           className="about-image"
         />

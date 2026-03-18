@@ -43,7 +43,6 @@ export default function Home() {
     }
   };
 
-  //  Optimised scroll handler (no React state updates)
   useEffect(() => {
     const container = containerRef.current;
     let ticking = false;
@@ -125,8 +124,8 @@ export default function Home() {
                 left: "50%",
               }}
             >
-              <h1 className="home_title">KATY GRANTHAM</h1>
-              <h2 className="home_subtitle">Full Stack Developer</h2>
+              <h1 className="home_title">Katy Grantham</h1>
+              <h2 className="home_subtitle">FULL STACK DEVELOPER</h2>
             </div>
 
             <button
@@ -171,18 +170,18 @@ export default function Home() {
             key="about"
             className="home-section"
             id="about"
-            ref={(el) => (sectionsRef.current[3] = el)}
+            ref={(el) => (sectionsRef.current[2] = el)}
           >
             <AboutMe />
             <button
               className="scroll-arrow up"
-              onClick={() => scrollToSection(2)}
+              onClick={() => scrollToSection(1)}
             >
               <span className="theme-arrow up"></span>
             </button>
             <button
               className="scroll-arrow down"
-              onClick={() => scrollToSection(4)}
+              onClick={() => scrollToSection(3)}
             >
               <span className="theme-arrow down"></span>
             </button>
@@ -193,18 +192,18 @@ export default function Home() {
             key="contact"
             className="home-section"
             id="contact"
-            ref={(el) => (sectionsRef.current[2] = el)}
+            ref={(el) => (sectionsRef.current[3] = el)}
           >
             <ContactForm />
             <button
               className="scroll-arrow up"
-              onClick={() => scrollToSection(1)}
+              onClick={() => scrollToSection(2)}
             >
               <span className="theme-arrow up"></span>
             </button>
             <button
               className="scroll-arrow down"
-              onClick={() => scrollToSection(3)}
+              onClick={() => scrollToSection(4)}
             >
               <span className="theme-arrow down"></span>
             </button>

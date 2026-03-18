@@ -15,20 +15,21 @@ const projects = [
       { label: "Site", url: "https://wearable-psi.vercel.app/" }
     ]
   },
-  {
+    {
     id: 2,
-    title: "St Albans Evening Rehearsal Orchestra",
-    logo: "/src/assets/images/sta_logo.png",
-    main: "/src/assets/images/sta_main.png",
+    title: "Soul & Subconscious",
+    logo: "/src/assets/images/soul_logo2.jpg",
+    main: "/src/assets/images/soul_main.png",
     type: "web",
     overview:
-      "The official website for the St Albans Evening Rehearsal Crchestra, featuring event information, rehearsal schedules, galleries, and integrated maps for venue locations.",
-    technologies: ["React", "CSS", "Google Maps API"],
+      "Soul Subconscious Hypnotherapy is a client-facing website built with React that offers an informative, calming experience for users seeking hypnotherapy services. The site includes pages like Home, About, Services, Blog, and FAQs, providing visitors with easy access to content about hypnotherapy, self-care strategies, and session booking. It features a Vite-powered development setup, CSS Modules for scoped component styling, and react-router for page navigation. The design integrates soothing, animated background elements for a calming user experience, with a mobile-friendly, accessible interface for all users.",
+    technologies: ["React", "Vite", "CSS Modules", "react-router", "Javascript"],
     links: [
-      { label: "GitHub", url: "https://github.com/katag1001/sta_rehearsal_orchestra" },
-      { label: "Site", url: "https://sta-rehearsal-orchestra.vercel.app/" }
+      { label: "GitHub", url: "https://github.com/katag1001/soul_subconscious" },
+      { label: "Site", url: "https://soul-subconscious.vercel.app/" },
     ]
   },
+
   {
     id: 3,
     title: "Travlr Mobile App",
@@ -42,21 +43,22 @@ const projects = [
       { label: "GitHub", url: "https://github.com/katag1001/Travlr" },
     ]
 
-  },
+  },  
   {
     id: 4,
-    title: "Soul & Subconscious",
-    logo: "/src/assets/images/soul_logo.png",
-    main: "/src/assets/images/soul_main.png",
+    title: "St Albans Evening Rehearsal Orchestra",
+    logo: "/src/assets/images/sta_logo.png",
+    main: "/src/assets/images/sta_main.png",
     type: "web",
     overview:
-      "Soul Subconscious Hypnotherapy is a client-facing website built with React that offers an informative, calming experience for users seeking hypnotherapy services. The site includes pages like Home, About, Services, Blog, and FAQs, providing visitors with easy access to content about hypnotherapy, self-care strategies, and session booking. It features a Vite-powered development setup, CSS Modules for scoped component styling, and react-router for page navigation. The design integrates soothing, animated background elements for a calming user experience, with a mobile-friendly, accessible interface for all users.",
-    technologies: ["React", "Vite", "CSS Modules", "react-router", "Javascript"],
+      "The official website for the St Albans Evening Rehearsal Crchestra, featuring event information, rehearsal schedules, galleries, and integrated maps for venue locations.",
+    technologies: ["React", "CSS", "Google Maps API"],
     links: [
-      { label: "GitHub", url: "https://github.com/katag1001/soul_subconscious" },
-      { label: "Site", url: "https://soul-subconscious.vercel.app/" },
+      { label: "GitHub", url: "https://github.com/katag1001/sta_rehearsal_orchestra" },
+      { label: "Site", url: "https://sta-rehearsal-orchestra.vercel.app/" }
     ]
   },
+
 
   
 ];

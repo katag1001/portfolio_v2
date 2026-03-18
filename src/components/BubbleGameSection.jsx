@@ -27,7 +27,7 @@ export default function BubbleGameSection() {
   return (
     <div className="home-section-container bubble-section-container">
 
-      <h2 className="bubble-section-title">Bubble Pop Challenge</h2>
+      <h2 className="card-title">Bubble Pop Challenge</h2>
 
       <div className="bubble-section-content">
 
@@ -49,9 +49,6 @@ export default function BubbleGameSection() {
             bubbles will appear faster and move quicker.
           </p>
 
-          <p className="bubble-description">
-            The longer you survive, the higher your score!
-          </p>
 
           <div className="bubble-score-panel">
             <div className="bubble-score">
