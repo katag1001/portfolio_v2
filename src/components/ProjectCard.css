@@ -1,11 +1,18 @@
+.home-section-container {
+  background: var(--bg-deep-purple);
+    box-shadow:
+    0 0 4px var(--bubble-pink-glow),
+    inset 0 0 30px var(--bubble-pink-glow, --bubble-rim-light);
+  border-radius: 16px;
+  width: 780px;
+  height: 450px;
+  z-index: 2;
+} 
+
+
 .project-card-container {
-  width: 900px;
-  height: 560px;
   margin: auto;
   padding: 28px;
-  background: var(--bg-deep-purple);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
   overflow-y: auto;
   font-family: var(--font-main);
 }

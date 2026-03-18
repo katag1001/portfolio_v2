@@ -1,9 +1,10 @@
 import React from "react";
-import "./ProjectCard.css";
+import "./projectCard.css";
+/*import ".././pages/home.css";*/
 
 export default function ProjectCard({ project, onBack }) {
   return (
-    <div className="project-card-container">
+    <div className=" home-section-container project-card-container">
 
       <div className="project-card-header">
         <h2 className="project-card-title">{project.title}</h2>
@@ -15,7 +16,7 @@ export default function ProjectCard({ project, onBack }) {
 
       <img
         className="project-card-image"
-        src={project.image}
+        src={project.main}
         alt={project.title}
       />
 

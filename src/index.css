@@ -10,7 +10,7 @@
   --fs-ui: 0.85rem;     
 
 /* Primary Backgrounds */
---bg-deep-purple: rgba(236, 232, 248, 1);      
+--bg-deep-purple: rgba(236, 232, 248, 0.7);    
 --bg-gradient-top: rgb(214, 224, 255);     
 --bg-gradient-bottom: rgba(255, 214, 235, 1);   
 
@@ -21,7 +21,7 @@
 
 /* UI Components (Cards/Windows) */
 --card-bg: rgba(255, 255, 255, 0.7);           
---card-border: rgba(180, 170, 210, 0.25);       
+--card-border: rgba(240, 237, 249, 0.863);       
 
 /* Typography & Icons */
 --text-main: rgba(45, 35, 65, 1);              
@@ -92,14 +92,3 @@
   transform: rotate(-135deg);
 }
 
-/* ==============================
-   SECTION CONTAINERS (Consistency)
-============================== */
-.home-section-container {
-  background: var(--bg-deep-purple);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  width: 750px;
-  height: 400px;
-  z-index: 2;
-}

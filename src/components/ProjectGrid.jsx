@@ -1,25 +1,54 @@
-import React from "react";
 import "./projectGrid.css";
 
-export const projects = [
+const projects = [
   {
     id: 1,
-    title: "Portfolio Website",
-    image: "/images/portfolio.png",
-    overview: "A personal portfolio website showcasing projects.",
-    technologies: ["React", "CSS", "Vite"],
+    title: "Wearable",
+    logo: "/src/assets/images/wearable_logo.png",
+    main: "/src/assets/images/wearable_main.png",
+    overview:
+      "A full-stack outfit planning app that allows users to upload clothing, automatically generate outfit combinations, and receive daily suggestions based on weather and location.",
+    technologies: ["React", "Node.js", "MongoDB", "Weather API"],
     links: [
-      { label: "GitHub", url: "https://github.com/example" },
-      { label: "Live Site", url: "https://example.com" }
+      { label: "GitHub", url: "https://github.com/katag1001/Wearable" },
+      { label: "Live Site", url: "https://wearable-psi.vercel.app/" }
     ]
   },
   {
     id: 2,
-    title: "Task Manager",
-    image: "/images/taskmanager.png",
-    overview: "A task management web application.",
+    title: "St Albans Evening Rehearsal Orchestra",
+    logo: "/src/assets/images/sta_logo.png",
+    main: "/src/assets/images/sta_main.png",
+    overview:
+      "An official website for the orchestra, featuring event information, rehearsal schedules, galleries, and integrated maps for venue locations.",
+    technologies: ["React", "CSS", "Google Maps API"],
+    links: [
+      { label: "GitHub", url: "https://github.com/katag1001/sta_rehearsal_orchestra" },
+      { label: "Live Site", url: "https://sta-rehearsal-orchestra.vercel.app/" }
+    ]
+  },
+  {
+    id: 3,
+    title: "Travlr Mobile App",
+    logo: "/src/assets/images/travlr_logo.png",
+    main: "/src/assets/images/travlr_logo.png",
+    overview:
+      "A travel planning mobile app that helps users organise trips, manage itineraries, track budgets, and maintain packing lists with dynamic destination-based UI themes.",
+    technologies: ["React Native", "JavaScript", "State Management"],
+    links: []
+  },
+  {
+    id: 4,
+    title: "Soul & Subconscious",
+    logo: "/src/assets/images/soul_logo.png",
+    main: "/src/assets/images/soul_main.png",
+    overview:
+      "A task management web application that allows users to create, track, and manage tasks efficiently.",
     technologies: ["React", "Node.js", "MongoDB"],
-    links: [{ label: "GitHub", url: "https://github.com/example" }]
+    links: [
+      { label: "GitHub", url: "https://github.com/example" },
+      { label: "GitHub", url: "https://github.com/example" },
+    ]
   }
 ];
 
@@ -36,7 +65,7 @@ export default function ProjectGrid({ onSelectProject }) {
             className="project-grid-item"
             onClick={() => onSelectProject(project)}
           >
-            <img src={project.image} alt={project.title} />
+            <img src={project.logo} alt={project.title} />
             <h3>{project.title}</h3>
           </div>
         ))}

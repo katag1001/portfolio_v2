@@ -114,16 +114,15 @@
 }
 
 /* ==============================
-   SECTION CONTAINERS (Consistency)
-============================== */
+   SECTION CONTAINERS
+==============================
 .home-section-container {
   background: var(--bg-deep-purple);
-  border: 1px solid var(--card-border);
   border-radius: 16px;
-  width: 750px;
-  height: 400px;
+  width: 780px;
+  height: 450px;
   z-index: 2;
-}
+} */
 
 /* ==============================
    HOME SECTIONS PADDING
