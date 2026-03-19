@@ -1,3 +1,4 @@
+import React from "react";
 import "./projectGrid.css";
 
 const projects = [
