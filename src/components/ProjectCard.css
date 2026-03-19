@@ -3,6 +3,7 @@
   margin: auto;
   overflow-y: auto;
   font-family: var(--font-main);
+
 }
 
 /* Header */
@@ -166,8 +167,8 @@
 
 /* Style the scrollbar */
 .project-card-container::-webkit-scrollbar {
-  width: 12px; /* Width of the scrollbar */
-  height: 12px; /* Height for horizontal scrollbar */
+  width: 12px; 
+  height: 12px; 
 }
 
 /* Track of the scrollbar */

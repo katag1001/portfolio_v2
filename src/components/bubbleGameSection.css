@@ -81,7 +81,7 @@
 
 
 /* General small screen adjustments */
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
   .bubble-section-container {
     padding: 16px; 
         flex-direction: column;

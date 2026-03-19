@@ -192,7 +192,7 @@
 /* ==============================
    MOBILE VERSION
 ============================== */
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
 
   .home-section-container {
   margin-top: 15%;
@@ -200,12 +200,14 @@
   width: 80%;
   height: 70%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
   /* Additional mobile adjustments */
   .home-container {
-    padding: 0 16px; 
+    padding: 0; 
+    width: 100%;
   }
 
   .scroll-arrow.up {
