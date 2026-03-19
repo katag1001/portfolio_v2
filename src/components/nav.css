@@ -32,7 +32,7 @@
 
 /* Mobile */
 
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
   .side-nav {
     position: fixed;
     margin-top: 20px;
