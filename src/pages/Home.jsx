@@ -12,7 +12,7 @@ import BubbleGameSection from "../components/BubbleGameSection";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
-  const [isMobile, setIsMobile] = useState(false); // Track screen size
+  const [isMobile, setIsMobile] = useState(false);
   const sectionsRef = useRef([]);
   const containerRef = useRef(null);
   const bubbleRef = useRef(null);

@@ -6,7 +6,7 @@
   height: 100vh;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  overflow-y: auto;
+  overflow-y: scroll;
   scrollbar-gutter: stable;
   padding: 0;
   margin: 0;
@@ -186,9 +186,6 @@
 .theme-arrow.up::after {
   transform: rotate(-135deg);
 }
-
-
-
 
 
 /* ==============================
