@@ -3,7 +3,7 @@
   gap: 40px;
   padding: 28px;
   font-family: var(--font-main);
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -32,6 +32,8 @@
   width: 60%;
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  height: 100%;
 }
 
 .about-title {
@@ -132,9 +134,9 @@
   }
 
   .about-image {
-    width: 100%; /* Full width */
-    max-height: 280px; /* Trim the height */
-    object-fit: cover; /* Maintain aspect ratio */
+    width: 100%; 
+    max-height: 280px; 
+    object-fit: cover;
     border-radius: 12px;
     border: 1px solid var(--card-border);
   }
@@ -142,10 +144,10 @@
   /* Right side text styling */
   .about-right {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
-
-  align-items: center;
+    align-items: center;
   }
 
   .about-title {
@@ -155,16 +157,24 @@
   }
 
   /* Scrollable text */
-  .about-text {
-    overflow-y: auto;
-    padding-right: 10px;
-    line-height: 1.6;
-    font-size: var(--fs-body);
-    color: var(--text-muted);
-  }
+    .about-text {
+        overflow: auto;
+        padding-right: 10px;
+        line-height: 1.6;
+        font-size: var(--fs-body);
+        color: var(--text-muted);
+        height: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
 
   .about-text p {
     margin-bottom: 16px;
+    text-align: center;
   }
 
   /* Keep the unique scrollbar styling */

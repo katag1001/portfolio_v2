@@ -6,7 +6,10 @@
   height: 100vh;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+  padding: 0;
+  margin: 0;
 }
 
 /* ==============================
@@ -216,9 +219,7 @@
 
 @media (max-width: 768px) {
 
-
-    .home-section-container {
-
+  .home-section-container {
   display: flex;
   justify-content: center;
   align-items: center;
