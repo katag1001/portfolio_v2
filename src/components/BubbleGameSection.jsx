@@ -29,7 +29,7 @@ export default function BubbleGameSection() {
 
       <h2 className="card-title">Bubble Pop Challenge</h2>
 
-      <div className="bubble-section-content">
+      <div className="bubble-section-content bubble-scroll-container">
 
         <div className="bubble-game-area">
           <BubbleGame />
@@ -40,10 +40,8 @@ export default function BubbleGameSection() {
           <h3 className="bubble-info-title">How to Play</h3>
 
           <p className="bubble-description">
-            Hover you mouse over the bubbles to pop them before they get to the top!
+            Hover your mouse over the bubbles to pop them before they get to the top!
           </p>
-
-
 
           <div className="bubble-score-panel">
             <div className="bubble-score">
