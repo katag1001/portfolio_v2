@@ -5,8 +5,8 @@
   --font-mono: 'Fira Code', monospace;
 
   
-  --fs-title: 3rem;
-  --fs-title-smaller: 2.5rem;
+  --fs-title: 2.7rem;
+  --fs-title-smaller: 2.3rem;
   --fs-h1: 2rem;      
   --fs-h2: 1.5rem;      
   --fs-body: 0.95rem;   
@@ -14,7 +14,7 @@
 
 
 --bg-deep-purple: rgba(236, 232, 248, 0.7);    
---bg-gradient-top: rgb(204, 217, 255);     
+--bg-gradient-top: rgb(186, 203, 253);     
 --bg-gradient-bottom: rgb(254, 228, 242);   
 
 

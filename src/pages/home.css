@@ -120,8 +120,8 @@
 
 
 .home-section-container {
-  width: 910px;
-  height: 530px;
+  width: 850px;
+  height: 470px;
   box-sizing: border-box;
   z-index: 2;
   background: var(--card-bg);
@@ -188,7 +188,7 @@
 /* ==============================
    MOBILE VERSION
 ============================== */
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
 
   .home-section-container {
   margin-top: 15%;
@@ -205,7 +205,7 @@
   }
 
   .scroll-arrow.down {
-    bottom: 2%; 
+    bottom: 0; 
   }
   
 
