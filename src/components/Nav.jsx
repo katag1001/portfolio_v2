@@ -1,5 +1,5 @@
 import React from "react";
-import "./sideNav.css";
+import "./nav.css";
 
 export default function SideNav() {
   return (
