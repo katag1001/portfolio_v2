@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Home.css";
+import "./home.css";
 import ".././index.css";
 import ".././App.css";
 import SideNav from '../components/SideNav.jsx';
