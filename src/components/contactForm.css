@@ -1,8 +1,7 @@
-/* General Section Layout */
-.home-section-container.contact-section-container {
+
+.contact-section-container {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   font-family: var(--font-main);
 }
 
@@ -82,8 +81,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
+  
+}
 
 .contact-form label {
   display: block;
@@ -92,8 +92,10 @@
   font-size: var(--fs-ui);
 }
 
-.contact-form input, .contact-form textarea {
-  width: 100%;
+
+.contact-form input{
+  width: 92%;
+  max-width: 300px;
   padding: 12px;
   border: 1px solid white;
   border-radius: 6px;
@@ -119,7 +121,7 @@
   font-size: var(--fs-ui);
   cursor: pointer;
   transition: transform 0.3s ease;
-  width: 100%;
+  width: 300px;
 }
 
 .contact-form button:hover {
@@ -143,82 +145,78 @@
 
 
 /* Mobile Adjustments for Contact Section with Scroll */
-@media (max-width: 600px) {
-  .home-section-container.contact-section-container {
-    flex-direction: column; /* Stack sections vertically */
-    padding: 10px; /* Adjust padding for smaller screens */
-    overflow-y: auto; /* Allow scrolling */
-    max-height: 100vh; /* Ensure it fits within the screen height */
+@media (max-width: 768px) {
+
+  .contact-section-container {
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   }
 
-  /* Left Section (Details) */
-  .contact-left {
-    max-width: 100%; /* Ensure full width for the left section on small screens */
-    padding: 15px; /* Reduce padding */
-  }
-
-  .contact-left-title {
-    font-size: var(--fs-h3); /* Adjust font size for smaller screens */
-    margin-bottom: 10px;
-  }
-
-  .contact-left-subtitle {
-    font-size: var(--fs-h2); /* Adjust font size for smaller screens */
-    margin-bottom: 50px; /* Reduce margin */
-  }
-
-  /* Contact Links */
-  .contact-links {
-    justify-content: center; /* Center the links */
-    gap: 10px;
-  }
-
-  .links-grid {
-    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr)); /* Keep grid responsive */
-    justify-items: center; /* Center the grid items */
-    width: 100%;
-    margin: 0;
-  }
-
-  .contact-link-btn {
-    padding: 8px; /* Reduce button size */
-    svg {
-      font-size: 24px; /* Reduce icon size */
-    }
-  }
-
-  /* Right Section (Contact Form) */
-  .contact-right {
-    max-width: 100%; /* Ensure full width for the contact form */
-    padding: 20px; /* Reduce padding for mobile */
-    margin-top: 20px; /* Add space between the sections */
-    display: flex;
+  .contact-left, .contact-right {
+    max-width: 100%;
+    padding: 5%;
+    display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 8px;
   }
 
-  .contact-right h2 {
-    font-size: var(--fs-h3); /* Adjust heading size */
-    margin-bottom: 15px;
+  .contact-right {
+    margin-top: 0;
   }
 
-  /* Contact Form Inputs */
-  .contact-form input, .contact-form textarea {
-    padding: 10px; /* Reduce padding */
-    margin-bottom: 15px; /* Reduce margin */
+
+  .divider {
+    display: none;
+  }
+
+
+  .contact-form {
+    padding: 10px; 
+    margin-top:0;  
+    max-width: 100%       
+  }
+
+  .contact-form input, .contact-form button {
+    font-size: 16px;          
+    padding: 12px;
+    max-width: 100%;       
+  }
+
+  .contact-left-title {
+    font-size: 1rem;  
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .contact-left-subtitle {
+    font-size: 1.2rem; 
+    margin-bottom: 10px; 
+  }
+
+  .contact-link-btn {
+    padding: 3px; 
+  }
+
+  .contact-link-btn svg {
+    font-size: 14px;    
   }
 
   .contact-form button {
-    padding: 10px 20px; /* Adjust button size */
+    font-size: 14px;     
   }
 
-  /* Horizontal Divider */
-  .divider {
-    width: 100%; /* Make the divider full width */
-    height: 2px; /* Horizontal line */
-    background-color: var(--text-muted); /* Change to a horizontal divider */
-    margin: 20px 0; /* Adjust margin */
+  .form-status {
+    font-size: 10px;    
   }
+
+.contact-form input, .contact-form textarea {
+  margin-bottom: 8px;
+}
+
+.contact-form textarea {
+  max-width: 80%;
+}
 }

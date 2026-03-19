@@ -67,7 +67,7 @@ export default function ContactForm() {
           </label>
           <label>
             Your message:
-            <textarea name="message" required></textarea>
+            <input name="message" required></input>
           </label>
           <button type="submit">Send</button>
         </form>
