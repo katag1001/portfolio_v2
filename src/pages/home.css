@@ -7,7 +7,6 @@
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
-  position: relative;
 }
 
 /* ==============================
@@ -204,12 +203,6 @@
   align-items: center;
 }
 
-  /* Additional mobile adjustments */
-  .home-container {
-    padding: 0; 
-    width: 100%;
-  }
-
   .scroll-arrow.up {
     top: 45px; 
   }
@@ -218,17 +211,30 @@
     bottom: 10px; 
   }
   
-  /* Title bubble scaling on mobile */
-  .home_header_bubble {
-    padding: 40px 60px;
-    max-width: 250px;
-  }
 
-  .home_title {
+}
+
+@media (max-width: 768px) {
+
+
+    .home-section-container {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+    .home_title {
     font-size: 24px; 
   }
 
   .home_subtitle {
     font-size: 18px; 
   }
+
+    .home_header_bubble {
+    max-width: 250px;
+  }
+
+
 }
