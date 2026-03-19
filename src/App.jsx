@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
-import SideNav from './components/SideNav';
-
 import Home from './pages/Home';
 
 function App() {
