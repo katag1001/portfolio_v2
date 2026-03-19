@@ -23,7 +23,8 @@
 
 
 --card-bg: rgba(239, 226, 252, 0.5);            
---card-border: rgba(240, 237, 249, 0.863);       
+--card-border: rgba(240, 237, 249, 0.863);  
+--card-border-shadow: rgba(45, 35, 65, 0.15);
 
 
 --text-main: rgba(45, 35, 65, 1);              

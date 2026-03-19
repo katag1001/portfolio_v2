@@ -125,7 +125,7 @@
   border-radius: 20px;
   padding: 20px;
   backdrop-filter: blur(14px);
-  box-shadow: 0 10px 30px rgba(45, 35, 65, 0.15);
+  box-shadow: 0 10px 30px var(--card-border-shadow);
   border: 1px solid var(--card-border);
 }
 
@@ -155,11 +155,6 @@
 .theme-arrow {
   width: 40px;
   height: 40px;
-  /*box-shadow:
-    0 0 4px var(--bubble-pink-glow),
-    inset 0 0 30px var(--bubble-pink-glow, --bubble-rim-light);
-  box-shadow: 0 0 10px var(--bubble-pink-glow), inset 0 0 15px var(--bubble-rim-light);
-  border-radius: 50%;*/
   display: flex;
   justify-content: center;
   align-items: center;
