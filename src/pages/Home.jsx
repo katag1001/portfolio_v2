@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./home.css";
 import ".././index.css";
 import ".././App.css";
-import SideNav from '../components/SideNav.jsx';
+import SideNav from '../components/Nav.jsx';
 import BubbleBackground from "../components/BubbleBackground";
 import ContactForm from "../components/ContactForm";
 import ProjectGrid from "../components/ProjectGrid";
