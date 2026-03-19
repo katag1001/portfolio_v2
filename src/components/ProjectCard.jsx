@@ -1,15 +1,14 @@
 import React from "react"; 
-import "./projectCard.css";
-import { FaGithub } from 'react-icons/fa';
+import "./projectCard.css"; 
+import { FaGithub } from 'react-icons/fa'; 
 import { CiGlobe } from 'react-icons/ci';
 
 export default function ProjectCard({ project, onBack }) {
   return (
     <div className={`home-section-container project-card-container ${project.type === 'mobile' ? 'mobile-card' : 'web-card'}`}>
-
+      {/* Header section without conditional styling */}
       <div className="project-card-header">
         <h2 className="card-title">{project.title}</h2>
-
         <button className="back-button" onClick={onBack}>
           ← Back
         </button>

@@ -1,23 +1,25 @@
 /* General Styles for Both Cards */
 .project-card-container {
-  margin: auto;
+  margin: 0;
   overflow-y: auto;
   font-family: var(--font-main);
+  display: flex;
+  flex-direction: column;
 
 }
 .project-card-body {
-
   height: 100%;
   display: flex;
   flex-direction: column;
+
 }
 
-/* Header */
 .project-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 18px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
 }
 
 /* Back Button */
@@ -136,6 +138,8 @@
   border-radius: 10px;
   margin-bottom: 24px;
 }
+
+
 /* Layout for Mobile App Cards ------------------------------------------------------------------*/
 .project-card-container.mobile-card .project-card-body {
   display: flex;
@@ -200,3 +204,46 @@
   background: var(--bg-deep-purple); 
 }
 
+
+@media (max-width: 1300px) {
+  .project-card-header {
+    margin-top: 5%;
+  }
+
+}
+
+@media (max-width: 600px) {
+.project-card-container.mobile-card .project-card-body {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  height: 100%;
+
+}
+
+.project-card-container.mobile-card .project-card-image {
+  width: 100%;  
+  max-height: 240px;
+  object-fit: cover;
+  margin-bottom: 24px;
+  border-radius: 10px;
+}
+
+.project-card-container.mobile-card .project-card-details {
+  width: 100%;  
+}
+
+/* Image */
+.project-card-image.mobile-card {
+  width: 100%;
+  max-height: 240px; 
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+
+  .card-title {
+    font-size: 16px;
+  }
+}
