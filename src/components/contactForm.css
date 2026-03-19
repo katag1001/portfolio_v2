@@ -28,7 +28,7 @@
 }
 
 .contact-left-subtitle {
-  font-size: var(--fs-title);
+  font-size: var(--fs-title-smaller);
   color: var(--text-main);
   margin-bottom: 120px;
 }
@@ -142,10 +142,24 @@
   margin: 0 30px;
 }
 
+@media (max-width: 1300px) {
+
+.contact-left-title {
+  margin-bottom: 15px;
+}
+
+.contact-left-subtitle {
+  margin-top: 0;
+  margin-bottom: 60px;
+  font-size: var(--fs-h1);
+}
+
+}
+
 
 
 /* Mobile Adjustments for Contact Section with Scroll */
-@media (max-width: 768px) {
+@media (max-width: 920px) {
 
   .contact-section-container {
   display: flex; 
@@ -187,7 +201,7 @@
 
   .contact-left-title {
     font-size: 1rem;  
-    margin-bottom: 0;
+    margin-bottom: 5%;
     margin-top: 0;
   }
 
