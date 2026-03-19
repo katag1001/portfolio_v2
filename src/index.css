@@ -4,17 +4,18 @@
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: 'Fira Code', monospace;
 
-  
   --fs-title: 2.7rem;
   --fs-title-smaller: 2.3rem;
   --fs-h1: 2rem;      
   --fs-h2: 1.5rem;      
   --fs-body: 0.95rem;   
-  --fs-ui: 0.85rem;     
+  --fs-ui: 0.85rem; 
+}
 
 
+[data-theme='light'] {
 --bg-deep-purple: rgba(236, 232, 248, 0.7);    
---bg-gradient-top: rgb(186, 203, 253);     
+--bg-gradient-top: rgb(225, 232, 253);     
 --bg-gradient-bottom: rgb(254, 228, 242);   
 
 
@@ -23,7 +24,6 @@
 --bubble-rim-light: rgba(255, 255, 255, 0.8);   
 
 
-/*--card-bg: rgba(239, 226, 252, 0.5);*/
 --card-bg: rgba(254, 254, 254, 0.5);          
 --card-border: rgba(240, 237, 249, 0.863);  
 --card-border-shadow: rgba(45, 35, 65, 0.15);
@@ -49,17 +49,9 @@
 
 
 
-/*:root {
-  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono: 'Fira Code', monospace;
-
-  --fs-h1: 2.5rem;      
-  --fs-h2: 1.5rem;      
-  --fs-body: 0.95rem;   
-  --fs-ui: 0.85rem; 
-
-  --bg-deep-purple: rgba(22, 11, 38, 1);      
-  --bg-gradient-top: rgba(28, 26, 71, 1);     
+[data-theme='dark'] {
+  --bg-deep-purple: rgb(22, 10, 40);      
+  --bg-gradient-top: rgb(18, 16, 51);     
   --bg-gradient-bottom: rgba(155, 122, 170, 1);    
   
   
@@ -68,7 +60,7 @@
   --bubble-rim-light: rgba(255, 255, 255, 0.4);
   
 
-  --card-bg: rgba(35, 25, 55, 0.85);         
+  --card-bg: rgba(22, 11, 38, 0.7);          
   --card-border: rgba(255, 255, 255, 0.1);   
 
 
@@ -89,7 +81,7 @@
 
   --transition-main: 0.25s ease;
   --overlay: rgba(12, 9, 17, 0);
-}*/
+}
 
 
 

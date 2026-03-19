@@ -1,0 +1,20 @@
+
+/* Button styling with transition */
+.mode-toggle-button {
+  padding: 16px;
+  border-radius: 15px;
+  color: var(--text-main);
+  outline: none;
+  background: var(--bg-gradient-bottom);
+  box-shadow: 0 0 8px var(--card-border-shadow);
+  font-size: var(--fs-body);
+  position: fixed;
+  top: 85%;
+  left: 85%;
+  z-index: 1000;
+  border: none;
+}
+
+.mode-toggle-button:hover {
+  transform: translateY(-4px);
+}

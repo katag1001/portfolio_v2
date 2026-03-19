@@ -9,6 +9,7 @@ import ProjectGrid from "../components/ProjectGrid";
 import ProjectCard from "../components/ProjectCard";
 import AboutMe from "../components/AboutMe";
 import BubbleGameSection from "../components/BubbleGameSection";
+import ModeToggle from  "../components/ModeToggle.jsx";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -95,6 +96,8 @@ export default function Home() {
             id="home"
             ref={(el) => (sectionsRef.current[0] = el)}
           >
+            <ModeToggle />
+            
             <div
               ref={bubbleRef}
               className="home_header_bubble"
@@ -207,6 +210,7 @@ export default function Home() {
             </button>
           </div>,
         ]}
+
       </div>
     </>
   );

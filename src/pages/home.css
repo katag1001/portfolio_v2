@@ -120,8 +120,8 @@
 
 
 .home-section-container {
-  width: 850px;
-  height: 470px;
+  width: 820px;
+  height: 450px;
   box-sizing: border-box;
   z-index: 2;
   background: var(--card-bg);
@@ -211,7 +211,7 @@
 
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1100px) {
 
   .home-section-container {
   display: flex;
