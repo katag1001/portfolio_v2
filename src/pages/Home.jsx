@@ -21,10 +21,10 @@ export default function Home() {
   // Detect screen size on load and resize
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // You can adjust this threshold as needed
+      setIsMobile(window.innerWidth <= 800);
     };
-    handleResize(); // Check initial screen size
-    window.addEventListener('resize', handleResize); // Listen for resize events
+    handleResize(); 
+    window.addEventListener('resize', handleResize); 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -38,7 +38,7 @@ export default function Home() {
 
   // Update bubble transformation (only on desktop)
   const updateBubbleTransform = () => {
-    if (isMobile) return; // Skip the animation on mobile
+    if (isMobile) return;
 
     const progress = scrollProgress.current;
     const translateX = 40 * progress;
@@ -67,7 +67,7 @@ export default function Home() {
 
           scrollProgress.current = Math.min(scrollTop / sectionHeight, 1);
 
-          updateBubbleTransform(); // Call update only if it's not mobile
+          updateBubbleTransform(); 
 
           ticking = false;
         });
@@ -79,7 +79,7 @@ export default function Home() {
     container.addEventListener("scroll", handleScroll);
 
     return () => container.removeEventListener("scroll", handleScroll);
-  }, [isMobile]); // Dependency on screen size change
+  }, [isMobile]); 
 
   return (
     <>
@@ -100,10 +100,10 @@ export default function Home() {
               className="home_header_bubble"
               id="home"
               style={{
-                position: isMobile ? "absolute" : "fixed", // Adjust position based on screen size
-                top: isMobile ? "10%" : "50%", // Position at top on mobile, centered on desktop
+                position: isMobile ? "absolute" : "fixed", 
+                top: isMobile ? "10%" : "50%", 
                 left: "50%",
-                transform: isMobile ? "translateX(-50%)" : "translate(-50%, -50%)", // Ensure center alignment on mobile
+                transform: isMobile ? "translateX(-50%)" : "translate(-50%, -50%)", 
               }}
             >
               <h1 className="home_title">Katarina Grantham</h1>
