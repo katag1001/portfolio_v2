@@ -103,6 +103,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 10;
+  outline: none;
 }
 
 .scroll-arrow:hover {
@@ -150,9 +151,6 @@
   z-index: 2;
 }
 
-
-
-
   
 .theme-arrow {
   width: 40px;
@@ -160,7 +158,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
   cursor: pointer;
   margin: 10px auto;
   position: relative;
@@ -204,11 +201,11 @@
 }
 
   .scroll-arrow.up {
-    top: 45px; 
+    top: 7.5%; 
   }
 
   .scroll-arrow.down {
-    bottom: 10px; 
+    bottom: 2%; 
   }
   
 
@@ -221,7 +218,5 @@
   justify-content: center;
   align-items: center;
 }
-
-
 
 }
