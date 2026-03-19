@@ -217,7 +217,7 @@
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1300px) {
 
   .home-section-container {
   display: flex;
@@ -226,15 +226,8 @@
 }
 
     .home_title {
-    font-size: 24px; 
-  }
-
-  .home_subtitle {
-    font-size: 18px; 
-  }
-
-    .home_header_bubble {
-    max-width: 250px;
+      margin-top: 10%
+    font-size: 35px; 
   }
 
 

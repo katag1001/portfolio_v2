@@ -1,10 +1,8 @@
-import React, { useState, useEffect, useRef } from "react"; 
+import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import ".././index.css";
 import ".././App.css";
 import SideNav from '../components/SideNav.jsx';
-
-
 import BubbleBackground from "../components/BubbleBackground";
 import ContactForm from "../components/ContactForm";
 import ProjectGrid from "../components/ProjectGrid";
@@ -14,11 +12,21 @@ import BubbleGameSection from "../components/BubbleGameSection";
 
 export default function Home() {
   const [selectedProject, setSelectedProject] = useState(null);
-
+  const [isMobile, setIsMobile] = useState(false); // Track screen size
   const sectionsRef = useRef([]);
   const containerRef = useRef(null);
   const bubbleRef = useRef(null);
   const scrollProgress = useRef(0);
+
+  // Detect screen size on load and resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // You can adjust this threshold as needed
+    };
+    handleResize(); // Check initial screen size
+    window.addEventListener('resize', handleResize); // Listen for resize events
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   // Scroll to a section smoothly
   const scrollToSection = (index) => {
@@ -28,12 +36,13 @@ export default function Home() {
     }
   };
 
-  // Update bubble transform 
+  // Update bubble transformation (only on desktop)
   const updateBubbleTransform = () => {
-    const progress = scrollProgress.current;
+    if (isMobile) return; // Skip the animation on mobile
 
-    const translateX = -41.5 * progress;
-    const translateY = -40 * progress;
+    const progress = scrollProgress.current;
+    const translateX = 40 * progress;
+    const translateY = -42 * progress;
     const scale = 1 - 0.5 * progress;
 
     if (bubbleRef.current) {
@@ -58,7 +67,7 @@ export default function Home() {
 
           scrollProgress.current = Math.min(scrollTop / sectionHeight, 1);
 
-          updateBubbleTransform();
+          updateBubbleTransform(); // Call update only if it's not mobile
 
           ticking = false;
         });
@@ -70,44 +79,15 @@ export default function Home() {
     container.addEventListener("scroll", handleScroll);
 
     return () => container.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("bounce");
-            setTimeout(() => {
-              entry.target.classList.remove("bounce");
-            }, 600);
-          }
-        });
-      },
-      { threshold: 0.6 }
-    );
-
-    sectionsRef.current.forEach((section) => {
-      if (section) observer.observe(section);
-    });
-
-    return () => {
-      sectionsRef.current.forEach((section) => {
-        if (section) observer.unobserve(section);
-      });
-    };
-  }, []);
+  }, [isMobile]); // Dependency on screen size change
 
   return (
     <>
-      {/* BUBBLE BACKGROUND  */}
       <BubbleBackground numBubbles={22} minSize={12} maxSize={200} />
-
       <div className="home_container" ref={containerRef}>
-<SideNav />
+        <SideNav />
         {/* SECTIONS */}
         {[
-
           /* HOME TITLE */
           <div
             key="home"
@@ -120,9 +100,10 @@ export default function Home() {
               className="home_header_bubble"
               id="home"
               style={{
-                position: "fixed",
-                top: "50%",
+                position: isMobile ? "absolute" : "fixed", // Adjust position based on screen size
+                top: isMobile ? "10%" : "50%", // Position at top on mobile, centered on desktop
                 left: "50%",
+                transform: isMobile ? "translateX(-50%)" : "translate(-50%, -50%)", // Ensure center alignment on mobile
               }}
             >
               <h1 className="home_title">Katarina Grantham</h1>
