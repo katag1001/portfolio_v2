@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import ".././index.css";
 import ".././App.css";
+import SideNav from '../components/SideNav.jsx';
 
 
 import BubbleBackground from "../components/BubbleBackground";
@@ -103,7 +104,7 @@ export default function Home() {
       <BubbleBackground numBubbles={22} minSize={12} maxSize={200} />
 
       <div className="home_container" ref={containerRef}>
-
+<SideNav />
         {/* SECTIONS */}
         {[
 

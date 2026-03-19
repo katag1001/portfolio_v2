@@ -7,7 +7,7 @@ import Home from './pages/Home';
 function App() {
   return (
     <Router>
-      <SideNav />
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Navigate to="/" replace />} />

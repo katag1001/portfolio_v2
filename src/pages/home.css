@@ -2,7 +2,7 @@
    HOME CONTAINER
 ============================== */
 .home_container {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
