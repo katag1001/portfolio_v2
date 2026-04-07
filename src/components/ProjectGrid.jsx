@@ -33,12 +33,13 @@ const projects = [
 
   {
     id: 3,
-    title: "Travlr Mobile App",
+    title: "TravlrMe Mobile App",
     logo: "/travlr_logo.png",
     main: "/travlr_main.jpg",
+    qr: "/download_qr.jpg",
     type: "mobile",
     overview:
-      "Travelr is a comprehensive travel organization app built with React Native and Expo Go that allows users to manage trips, itineraries, packing lists, and budgets with automated cross-module data syncing. It features a dual-view itinerary system (Calendar/List), automated budgeting that tracks expenses across transport and accommodation, and seamless syncing between modules using AsyncStorage. The app’s modular architecture uses a relational logic model, where actions like adding flights or hotels auto-generate related entries in the budget and itinerary. React Native Paper powers the UI with Material Design components, while a custom Dynamic Theming Engine adapts the interface based on geographic keywords in trip names. The app is built using React Context API for global state management, with utilities like uuid for ID generation and date-fns for date manipulation, ensuring a smooth and dynamic user experience.",
+      "TravlrMe is a comprehensive travel organization app built with React Native and Expo Go that allows users to manage trips, itineraries, packing lists, and budgets with automated cross-module data syncing. It features a dual-view itinerary system (Calendar/List), automated budgeting that tracks expenses across transport and accommodation, and seamless syncing between modules using AsyncStorage. The app’s modular architecture uses a relational logic model, where actions like adding flights or hotels auto-generate related entries in the budget and itinerary. React Native Paper powers the UI with Material Design components, while a custom Dynamic Theming Engine adapts the interface based on geographic keywords in trip names. The app is built using React Context API for global state management, with utilities like uuid for ID generation and date-fns for date manipulation, ensuring a smooth and dynamic user experience.",
     technologies: ["React Native", "Expo Go", "React Context API", "React Native Paper", "async-storage", "uuid"],
    links: [
       { label: "GitHub", url: "https://github.com/katag1001/Travlr" },

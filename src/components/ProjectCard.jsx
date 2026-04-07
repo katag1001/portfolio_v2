@@ -66,6 +66,18 @@ export default function ProjectCard({ project, onBack }) {
               })}
             </div>
           </div>
+
+          {project.qr && (
+          <div className="project-section qr-section">
+            <h3>Download App</h3>
+            <div className="qr-container">
+              <img src={project.qr} alt={`${project.title} QR code`} />
+              <p>Scan to open the Play Store</p>
+            </div>
+          </div>
+        )}
+
+
         </div>
       </div>
     </div>

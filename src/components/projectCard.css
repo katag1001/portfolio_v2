@@ -112,6 +112,32 @@
 }
 
 
+
+/* QR Section */
+
+
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.qr-container img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: white;
+  padding: 8px;
+}
+
+.qr-container p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+
 /* Layout for Web App Cards ------------------------------------------------------------------*/
 .project-card-container.web-card .project-card-body {
   display: flex;
