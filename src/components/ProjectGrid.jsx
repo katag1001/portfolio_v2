@@ -57,7 +57,7 @@ const projects = [
     technologies: ["React", "CSS", "Google Maps API"],
     links: [
       { label: "GitHub", url: "https://github.com/katag1001/sta_rehearsal_orchestra" },
-      { label: "Site", url: "https://sta-rehearsal-orchestra.vercel.app/" }
+      { label: "Site", url: "https://stalbans-ero.org.uk/" }
     ]
   },
 
