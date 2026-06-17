@@ -17,23 +17,13 @@ export default function AboutMe() {
         <h2 className="about-title">Meet Katy</h2>
 
         <div className="about-text">
-          <p>
-Hello! I'm Katy and I began my career in data analysis and CRM, helping companies turn complex datasets into actionable insights. From managing multi-market CRM systems to leading testing strategies at H&M, I discovered a love for problem-solving and building efficient, tech-driven solutions.
 
-          </p>
-
-          <p>
-That passion led me to full-stack development, where I now create web and mobile applications using React, React Native, Node.js, and MongoDB. I bring the same analytical mindset from my data background to coding, focusing on scalable, maintainable, and user-friendly solutions while continuing to learn and grow.
-          </p>
-
-          <p>
-
-Outside of work, I’m a world traveller and language enthusiast. I’ve lived in five countries and visited over 50, and I love immersing myself in new cultures. If I'm not travelling or coding, you'll probably find me attached to my sewing machine, figuring out new and creative ways to bring fabric to life (either that, or I'm playing sudoku).
-          </p>
-
-          <p>
-            Get in touch via my contact page or download my resume to learn more about my experience and projects. I’m always excited to connect with fellow developers, potential collaborators, or anyone interested in chatting about tech, travel, or sewing!
-          </p>
+<p>Hi, I'm Katy and I’m a full stack developer 👋. </p>
+<p>I’m a lifelong learner and lover of knowledge.</p>
+<p>After several years working in data analysis with SQL and Python, I caught the coding bug (pun intended). I’ve always been someone who loves getting stuck into a problem and am able to hyper-focus for hours when there’s a solution to be found. I’m at my happiest when I’m building, improving, and making sense of something challenging.</p>
+<p>Right now, I’m obsessed with building my wardrobe pairing app, Wearable, which you can check out in my projects above. I wanted to crack the secret of what makes an outfit look good and build that into an algorithm. I also wanted to solve the age-old problem of having a wardrobe full of clothes and nothing to wear, so that when someone uses my app, they’re simply given the perfect option based on the weather, their existing wardrobe, and what they haven’t worn recently.</p>
+<p>And when I’m not coding, you’ll usually find me sat at (and sometimes sewn into) my sewing machine, solving problems in a different way. I love the engineering behind constructing a garment and how you can mathematically transform a flat piece of fabric into a three-dimensional object that fits and moves with the human body.</p>
+<p>If you want to know more, feel free to get in touch below or download my CV. Looking forward to hearing from you!</p>
 
 
           {/* Download CV button */}
