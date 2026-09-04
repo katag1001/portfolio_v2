@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa"; 
-import "./contactForm.css"; 
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import useHeaderEyebrow from "../hooks/useHeaderEyebrow";
+import "./contactForm.css";
 
 export default function ContactForm() {
+  useHeaderEyebrow("04", "Contact");
   const [status, setStatus] = useState("");
 
   const handleSubmit = async (e) => {
@@ -33,9 +35,9 @@ export default function ContactForm() {
   return (
     <div className="home-section-container contact-section-container">
       <div className="contact-left">
-        <h2 className="contact-left-title">Get in touch</h2>
-        <h3 className="contact-left-subtitle">LET'S COLLABORATE</h3>
-        <div className="links-grid"> 
+        <h2 className="contact-left-subtitle">Let's collaborate</h2>
+        <h3 className="contact-left-title">Get in touch</h3>
+        <div className="links-grid">
           <a
             href="https://github.com/katag1001"
             target="_blank"

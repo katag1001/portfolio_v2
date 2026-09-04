@@ -1,14 +1,19 @@
-import React from "react"; 
-import "./projectCard.css"; 
-import { FaGithub } from 'react-icons/fa'; 
+import React from "react";
+import "./projectCard.css";
+import { FaGithub } from 'react-icons/fa';
 import { CiGlobe } from 'react-icons/ci';
+import useHeaderEyebrow from "../hooks/useHeaderEyebrow";
 
 export default function ProjectCard({ project, onBack }) {
+  useHeaderEyebrow(null, "Project");
+
   return (
     <div className={`home-section-container project-card-container ${project.type === 'mobile' ? 'mobile-card' : 'web-card'}`}>
       {/* Header section without conditional styling */}
       <div className="project-card-header">
-        <h2 className="card-title">{project.title}</h2>
+        <div>
+          <h2 className="card-title">{project.title}</h2>
+        </div>
         <button className="back-button" onClick={onBack}>
           ← Back
         </button>

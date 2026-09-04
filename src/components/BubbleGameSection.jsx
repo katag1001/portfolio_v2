@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import BubbleGame from "./BubbleGame";
+import useHeaderEyebrow from "../hooks/useHeaderEyebrow";
 import "./bubbleGameSection.css";
 
 const LAST_SCORE_KEY = "bubbleGame_lastScore";
 const BEST_SCORE_KEY = "bubbleGame_bestScore";
 
 export default function BubbleGameSection() {
+  useHeaderEyebrow("05", "Play");
   const [bestScore, setBestScore] = useState(0);
   const [lastScore, setLastScore] = useState(0);
 

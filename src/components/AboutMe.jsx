@@ -1,17 +1,12 @@
 import React from "react";
+import useHeaderEyebrow from "../hooks/useHeaderEyebrow";
 import "./aboutMe.css";
 
 export default function AboutMe() {
+  useHeaderEyebrow("02", "About");
+
   return (
     <div className="home-section-container about-container">
-
-      <div className="about-left">
-        <img
-          src="/katy.jpg"
-          alt="Katy"
-          className="about-image"
-        />
-      </div>
 
       <div className="about-right">
         <h2 className="about-title">Meet Katy</h2>
@@ -30,12 +25,20 @@ export default function AboutMe() {
           <a
             href="/Katarina_Grantham_CV.pdf"
             download
-            className="download-cv-button"
+            className="editorial-btn download-cv-button"
           >
-            Download My CV
+            Download my CV
           </a>
         </div>
 
+      </div>
+
+      <div className="about-left">
+        <img
+          src="/katy.jpg"
+          alt="Katy"
+          className="about-image"
+        />
       </div>
 
     </div>

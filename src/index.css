@@ -6,10 +6,51 @@
 
   --fs-title: 2.7rem;
   --fs-title-smaller: 2.3rem;
-  --fs-h1: 2rem;      
-  --fs-h2: 1.5rem;      
-  --fs-body: 0.95rem;   
-  --fs-ui: 0.85rem; 
+  --fs-h1: 2rem;
+  --fs-h2: 1.5rem;
+  --fs-body: 0.95rem;
+  --fs-ui: 0.85rem;
+
+  /* ==============================
+     EDITORIAL DESIGN SYSTEM
+     Additive tokens only — nothing above this block, and nothing
+     inside the [data-theme] blocks below, has its value changed.
+     The bubble background & bubble game read only the original
+     tokens, so they render identically regardless of what's added here.
+  ============================== */
+
+  /* -- extended type scale -- */
+  --xxl-font: clamp(4rem, 10vw, 8rem);
+  --xl-font: clamp(3rem, 8vw, 7rem);
+  --fs-display: clamp(2.8rem, 7vw, 6.4rem);
+  --fs-h3: 1.15rem;
+  --fs-h4: 1rem;
+  --fs-h5: 2rem;
+  --fs-small: 0.8rem;
+  --fs-label: 0.72rem;
+
+  /* -- tracking -- */
+  --ls-label: 0.22em;
+  --ls-wide: 0.05em;
+
+  /* -- spacing scale -- */
+  --space-3xs: 4px;
+  --space-2xs: 8px;
+  --space-xs: 12px;
+  --space-sm: 18px;
+  --space-md: 28px;
+  --space-lg: 48px;
+  --space-xl: 72px;
+  --space-2xl: 110px;
+
+  /* -- radius -- */
+  --radius-sm: 2px;
+  --radius-md: 10px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  /* -- structural line -- */
+  --line-w: 1px;
 }
 
 
@@ -45,6 +86,13 @@
 
 --transition-main: 0.25s ease;
 --overlay: rgba(12, 9, 17, 0);
+
+/* editorial additions */
+--line-color: rgba(45, 35, 65, 0.22);
+--line-color-strong: rgba(45, 35, 65, 0.45);
+--numeral-color: rgba(45, 35, 65, 0.35);
+--tag-bg: rgba(45, 35, 65, 0.06);
+--chip-bg: rgba(255, 255, 255, 0.55);
 }
 
 
@@ -81,6 +129,13 @@
 
   --transition-main: 0.25s ease;
   --overlay: rgba(12, 9, 17, 0);
+
+  /* editorial additions */
+  --line-color: rgba(255, 255, 255, 0.22);
+  --line-color-strong: rgba(255, 255, 255, 0.45);
+  --numeral-color: rgba(255, 255, 255, 0.35);
+  --tag-bg: rgba(255, 255, 255, 0.06);
+  --chip-bg: rgba(22, 11, 38, 0.45);
 }
 
 

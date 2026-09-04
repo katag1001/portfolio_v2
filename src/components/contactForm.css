@@ -7,7 +7,7 @@
 
 .contact-left, .contact-right {
   flex: 1;
-  padding: 30px;
+  padding: var(--space-md);
   max-width: 50%;
   box-sizing: border-box;
 }
@@ -16,21 +16,26 @@
 .contact-left {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; 
+  justify-content: center;
   align-items: flex-start;
 }
 
 .contact-left-title {
-  font-size: var(--fs-h1);
-  font-weight: bold;
-  color: var(--text-muted);
-  margin-bottom: 15px;
+  font-size: var(--fs-display);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-main);
+  margin: 0 0 var(--space-lg);
 }
 
 .contact-left-subtitle {
-  font-size: var(--fs-title-smaller);
-  color: var(--text-main);
-  margin-bottom: 120px;
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0 0 var(--space-2xs);
 }
 
 /* Contact Links --------------------------------------------------------------------------*/
@@ -38,7 +43,7 @@
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
-  
+
 }
 
 .links-grid {
@@ -53,105 +58,119 @@
 }
 
 .contact-link-btn {
-  background: var(--accent-blue);
-  color: white;
+  background: transparent;
+  color: var(--text-main);
   text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  padding: 10px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: var(--radius-pill);
+  border: var(--line-w) solid var(--text-main);
+  padding: var(--space-xs);
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
 
 .contact-link-btn svg {
-  font-size: 32px;
+  font-size: 28px;
 }
 
 .contact-link-btn:hover {
   transform: translateY(-4px);
-  opacity: 0.9;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: #fff;
 }
 
 /* Right Section (Contact Form) */
 .contact-right {
-  border-radius: 8px;
-  padding: 30px;
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 
-  
+.contact-form {
+  width: 100%;
+  max-width: 320px;
 }
 
 .contact-form label {
   display: block;
-  margin-bottom: 12px;
-  color: var(--text-main);
-  font-size: var(--fs-ui);
+  margin-bottom: var(--space-xs);
+  color: var(--text-muted);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
 }
 
 
 .contact-form input{
-  width: 92%;
-  max-width: 300px;
-  padding: 12px;
-  border: 1px solid white;
-  border-radius: 6px;
-  font-size: var(--fs-ui);
-  background: var(--bg-deep-purple);
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--space-xs) 0;
+  border: none;
+  border-bottom: var(--line-w) solid var(--line-color-strong);
+  border-radius: 0;
+  font-size: var(--fs-body);
+  background: transparent;
   color: var(--text-main);
-  margin-bottom: 20px;
-  transition: background-color 0.2s ease;
+  margin-top: var(--space-3xs);
+  margin-bottom: var(--space-md);
+  transition: border-color 0.2s ease;
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
   outline: none;
-  background: var(--accent-blue-light);
-  box-shadow: 0 0 8px white;
+  border-color: var(--accent-strong);
 }
 
 .contact-form button {
-  padding: 12px 24px;
-  background: var(--accent-blue);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: var(--fs-ui);
+  padding: var(--space-xs) var(--space-lg);
+  background: transparent;
+  color: var(--text-main);
+  border: var(--line-w) solid var(--text-main);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  font-weight: 600;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  width: 300px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  width: 100%;
 }
 
 .contact-form button:hover {
-  transform: translateY(-4px);
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: #fff;
+  transform: translateY(-3px);
 }
 
 .form-status {
-  margin-top: 15px;
+  margin-top: var(--space-sm);
   color: var(--text-muted);
-  font-size: var(--fs-ui);
+  font-size: var(--fs-small);
 }
 
 
 .divider {
-  width: 2px; 
-  background-color: var(--text-muted); 
-  height: 100%; 
-  margin: 0 30px;
+  width: var(--line-w);
+  background-color: var(--line-color);
+  height: 100%;
+  margin: 0 var(--space-lg);
 }
 
 @media (max-width: 1100px) {
 
 .contact-left-title {
-  margin-bottom: 15px;
+  font-size: var(--fs-h1);
+  margin-bottom: var(--space-xs);
 }
 
 .contact-left-subtitle {
-  margin-top: 0;
-  margin-bottom: 60px;
-  font-size: var(--fs-h1);
+  margin-bottom: var(--space-sm);
 }
 
 }
@@ -162,7 +181,7 @@
 @media (max-width: 920px) {
 
   .contact-section-container {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -171,7 +190,7 @@
   .contact-left, .contact-right {
     max-width: 100%;
     padding: 5%;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -188,42 +207,44 @@
 
 
   .contact-form {
-    padding: 10px; 
-    margin-top:0;  
-    max-width: 100%       
+    padding: 10px;
+    margin-top:0;
+    max-width: 100%
   }
 
   .contact-form input, .contact-form button {
-    font-size: 16px;          
+    font-size: 16px;
     padding: 12px;
-    max-width: 100%;       
+    max-width: 100%;
   }
 
   .contact-left-title {
-    font-size: 1rem;  
+    font-size: 1.6rem;
     margin-bottom: 5%;
     margin-top: 0;
+    text-align: center;
   }
 
   .contact-left-subtitle {
-    font-size: 1.2rem; 
-    margin-bottom: 10px; 
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
   }
 
   .contact-link-btn {
-    padding: 3px; 
+    padding: 8px;
   }
 
   .contact-link-btn svg {
-    font-size: 14px;    
+    font-size: 22px;
   }
 
   .contact-form button {
-    font-size: 14px;     
+    font-size: 14px;
   }
 
   .form-status {
-    font-size: 10px;    
+    font-size: 10px;
   }
 
 .contact-form input, .contact-form textarea {

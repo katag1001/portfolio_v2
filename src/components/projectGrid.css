@@ -1,194 +1,231 @@
-/* Container */
+/* Outer container: rotated label rail + preview + scrollable list */
 .project-grid-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: var(--space-lg);
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Vertical rail */
+.project-grid-side {
+  flex-shrink: 0;
+  width: 70px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.project-grid-vertical {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: var(--fs-display);
+  letter-spacing: var(--ls-wide);
+  color: var(--text-main);
+  opacity: 0.9;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Middle preview area — shows the hovered project's icon */
+.project-grid-preview {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-grid-preview-img {
+  max-width: 100%;
+  max-height: 260px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  animation: project-grid-preview-fade 0.3s ease;
+}
+
+@keyframes project-grid-preview-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Right-hand list column */
+.project-grid-list-wrap {
+  flex: 0 0 auto;
+  width: min(420px, 40%);
+  min-width: 260px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Title row above the scrollable list */
+.project-grid-list-header {
+  flex-shrink: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-xs);
+}
+
+.project-grid-list-header h2 {
+  margin: 0;
+  font-family: var(--font-main);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  letter-spacing: var(--ls-wide);
+  color: var(--text-main);
+}
+
+.project-grid-list-count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-wide);
+  color: var(--text-muted);
+}
+
+/* Scrollable area holding the list itself */
+.project-grid-list-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* hide scrollbar */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.project-grid-list-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.project-grid-list {
   display: flex;
   flex-direction: column;
 }
 
-/* Grid Layout */
-.project-grid {
-  display: grid;
-  gap: 16px;
-  flex-grow: 1;
-  height: 80%;
-  grid-template-rows: repeat(2, 1fr);
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  grid-auto-columns: minmax(140px, 1fr);
-}
-
-/* Each card fills its grid cell */
-.project-grid-item {
-  position: relative;
-  height: 100%; /* important */
-  border-radius: 16px;
-  overflow: hidden;
-  cursor: pointer;
-  background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  transition: 0.25s ease;
-}
-
-/* Hover lift */
-.project-grid-item:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(255, 120, 185, 0.25);
-}
-
-/* Logo fills card */
-.project-grid-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.3s ease;
-}
-
-.project-grid-item:hover img {
-  transform: scale(1.08);
-  filter: brightness(0.7);
-}
-
-.project-grid-item h3 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 95%;
-  font-family: var(--font-main);
-  font-size: var(--fs-h2);
-  font-weight: 600;
-  color: white;
-  text-align: center;
-  background: var(--overlay);
-  opacity: 0;
-  transition: 0.25s ease;
-  white-space: normal;
-  word-wrap: break-word; 
-  line-height: 1.4;
-}
-
-
-/* Show title on hover */
-.project-grid-item:hover h3 {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.project-grid-item::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 120, 185, 0.15),
-    transparent 70%
-  );
-  opacity: 0;
-  transition: 0.25s ease;
-}
-
-.project-grid-item:hover::after {
-  opacity: 1;
-}
-
-
-/* Container */
-.project-grid-container {
+.project-grid-list-item {
   display: flex;
-  flex-direction: column;
-}
-
-/* Grid Layout */
-.project-grid {
-  display: grid;
-  gap: 16px;
-  flex-grow: 1;
-  height: 80%;
-  grid-template-rows: repeat(2, 1fr);
-  grid-auto-flow: column;
-  grid-auto-columns: 1fr;
-  grid-auto-columns: minmax(100px, 1fr);
-}
-
-/* Each card fills its grid cell */
-.project-grid-item {
-  position: relative;
-  height: 100%; /* important */
-  border-radius: 16px;
-  overflow: hidden;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-2xs);
+  border-bottom: var(--line-w) solid var(--line-color);
   cursor: pointer;
-  background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  transition: 0.25s ease;
+  transition: color 0.25s ease, border-color 0.25s ease;
 }
 
-/* Hover lift */
-.project-grid-item:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(255, 120, 185, 0.25);
+.project-grid-list-item:first-child {
+  border-top: var(--line-w) solid var(--line-color);
 }
 
-/* Logo fills card */
-.project-grid-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.3s ease;
+.project-grid-list-index {
+  font-family: var(--font-mono);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-wide);
+  color: var(--numeral-color);
+  flex-shrink: 0;
 }
 
-.project-grid-item:hover img {
-  transform: scale(1.08);
-  filter: brightness(0.7);
-}
-
-.project-grid-item h3 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 95%;
+.project-grid-list-item h3 {
+  flex: 1;
+  margin: 0;
   font-family: var(--font-main);
   font-size: var(--fs-h2);
   font-weight: 600;
-  color: white;
-  text-align: center;
-  background: var(--overlay);
-  opacity: 0;
-  transition: 0.25s ease;
+  letter-spacing: var(--ls-wide);
+  color: var(--text-main);
+  opacity: 0.55;
+  transition: opacity 0.25s ease, transform 0.25s ease;
   white-space: normal;
-  word-wrap: break-word; 
-  line-height: 1.4;
 }
 
-/* Show title on hover */
-.project-grid-item:hover h3 {
+.project-grid-list-plus {
+  flex-shrink: 0;
+  font-size: var(--fs-h3);
+  color: var(--text-muted);
+  opacity: 0.55;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.project-grid-list-item:hover,
+.project-grid-list-item:focus-visible,
+.project-grid-list-item.is-active {
+  border-color: var(--line-color-strong);
+}
+
+.project-grid-list-item:hover h3,
+.project-grid-list-item:focus-visible h3,
+.project-grid-list-item.is-active h3 {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(6px);
 }
 
-.project-grid-item::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-
-  background: radial-gradient(
-    circle at center,
-    rgba(255, 120, 185, 0.15),
-    transparent 70%
-  );
-  opacity: 0;
-  transition: 0.25s ease;
-}
-
-.project-grid-item:hover::after {
+.project-grid-list-item:hover .project-grid-list-plus,
+.project-grid-list-item:focus-visible .project-grid-list-plus,
+.project-grid-list-item.is-active .project-grid-list-plus {
   opacity: 1;
+  transform: rotate(90deg);
+  color: var(--accent-strong);
+}
+
+@media (max-width: 1100px) {
+  .project-grid-container {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .project-grid-side {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .project-grid-vertical {
+    writing-mode: horizontal-tb;
+    transform: none;
+    font-size: var(--fs-h1);
+  }
+
+  .project-grid-preview {
+    flex: 0 0 auto;
+    min-height: 140px;
+  }
+
+  .project-grid-preview-img {
+    max-height: 160px;
+  }
+
+  .project-grid-list-wrap {
+    width: 100%;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  .project-grid-list-item h3 {
+    font-size: var(--fs-h3);
+  }
 }
 
 @media (max-width: 600px) {
+  .project-grid-list-item {
+    padding: var(--space-sm) var(--space-2xs);
+    gap: var(--space-xs);
+  }
 
-.project-grid-item h3 {
-
-  font-size: var(--fs-h3);
+  .project-grid-list-item h3 {
+    font-size: var(--fs-small);
+  }
 }
-
-}
-
-
