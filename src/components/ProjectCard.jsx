@@ -4,7 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 import { CiGlobe } from 'react-icons/ci';
 import useHeaderEyebrow from "../hooks/useHeaderEyebrow";
 
-export default function ProjectCard({ project, onBack }) {
+export default function ProjectCard({ project, onBack, onNext, nextProject }) {
   useHeaderEyebrow(null, "Project");
 
   const renderLinks = () =>
@@ -77,6 +77,16 @@ export default function ProjectCard({ project, onBack }) {
         </div>
       </div>
 
+            {project.qr && (
+        <div className="project-section qr-section">
+          <h3>Download App</h3>
+          <div className="qr-container">
+            <img src={project.qr} alt={`${project.title} QR code`} />
+            <p>Scan to open the Play Store</p>
+          </div>
+        </div>
+      )}
+
       {project.gallery && project.gallery.length > 0 && (
         <div className={`project-gallery ${project.type === 'mobile' ? 'gallery-mobile' : 'gallery-web'}`}>
           {project.gallery.map((item, i) => (
@@ -88,13 +98,14 @@ export default function ProjectCard({ project, onBack }) {
         </div>
       )}
 
-      {project.qr && (
-        <div className="project-section qr-section">
-          <h3>Download App</h3>
-          <div className="qr-container">
-            <img src={project.qr} alt={`${project.title} QR code`} />
-            <p>Scan to open the Play Store</p>
-          </div>
+
+
+      {onNext && (
+        <div className="project-card-footer">
+          <button className="project-next-link" onClick={onNext}>
+            Next{nextProject ? `: ${nextProject.title}` : " Project"}
+            <span className="project-next-arrow">→</span>
+          </button>
         </div>
       )}
     </div>

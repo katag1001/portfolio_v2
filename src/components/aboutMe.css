@@ -59,6 +59,37 @@
   align-self: flex-start;
 }
 
+.download-cv-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-family: var(--font-main);
+  font-size: var(--fs-label);
+  font-weight: 600;
+  letter-spacing: var(--ls-label);
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-main);
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color var(--transition-main), gap var(--transition-main);
+}
+
+.download-cv-button-arrow {
+  transition: transform var(--transition-main);
+}
+
+.download-cv-button:hover {
+  color: var(--accent-strong);
+}
+
+.download-cv-button:hover .download-cv-button-arrow {
+  transform: translateX(4px);
+}
+
+
 
 /* Mobile responsive design */
 @media (max-width: 1100px) {

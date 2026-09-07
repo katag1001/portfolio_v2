@@ -25,11 +25,14 @@ export default function AboutMe() {
           <a
             href="/Katarina_Grantham_CV.pdf"
             download
-            className="editorial-btn download-cv-button"
+            className="download-cv-button"
           >
-            Download my CV
+            <span className="download-cv-button-arrow">→</span>Download my CV
           </a>
         </div>
+
+
+        
 
       </div>
 
