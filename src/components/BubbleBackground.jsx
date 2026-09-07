@@ -16,10 +16,10 @@ export default function BubbleBackground({
       const size = parseFloat(el.dataset.size);
       return {
         el,
-        x: Math.random() * (container.offsetWidth - size),
-        y: Math.random() * (container.offsetHeight - size),
-        vx: (Math.random() * 0.5 + 0.2) * (Math.random() > 0.5 ? 1 : -1),
-        vy: (Math.random() * 0.5 + 0.2) * (Math.random() > 0.5 ? 1 : -1),
+        x: Math.random() * Math.max(0, container.offsetWidth - size),
+        y: Math.random() * Math.max(0, container.offsetHeight - size),
+        vx: (Math.random() * 0.07 + 0.05) * (Math.random() > 0.5 ? 1 : -1),
+        vy: (Math.random() * 0.07 + 0.05) * (Math.random() > 0.5 ? 1 : -1),
         size
       };
     });
@@ -29,14 +29,27 @@ export default function BubbleBackground({
         item.x += item.vx;
         item.y += item.vy;
 
-        // Bounce off walls
-        if (item.x <= 0 || item.x + item.size >= container.offsetWidth)
-          item.vx *= -1;
-        if (item.y <= 0 || item.y + item.size >= container.offsetHeight)
-          item.vy *= -1;
+        // Bounce off walls, clamping so bubbles never render outside the frame
+        const maxX = Math.max(0, container.offsetWidth - item.size);
+        const maxY = Math.max(0, container.offsetHeight - item.size);
 
-        item.el.style.left = `${item.x}px`;
-        item.el.style.top = `${item.y}px`;
+        if (item.x <= 0) {
+          item.x = 0;
+          item.vx = Math.abs(item.vx);
+        } else if (item.x >= maxX) {
+          item.x = maxX;
+          item.vx = -Math.abs(item.vx);
+        }
+
+        if (item.y <= 0) {
+          item.y = 0;
+          item.vy = Math.abs(item.vy);
+        } else if (item.y >= maxY) {
+          item.y = maxY;
+          item.vy = -Math.abs(item.vy);
+        }
+
+        item.el.style.transform = `translate3d(${item.x}px, ${item.y}px, 0)`;
       });
 
       requestAnimationFrame(animate);
@@ -50,7 +63,10 @@ export default function BubbleBackground({
   return (
     <div className="bubble_background" ref={containerRef}>
       {Array.from({ length: numBubbles }).map((_, i) => {
-        const size = minSize + Math.random() * (maxSize - minSize);
+        const isExtraLarge = i < 3;
+        const size = isExtraLarge
+          ? maxSize + maxSize * 0.15 + Math.random() * maxSize * 0.25
+          : minSize + Math.pow(Math.random(), 0.6) * (maxSize - minSize);
         const colorClass = colors[i % colors.length];
         return (
           <div

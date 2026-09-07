@@ -51,14 +51,35 @@
 
 
 [data-theme='light'] {
---bg-deep-purple: rgba(236, 232, 248, 0.7);    
---bg-gradient-top: rgb(225, 232, 253);     
---bg-gradient-bottom: rgb(254, 228, 242);   
+--bg-deep-purple: rgba(236, 232, 248, 0.7);
+--bg-gradient-top: rgb(236, 240, 255);
+--bg-gradient-bottom: rgb(255, 240, 248);
 
+/* soft colour patches that fade into one another behind the bubbles */
+--bg-patch-pink: rgba(255, 200, 222, 0.5);
+--bg-patch-pink-2: rgba(255, 185, 212, 0.44);
+--bg-patch-lavender: rgba(215, 195, 253, 0.44);
+--bg-patch-blue: rgba(170, 205, 253, 0.4);
+--bg-patch-mint: rgba(195, 235, 220, 0.38);
+--bg-patch-peach: rgba(255, 218, 195, 0.4);
+--bg-patch-white: rgba(255, 255, 255, 0.65);
+--bg-patch-white-2: rgba(255, 255, 255, 0.4);
 
---bubble-pink-fill: rgba(255, 160, 210, 0.15);  
---bubble-pink-glow: rgba(255, 150, 200, 0.45);  
---bubble-rim-light: rgba(255, 255, 255, 0.8);   
+--bubble-pink-fill: rgba(255, 160, 210, 0.15);
+--bubble-pink-glow: rgba(255, 150, 200, 0.35);
+--bubble-rim-light: rgba(255, 255, 255, 0.8);
+
+/* specular highlights on the glass bubbles */
+--bubble-highlight-strong: rgba(255, 255, 255, 0.55);
+--bubble-highlight-mid: rgba(255, 255, 255, 0.22);
+--bubble-highlight-soft: rgba(255, 255, 255, 0.27);
+
+/* iridescent rim hues, sampled from the rainbow-glass reference, pink-forward */
+--bubble-rim-pink: rgba(255, 130, 185, 0.5);
+--bubble-rim-lavender: rgba(180, 140, 250, 0.42);
+--bubble-rim-blue: rgba(130, 170, 250, 0.4);
+--bubble-rim-mint: rgba(160, 220, 205, 0.32);
+--bubble-rim-peach: rgba(255, 195, 175, 0.35);
 
 
 --card-bg: rgba(254, 254, 254, 0.5);          
@@ -94,15 +115,37 @@
 
 
 [data-theme='dark'] {
-  --bg-deep-purple: rgb(22, 10, 40);      
-  --bg-gradient-top: rgb(18, 16, 51);     
-  --bg-gradient-bottom: rgba(155, 122, 170, 1);    
-  
-  
-  --bubble-pink-fill: rgba(255, 140, 190, 0.1); 
-  --bubble-pink-glow: rgba(255, 105, 180, 0.6); 
+  --bg-deep-purple: rgb(22, 10, 40);
+  --bg-gradient-top: rgb(38, 34, 78);
+  --bg-gradient-bottom: rgba(178, 148, 190, 1);
+
+  /* soft colour patches that fade into one another behind the bubbles */
+  --bg-patch-pink: rgba(238, 115, 175, 0.4);
+  --bg-patch-pink-2: rgba(212, 100, 158, 0.35);
+  --bg-patch-lavender: rgba(172, 135, 230, 0.36);
+  --bg-patch-blue: rgba(122, 148, 235, 0.34);
+  --bg-patch-mint: rgba(102, 178, 190, 0.28);
+  --bg-patch-peach: rgba(230, 152, 158, 0.26);
+  --bg-patch-white: rgba(255, 255, 255, 0.26);
+  --bg-patch-white-2: rgba(255, 255, 255, 0.15);
+
+  --bubble-pink-fill: rgba(255, 140, 190, 0.1);
+  --bubble-pink-glow: rgba(255, 105, 180, 0.45);
   --bubble-rim-light: rgba(255, 255, 255, 0.4);
-  
+
+  /* specular highlights on the glass bubbles: dimmed relative to light mode,
+     since the same white intensity reads as much more obvious against a dark backdrop */
+  --bubble-highlight-strong: rgba(255, 255, 255, 0.26);
+  --bubble-highlight-mid: rgba(255, 255, 255, 0.09);
+  --bubble-highlight-soft: rgba(255, 255, 255, 0.12);
+
+  /* iridescent rim hues, sampled from the rainbow-glass reference, pink-forward */
+  --bubble-rim-pink: rgba(255, 110, 180, 0.5);
+  --bubble-rim-lavender: rgba(170, 130, 255, 0.42);
+  --bubble-rim-blue: rgba(110, 160, 255, 0.4);
+  --bubble-rim-mint: rgba(120, 210, 195, 0.32);
+  --bubble-rim-peach: rgba(255, 160, 140, 0.32);
+
 
   --card-bg: rgba(22, 11, 38, 0.7);          
   --card-border: rgba(255, 255, 255, 0.1);   

@@ -8,7 +8,7 @@ import "../pages/pages.css";
 export default function MainLayout() {
   return (
     <HeaderEyebrowProvider>
-      <BubbleBackground numBubbles={22} minSize={12} maxSize={200} />
+      <BubbleBackground numBubbles={16} minSize={12} maxSize={200} />
       <Header />
       <div className="page-container">
         <Outlet />

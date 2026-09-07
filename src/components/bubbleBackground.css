@@ -1,50 +1,135 @@
-/* Full screen gradient background */
+/* Full screen background: soft colour patches fading into one another,
+   sitting on top of the base gradient */
 .bubble_background {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   overflow: hidden;
   z-index: 0;
   pointer-events: none;
-  background: linear-gradient(
-    180deg,
-    var(--bg-gradient-top, rgba(45,23,76,1)),
-    var(--bg-gradient-bottom, rgba(22,11,38,1))
-  );
+  background:
+    /* centre glow: pulls the middle of the screen toward white, painted
+       above the colour patches so it washes out whatever sits behind it */
+    radial-gradient(ellipse 34% 30% at 50% 50%, var(--bg-patch-white, rgba(255,255,255,0.5)) 0%, transparent 62%),
+    radial-gradient(ellipse 54% 48% at 50% 50%, var(--bg-patch-white-2, rgba(255,255,255,0.3)) 0%, transparent 70%),
+    /* colour sections around the perimeter, sized generously so neighbouring
+       patches overlap and blur into one another along the edges */
+    radial-gradient(ellipse 58% 52% at 10% 12%, var(--bg-patch-pink, rgba(255,150,200,0.4)) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 48% at 50% 4%, var(--bg-patch-lavender, rgba(200,175,250,0.35)) 0%, transparent 70%),
+    radial-gradient(ellipse 58% 52% at 90% 10%, var(--bg-patch-blue, rgba(160,195,250,0.35)) 0%, transparent 70%),
+    radial-gradient(ellipse 52% 60% at 96% 50%, var(--bg-patch-peach, rgba(255,210,190,0.3)) 0%, transparent 70%),
+    radial-gradient(ellipse 58% 52% at 90% 90%, var(--bg-patch-pink-2, rgba(255,150,200,0.35)) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 48% at 50% 96%, var(--bg-patch-mint, rgba(180,230,215,0.3)) 0%, transparent 70%),
+    radial-gradient(ellipse 58% 52% at 10% 90%, var(--bg-patch-lavender, rgba(200,175,250,0.35)) 0%, transparent 70%),
+    radial-gradient(ellipse 52% 60% at 4% 50%, var(--bg-patch-blue, rgba(160,195,250,0.35)) 0%, transparent 70%),
+    linear-gradient(
+      180deg,
+      var(--bg-gradient-top, rgba(45,23,76,1)),
+      var(--bg-gradient-bottom, rgba(22,11,38,1))
+    );
 }
 
 /* Base bubble */
 .bouncing_bubble {
   position: absolute;
+  top: 0;
+  left: 0;
   border-radius: 50%;
+  will-change: transform;
 }
 
-
+/* Glassy body: almost fully transparent centre, subtle inner depth */
 .pink-bubble {
-  box-shadow:
-    0 0 4px var(--bubble-pink-glow),
-    inset 0 0 30px var(--bubble-pink-glow, --bubble-rim-light);
-
-  /*border: 1px solid rgba(255,255,255,0.2);*/
   border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    transparent 40%,
+    rgba(255,255,255,0.06) 70%,
+    transparent 100%
+  );
+  box-shadow:
+    0 0 6px var(--bubble-pink-glow),
+    0 0 16px var(--bubble-rim-lavender),
+    inset 0 0 30px rgba(255,255,255,0.08);
 }
 
+/* Iridescent rim: multiple hues layered around the edge only */
+.pink-bubble::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 200deg,
+    var(--bubble-rim-pink) 0deg,
+    var(--bubble-rim-lavender) 75deg,
+    var(--bubble-rim-blue) 150deg,
+    var(--bubble-rim-mint) 220deg,
+    var(--bubble-rim-peach) 290deg,
+    var(--bubble-rim-pink) 360deg
+  );
+  -webkit-mask: radial-gradient(circle, transparent 48%, black 66%, black 92%, transparent 100%);
+  mask: radial-gradient(circle, transparent 48%, black 66%, black 92%, transparent 100%);
+  pointer-events: none;
+}
 
+/* Specular highlights: one or two bright points where light catches the glass */
 .pink-bubble::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.6) 0%,
-    rgba(255,255,255,0) 70%
-  );
+  inset: 0;
   border-radius: 50%;
+  background:
+    radial-gradient(circle at 28% 24%, var(--bubble-highlight-strong, rgba(255,255,255,0.55)) 0%, var(--bubble-highlight-mid, rgba(255,255,255,0.22)) 6%, rgba(255,255,255,0) 15%),
+    radial-gradient(circle at 70% 74%, var(--bubble-highlight-soft, rgba(255,255,255,0.28)) 0%, rgba(255,255,255,0) 9%);
   pointer-events: none;
+}
+
+/* A little variety across bubbles so they don't all catch the light the same way */
+.bouncing_bubble:nth-child(3n)::after {
+  background: conic-gradient(
+    from 40deg,
+    var(--bubble-rim-lavender) 0deg,
+    var(--bubble-rim-pink) 90deg,
+    var(--bubble-rim-peach) 170deg,
+    var(--bubble-rim-blue) 250deg,
+    var(--bubble-rim-mint) 320deg,
+    var(--bubble-rim-lavender) 360deg
+  );
+}
+
+.bouncing_bubble:nth-child(3n)::before {
+  background:
+    radial-gradient(circle at 68% 22%, var(--bubble-highlight-strong, rgba(255,255,255,0.5)) 0%, var(--bubble-highlight-mid, rgba(255,255,255,0.2)) 6%, rgba(255,255,255,0) 15%),
+    radial-gradient(circle at 30% 70%, var(--bubble-highlight-soft, rgba(255,255,255,0.25)) 0%, rgba(255,255,255,0) 9%);
+}
+
+.bouncing_bubble:nth-child(3n+1)::after {
+  background: conic-gradient(
+    from 300deg,
+    var(--bubble-rim-mint) 0deg,
+    var(--bubble-rim-blue) 80deg,
+    var(--bubble-rim-lavender) 160deg,
+    var(--bubble-rim-pink) 240deg,
+    var(--bubble-rim-peach) 310deg,
+    var(--bubble-rim-mint) 360deg
+  );
+}
+
+.bouncing_bubble:nth-child(3n+2)::after {
+  background: conic-gradient(
+    from 120deg,
+    var(--bubble-rim-blue) 0deg,
+    var(--bubble-rim-lavender) 90deg,
+    var(--bubble-rim-pink) 170deg,
+    var(--bubble-rim-peach) 240deg,
+    var(--bubble-rim-mint) 300deg,
+    var(--bubble-rim-blue) 360deg
+  );
+}
+
+.bouncing_bubble:nth-child(3n+2)::before {
+  background:
+    radial-gradient(circle at 24% 68%, var(--bubble-highlight-strong, rgba(255,255,255,0.5)) 0%, var(--bubble-highlight-mid, rgba(255,255,255,0.2)) 6%, rgba(255,255,255,0) 15%),
+    radial-gradient(circle at 74% 30%, var(--bubble-highlight-soft, rgba(255,255,255,0.25)) 0%, rgba(255,255,255,0) 9%);
 }
 
