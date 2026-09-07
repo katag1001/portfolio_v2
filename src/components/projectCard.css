@@ -29,7 +29,7 @@
   gap: var(--space-md);
   margin-bottom: var(--space-lg);
   text-transform:uppercase;
-  border-bottom: 3px solid var(--text-muted);
+  border-bottom: var(--line-w) solid var(--line-color);
 }
 
 .project-card-header .card-title {
@@ -75,7 +75,7 @@
   justify-content: flex-end;
   padding-top: var(--space-lg);
   margin-top: var(--space-lg);
-  border-top: 3px solid var(--text-muted);
+  border-top: var(--line-w) solid var(--line-color);
 }
 
 .project-next-link {
@@ -267,6 +267,8 @@
 /* QR Section -------------------------------------------------------- */
 .project-section {
   margin-bottom: var(--space-lg);
+  border-bottom: var(--line-w) solid var(--line-color);
+  border-top: var(--line-w) solid var(--line-color);
 }
 
 .qr-container {

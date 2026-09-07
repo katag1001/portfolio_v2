@@ -1,157 +1,195 @@
+/* =========================================================
+   EASY-TO-CHANGE ABOUT PAGE SETTINGS
+   ========================================================= */
+
 .about-container {
-  display: flex;
-  gap: var(--space-xl);
+  /* Text position */
+  --about-text-top: 30%;
+  --about-text-right: 10%;
+  --about-text-width: 55%;
+
+  /* Image size */
+  --about-image-width: 25vw;
+
+  /* Image position */
+  --about-image-bottom: 0;
+  --about-image-left: 0;
+
+  /* Only bottom-right corner rounded */
+  --about-image-radius: 0 var(--radius-lg) 0 0;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+   ========================================================= */
+
+.about-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
   padding: 0;
   font-family: var(--font-main);
-  align-items: stretch;
+  display: block;
 }
 
-/* Right side image (visually sits on the right of the panel) */
 
-.about-left {
-  width: 38%;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.about-image {
-  width: 100%;
-  height: 100%;
-  max-height: 460px;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-  border: var(--line-w) solid var(--line-color);
-  object-position: top;
-}
-
-/* Text side */
+/* =========================================================
+   TEXT / CONTENT
+   ========================================================= */
 
 .about-right {
-  width: 62%;
+  position: absolute;
+  top: var(--about-text-top);
+  right: var(--about-text-right);
+  width: var(--about-text-width);
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  padding-bottom: var(--space-lg);
 }
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
 
 .about-title {
-  font-size: var(--fs-display);
+  width: 100%;
+  font-size: var(--fs-h6);
   line-height: 1;
+
   font-weight: 700;
   letter-spacing: -0.01em;
+
   color: var(--text-main);
+
   margin: 0 0 var(--space-md);
+
+  text-align: right;
 }
 
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.about-divider {
+  width: 100%;
+  height: var(--line-w);
+  background-color: var(--line-color);
+  margin-bottom: var(--space-lg);
+}
+
+
+/* =========================================================
+   BODY TEXT
+   ========================================================= */
+
 .about-text {
-  padding-right: var(--space-xs);
+  width: 100%;
+
+  padding-right: 0;
+
   line-height: 1.6;
   font-size: var(--fs-body);
+
   color: var(--text-muted);
+
+  text-align: right;
 }
 
 .about-text p {
-  margin-bottom: var(--space-sm);
+  margin: 0 0 var(--space-sm);
+  text-align: right;
 }
 
-.download-cv-button {
-  margin: var(--space-md) 0 0;
-  align-self: flex-start;
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.about-left {
+  position: fixed;
+
+  bottom: var(--about-image-bottom);
+  left: var(--about-image-left);
+
+  width: var(--about-image-width);
+  height: var(--about-image-height);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 2;
 }
+
+
+.about-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: top;
+  /* Bottom-right corner only */
+  border-radius: var(--about-image-radius);
+
+  border: var(--line-w) solid var(--line-color);
+}
+
+
+/* =========================================================
+   DOWNLOAD CV BUTTON
+   ========================================================= */
 
 .download-cv-button {
   display: inline-flex;
   align-items: center;
+
   gap: var(--space-2xs);
+
+  align-self: flex-end;
+
+  margin: var(--space-md) 0 0;
+
   font-family: var(--font-main);
   font-size: var(--fs-label);
   font-weight: 600;
   letter-spacing: var(--ls-label);
   text-transform: uppercase;
+
   text-decoration: none;
+
   color: var(--text-main);
   background: transparent;
+
   border: none;
   padding: 0;
+
   cursor: pointer;
-  transition: color var(--transition-main), gap var(--transition-main);
+
+  transition:
+    color var(--transition-main),
+    gap var(--transition-main);
 }
+
 
 .download-cv-button-arrow {
   transition: transform var(--transition-main);
 }
 
+
 .download-cv-button:hover {
   color: var(--accent-strong);
 }
+
 
 .download-cv-button:hover .download-cv-button-arrow {
   transform: translateX(4px);
 }
 
 
-
-/* Mobile responsive design */
-@media (max-width: 1100px) {
-
-  /* Stack the image on top of the text */
-  .about-container {
-    padding: 0;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-    align-items: center;
-    gap: var(--space-md);
-  }
-
-  /* Image styling */
-  .about-left {
-    width: 100%; /* Full width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .about-image {
-    width: 100%;
-    max-height: 240px;
-    object-fit: cover;
-    border-radius: var(--radius-md);
-    border: var(--line-w) solid var(--line-color);
-  }
-
-  /* Right side text styling */
-  .about-right {
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-title {
-    font-size: var(--fs-h1);
-    color: var(--text-main);
-    margin-bottom: var(--space-xs);
-    text-align: center;
-  }
-
-  .about-text {
-    padding-right: 10px;
-    line-height: 1.6;
-    font-size: var(--fs-body);
-    color: var(--text-muted);
-    text-align: center;
-  }
-
-  .about-text p {
-    margin-bottom: 16px;
-    text-align: center;
-  }
-
-  /* Button styling */
-  .download-cv-button {
-    align-self: center;
-    margin: var(--space-sm) 0 0;
-  }
-}
