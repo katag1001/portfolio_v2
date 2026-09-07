@@ -162,6 +162,49 @@
   margin: 0 var(--space-lg);
 }
 
+/* Direct Email Section --------------------------------------------------------------------------*/
+.contact-direct {
+  position: absolute;
+  bottom: var(--space-md);
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-direct-text {
+  font-family: var(--font-main);
+  font-size: var(--fs-label);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.contact-direct-link {
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: var(--line-w) solid var(--text-main);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-direct-link:hover {
+  color: var(--accent-strong);
+  border-color: var(--accent-strong);
+}
+
+@media (max-width: 920px) {
+  .contact-direct {
+    position: static;
+    margin-top: var(--space-md);
+    padding-bottom: var(--space-md);
+  }
+
+  .contact-direct-text {
+    text-align: center;
+  }
+}
+
 @media (max-width: 1100px) {
 
 .contact-left-title {
