@@ -5,6 +5,9 @@ export const projects = [
     logo: "/cherry-logo.png",
     main: "/cherry-logo.png",
     type: "web",
+    category: "Web Application",
+    team: "Solo Developer",
+    client: "Cherry (Non-profit)",
     overview:
       "A full-stack volunteer management and project coordination platform built for Cherry. \
     The application combines member profiles and a searchable volunteer directory with a \
@@ -22,6 +25,9 @@ export const projects = [
     links: [
       { label: "GitHub", url: "https://github.com/katag1001/volunteer-app" },
       { label: "Site", url: "https://cherry.org.uk/" }
+    ],
+    gallery: [
+      // { title: "Screen name", image: "/path-to-image.png" },
     ]
   },
 
@@ -31,6 +37,9 @@ export const projects = [
     logo: "/cherry-logo.png",
     main: "/cherry-app-main.PNG",
     type: "mobile",
+    category: "Mobile Application",
+    team: "Open Source Team",
+    client: "Cherry (Non-profit)",
     overview:
       "Cherry is a nonprofit, open-source app building a digital platform similar to Vinted \
       that combines sustainable fashion with charitable giving. The platform enables users to buy \
@@ -45,6 +54,9 @@ export const projects = [
     links: [
       { label: "GitHub", url: "https://github.com/Cherry-CIC/MVP" },
       { label: "Site", url: "https://cherry.org.uk/" }
+    ],
+    gallery: [
+      // { title: "Screen name", image: "/path-to-image.png" },
     ]
   },
 
@@ -54,6 +66,9 @@ export const projects = [
     logo: "/wearable_logo.png",
     main: "/wearable_main.png",
     type: "web",
+    category: "Web Application",
+    team: "Solo Developer",
+    client: "Personal Project",
     overview:
       "Wearable is a full-stack web app designed to streamline outfit planning by allowing users \
       to upload and categorize their clothing. Leveraging a React frontend and a Node.js backend \
@@ -67,6 +82,9 @@ export const projects = [
     links: [
       { label: "GitHub", url: "https://github.com/katag1001/Wearable" },
       { label: "Site", url: "https://wearable-psi.vercel.app/" }
+    ],
+    gallery: [
+      // { title: "Screen name", image: "/path-to-image.png" },
     ]
   },
 
@@ -76,6 +94,9 @@ export const projects = [
     logo: "/soul_logo2.jpg",
     main: "/soul_main.png",
     type: "web",
+    category: "Web Application",
+    team: "Solo Developer",
+    client: "Soul & Subconscious Hypnotherapy",
     overview:
       "Soul Subconscious Hypnotherapy is a client-facing website built with React that offers an \
       informative, calming experience for users seeking hypnotherapy services. The site includes \
@@ -89,6 +110,9 @@ export const projects = [
     links: [
       { label: "GitHub", url: "https://github.com/katag1001/soul_subconscious" },
       { label: "Site", url: "https://soul-subconscious.vercel.app/" },
+    ],
+    gallery: [
+      // { title: "Screen name", image: "/path-to-image.png" },
     ]
   },
 
@@ -99,6 +123,9 @@ export const projects = [
     main: "/travlr_main.jpg",
     qr: "/download_qr.jpg",
     type: "mobile",
+    category: "Mobile Application",
+    team: "Solo Developer",
+    client: "Personal Project",
     overview:
       "TravlrMe is a comprehensive travel organization app built with React Native and Expo Go \
       that allows users to manage trips, itineraries, packing lists, and budgets with automated \
@@ -114,6 +141,15 @@ export const projects = [
     technologies: ["React Native", "Expo Go", "React Context API", "React Native Paper", "async-storage", "uuid"],
     links: [
       { label: "GitHub", url: "https://github.com/katag1001/Travlr" },
+    ],
+    gallery: [
+      { title: "Itinerary", image: "/travlr_itinerary.jpg" },
+      { title: "Day View", image: "/travlr_day.jpg" },
+      { title: "Hotel Booking", image: "/travlr_hotel.jpg" },
+      { title: "Transport", image: "/travlr_transport.jpg" },
+      { title: "Packing List", image: "/travlr_packing.jpg" },
+      { title: "Dynamic Theming - Dubai", image: "/travlr_dubai.jpg" },
+      { title: "Dynamic Theming - Japan", image: "/travlr_japan.jpg" },
     ]
   },
   {
@@ -122,6 +158,9 @@ export const projects = [
     logo: "/sta_logo.png",
     main: "/sta_main.png",
     type: "web",
+    category: "Web Application",
+    team: "Solo Developer",
+    client: "St Albans Evening Rehearsal Orchestra",
     overview:
       "The official website for the St Albans Evening Rehearsal Crchestra, featuring event \
       information, rehearsal schedules, galleries, and integrated maps for venue locations.",
@@ -129,6 +168,9 @@ export const projects = [
     links: [
       { label: "GitHub", url: "https://github.com/katag1001/sta_rehearsal_orchestra" },
       { label: "Site", url: "https://stalbans-ero.org.uk/" }
+    ],
+    gallery: [
+      // { title: "Screen name", image: "/path-to-image.png" },
     ]
   },
 ];

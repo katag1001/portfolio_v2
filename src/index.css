@@ -11,14 +11,6 @@
   --fs-body: 0.95rem;
   --fs-ui: 0.85rem;
 
-  /* ==============================
-     EDITORIAL DESIGN SYSTEM
-     Additive tokens only — nothing above this block, and nothing
-     inside the [data-theme] blocks below, has its value changed.
-     The bubble background & bubble game read only the original
-     tokens, so they render identically regardless of what's added here.
-  ============================== */
-
   /* -- extended type scale -- */
   --xxl-font: clamp(4rem, 10vw, 8rem);
   --xl-font: clamp(3rem, 8vw, 7rem);
@@ -28,6 +20,9 @@
   --fs-h5: 2rem;
   --fs-small: 0.8rem;
   --fs-label: 0.72rem;
+
+   /* -- box styling -- */
+  --button-box-size: 44px;
 
   /* -- tracking -- */
   --ls-label: 0.22em;
