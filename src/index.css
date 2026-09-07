@@ -51,22 +51,22 @@
 
 
 [data-theme='light'] {
---bg-deep-purple: rgba(236, 232, 248, 0.7);
---bg-gradient-top: rgb(236, 240, 255);
---bg-gradient-bottom: rgb(255, 240, 248);
+--bg-deep-purple: rgba(240, 237, 250, 0.7);
+--bg-gradient-top: rgb(240, 243, 255);
+--bg-gradient-bottom: rgb(255, 243, 250);
 
 /* soft colour patches that fade into one another behind the bubbles */
---bg-patch-pink: rgba(255, 200, 222, 0.5);
---bg-patch-pink-2: rgba(255, 185, 212, 0.44);
---bg-patch-lavender: rgba(215, 195, 253, 0.44);
---bg-patch-blue: rgba(170, 205, 253, 0.4);
---bg-patch-mint: rgba(195, 235, 220, 0.38);
---bg-patch-peach: rgba(255, 218, 195, 0.4);
+--bg-patch-pink: rgba(255, 212, 229, 0.5);
+--bg-patch-pink-2: rgba(255, 200, 221, 0.44);
+--bg-patch-lavender: rgba(224, 208, 253, 0.44);
+--bg-patch-blue: rgba(189, 216, 253, 0.4);
+--bg-patch-mint: rgba(208, 239, 228, 0.38);
+--bg-patch-peach: rgba(255, 226, 208, 0.4);
 --bg-patch-white: rgba(255, 255, 255, 0.65);
 --bg-patch-white-2: rgba(255, 255, 255, 0.4);
 
---bubble-pink-fill: rgba(255, 160, 210, 0.15);
---bubble-pink-glow: rgba(255, 150, 200, 0.35);
+--bubble-pink-fill: rgba(255, 181, 220, 0.15);
+--bubble-pink-glow: rgba(255, 173, 212, 0.35);
 --bubble-rim-light: rgba(255, 255, 255, 0.8);
 
 /* specular highlights on the glass bubbles */
@@ -75,31 +75,31 @@
 --bubble-highlight-soft: rgba(255, 255, 255, 0.27);
 
 /* iridescent rim hues, sampled from the rainbow-glass reference, pink-forward */
---bubble-rim-pink: rgba(255, 130, 185, 0.5);
---bubble-rim-lavender: rgba(180, 140, 250, 0.42);
---bubble-rim-blue: rgba(130, 170, 250, 0.4);
---bubble-rim-mint: rgba(160, 220, 205, 0.32);
---bubble-rim-peach: rgba(255, 195, 175, 0.35);
+--bubble-rim-pink: rgba(255, 158, 200, 0.5);
+--bubble-rim-lavender: rgba(197, 165, 251, 0.42);
+--bubble-rim-blue: rgba(158, 189, 251, 0.4);
+--bubble-rim-mint: rgba(181, 228, 216, 0.32);
+--bubble-rim-peach: rgba(255, 208, 193, 0.35);
 
 
---card-bg: rgba(254, 254, 254, 0.5);          
---card-border: rgba(240, 237, 249, 0.863);  
+--card-bg: rgba(254, 254, 254, 0.5);
+--card-border: rgba(240, 237, 249, 0.863);
 --card-border-shadow: rgba(45, 35, 65, 0.15);
 
 
---text-main: rgba(45, 35, 65, 1);              
---text-muted: rgba(90, 80, 120, 0.75); 
+--text-main: rgba(45, 35, 65, 1);
+--text-muted: rgba(90, 80, 120, 0.995);
 
---accent-soft: rgba(255, 120, 185, 0.2);
---accent-strong: rgba(255, 120, 185, 1);
+--accent-soft: rgba(255, 150, 200, 0.2);
+--accent-strong: rgba(255, 150, 200, 1);
 
---accent-blue:  rgba(100, 80, 120, 0.8);   
---accent-blue-light:  rgba(100, 80, 120, 0.2);   
+--accent-blue:  rgba(134, 119, 150, 0.8);
+--accent-blue-light:  rgba(134, 119, 150, 0.2);
 
 
 --glass-blur: blur(14px);
 --shadow-soft: 0 10px 30px rgba(45, 35, 65, 0.15);
---shadow-hover: 0 15px 40px rgba(255, 120, 185, 0.25);
+--shadow-hover: 0 15px 40px rgba(255, 150, 200, 0.25);
 
 --transition-main: 0.25s ease;
 --overlay: rgba(12, 9, 17, 0);
@@ -152,7 +152,7 @@
 
 
   --text-main: rgba(255, 255, 255, 1);        
-  --text-muted: rgba(200, 190, 220, 0.8);     
+  --text-muted: rgb(251, 250, 252);     
 
 
   --accent-soft: rgba(255, 120, 185, 0.2);
