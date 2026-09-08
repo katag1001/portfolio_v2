@@ -53,14 +53,24 @@ export default function ProjectCard({ project, onBack, onNext, nextProject }) {
             <dt>Category</dt>
             <dd>{project.category}</dd>
           </div>
-          <div className="meta-row">
-            <dt>Team</dt>
-            <dd>{project.team}</dd>
-          </div>
-          <div className="meta-row">
-            <dt>Client</dt>
-            <dd>{project.client}</dd>
-          </div>
+          {project.stage && (
+            <div className="meta-row">
+              <dt>Stage</dt>
+              <dd>{project.stage}</dd>
+            </div>
+          )}
+          {project.team && (
+            <div className="meta-row">
+              <dt>Team</dt>
+              <dd>{project.team}</dd>
+            </div>
+          )}
+          {project.client && (
+            <div className="meta-row">
+              <dt>Client</dt>
+              <dd>{project.client}</dd>
+            </div>
+          )}
           <div className="meta-row">
             <dt>Tech</dt>
             <dd>{project.technologies.join(", ")}</dd>

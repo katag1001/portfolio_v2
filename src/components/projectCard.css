@@ -220,7 +220,6 @@
 .gallery-image {
   object-fit: cover;
   border-radius: var(--radius-md);
-  border: var(--line-w) solid var(--line-color);
 }
 
 /* Web projects: title above image, standardised landscape size */
@@ -230,8 +229,8 @@
 }
 
 .gallery-web .gallery-image {
-  width: 100%;
-  height: 320px;
+  width: auto;
+  height: 400px;
 }
 
 /* Mobile projects: title next to image, standardised portrait size, 50/50 split */

@@ -1,12 +1,109 @@
+//Chocolate Pistachio Screenshots
+import cpHomepage from "../../dist/gallery/cp-homepage.png";
+import cpFindcafe from "../../dist/gallery/cp-findcafe.png";
+import cpAddcafe from "../../dist/gallery/cp-addcafe.png";
+import cpConfirmdetails from "../../dist/gallery/cp-confirmdetails.png";
+import cpPending from "../../dist/gallery/cp-pending.png";
+import cpMyarea from "../../dist/gallery/cp-myarea.png";
+import cpMyprofile from "../../dist/gallery/cp-myprofile.png";
+import cpChangedetails from "../../dist/gallery/cp-changedetails.png";
+import cpUserfaves from "../../dist/gallery/cp-userfaves.png";
+import cpLogo from "../../dist/gallery/cp-logo.png";
+import cpCafe from "../../dist/gallery/cp-cafe.png";
+import cpRatecafe from "../../dist/gallery/cp-ratecafe.png";
+import cpCaferated from "../../dist/gallery/cp-caferated.png";
+
+//TravlrMe Screenshots
+import travlrJapan from "../../dist/gallery/travlr_japan.jpg";
+import travlrItinerary from "../../dist/gallery/travlr_itinerary.jpg";
+import travlrHotel from "../../dist/gallery/travlr_hotel.jpg";
+import travlrTransport from "../../dist/gallery/travlr_transport.jpg";
+import travlrMain from "../../dist/gallery/travlr_main.jpg";
+import travlrPacking from "../../dist/gallery/travlr_packing.jpg";
+import travlrDay from "../../dist/gallery/travlr_day.jpg";
+import travlrDubai from "../../dist/gallery/travlr_dubai.jpg";
+import travlrLogo from "../../dist/gallery/travlr_logo.png";
+
+//Soul & Subconscious Screenshots
+import soulMain from "../../dist/gallery/soul_main.png";
+import staMain from "../../dist/gallery/sta_main.png";
+import wearableLogo from "../../dist/gallery/wearable_logo.png";
+import soulLogo2 from "../../dist/gallery/soul_logo2.jpg";
+
+//Cherry Screenshots
+import cherryLogo from "../../dist/gallery/cherry-logo.png";
+import cherryLogoLarge from "../../dist/gallery/cherry-logo-large.png";
+import cherryLogin from "../../dist/gallery/cherry-login.png";
+import cherryConfirm from "../../dist/gallery/cherry-confirm.png";
+import cherryExplore from "../../dist/gallery/cherry-explore.png";
+import cherryPurchase from "../../dist/gallery/cherry-purchase.png";
+import cherryBuy from "../../dist/gallery/cherry-buy.png";
+import cherryPickup from "../../dist/gallery/cherry-pickup.png";
+import cherrySecurepay from "../../dist/gallery/cherry-securepay.png";
+import cherryOrderplaced from "../../dist/gallery/cherry-orderplaced.png";
+
+// Volunteer Organiser Screenshots
+import voHome from "../../dist/gallery/vo-home.png";
+import voMyprofile from "../../dist/gallery/vo-myprofile.png";
+import voProjects from "../../dist/gallery/vo-projects.png";
+import voPolls from "../../dist/gallery/vo-polls.png";
+import voAdmin from "../../dist/gallery/vo-admin.png";
+import voApprovals from "../../dist/gallery/vo-approvals.png";
+import voIssues from "../../dist/gallery/vo-issues.png";
+
+
+//LWS Screenshots
+import lwsHomepage from "../../dist/gallery/lws-homepage.png";
+import lwsAddclothes from "../../dist/gallery/lws-addclothes.png";
+import lwsClothes from "../../dist/gallery/lws-clothes.png";
+import lwsOutfits from "../../dist/gallery/lws-outfits.png";
+import lwsBuildoutfits from "../../dist/gallery/lws-buildoutfits.png";
+import lwsPrefs from "../../dist/gallery/lws-prefs.png";
+
+
+
+
+
+
 export const projects = [
+  {
+    id: 0,
+    title: "Chocolate Pistachio",
+    logo: cpLogo,
+    main: cpLogo,
+    type: "web",
+    category: "Web Application",
+    stage: "MVP shipped. In testing and iteration phase.",
+    overview: "Chocolate Pistachio is a crowd-sourced web app designed to help users discover cafes based on what matters to them most. Rather than relying on a single star rating, it uses category-specific ratings for factors such as laptop-friendliness, accessibility, vegetarian options, cosiness, and date suitability. User ratings are weighted depending on how many ratings they have given in a certain area, so that real experts in a topic have their voice heard. Users can explore cafes on an interactive map, filter and search listings, contribute ratings and reviews, save favourites, and add new cafes. The project also incorporates automated location verification, user authentication, moderation workflows, and secure data handling.",
+    technologies: ["React 19", "Node.js", "Express", "MongoDB Atlas", "Mongoose", "JWT", "MapLibre", "Protomaps", "Nominatim", "Overpass API", "OpenStreetMap", "Nodemailer"],
+        links: [
+      { label: "GitHub", url: "https://github.com/katag1001/cafe-app" },
+      { label: "Site", url: "https://cafe-app-beryl.vercel.app/" }
+    ],
+    gallery: [
+      { title: "View all the cafes added in your local area", image: cpHomepage },
+      { title: "Filter to show the highest rated cafes by type", image: cpFindcafe },
+      { title: "Add a cafe by address. The location is automatically verified or sent through to an admin to confirm", image: cpAddcafe },
+      { title: "Pending approval from admin", image: cpPending },
+      { title: "View full cafe details", image: cpCafe },
+      { title: "Rate a cafe and leave a review depending on specific criteria", image: cpRatecafe },
+      { title: "See reviews and comments based on category", image: cpCaferated }, 
+      { title: "See all the cafes and ratings that you have added", image: cpMyarea },
+      { title: "Change your details", image: cpChangedetails },
+      { title: "Public profile so you can show others the cafes you love", image: cpMyprofile },
+      { title: "See the favourite cafes of the highest rated users in your area", image: cpUserfaves },
+    ]
+  },
+
   {
     id: 1,
     title: "Cherry Volunteer Organiser",
-    logo: "/cherry-logo.png",
-    main: "/cherry-logo.png",
+    logo: cherryLogo,
+    main: cherryLogoLarge,
     type: "web",
     category: "Web Application",
-    team: "Solo Developer",
+    stage: "MPV shipped and in use by Cherry.",
+    team: "Bradley Venn",
     client: "Cherry (Non-profit)",
     overview:
       "A full-stack volunteer management and project coordination platform built for Cherry. \
@@ -27,17 +124,24 @@ export const projects = [
       { label: "Site", url: "https://cherry.org.uk/" }
     ],
     gallery: [
-      // { title: "Screen name", image: "/path-to-image.png" },
+      { title: "Homepage where you can view all the projects you are connected to", image: voHome },
+      { title: "Change all your details to let your team know how you can help out", image: voMyprofile },
+      { title: "All items organised at project level", image: voProjects },
+      { title: "Add a poll on a project to make key decisions", image: voPolls },
+      { title: "View all the issues that need to be resolved and add tasks", image: voIssues },
+      { title: "Set key players and admin users", image: voAdmin },
+      { title: "Approval requests for new users", image: voApprovals },
     ]
   },
 
   {
     id: 2,
     title: "Cherry",
-    logo: "/cherry-logo.png",
-    main: "/cherry-app-main.PNG",
+    logo: cherryLogo,
+    main: cherryLogoLarge,
     type: "mobile",
     category: "Mobile Application",
+    stage: "Preparing MVP for launch. ETA December 2026.",
     team: "Open Source Team",
     client: "Cherry (Non-profit)",
     overview:
@@ -56,17 +160,26 @@ export const projects = [
       { label: "Site", url: "https://cherry.org.uk/" }
     ],
     gallery: [
-      // { title: "Screen name", image: "/path-to-image.png" },
+      { title: "Login", image: cherryLogin },
+      { title: "Secure login", image: cherryConfirm },
+      { title: "Explore listings", image: cherryExplore },
+      { title: "View an item and make an offer", image: cherryPurchase },
+      { title: "Checkout securely", image: cherryBuy },
+      { title: "Secure payment using stripe", image: cherrySecurepay },
+      { title: "Choose a pickup point with inpost", image: cherryPickup },
+      { title: "Order placed", image: cherryOrderplaced },
+      
     ]
   },
 
   {
     id: 3,
-    title: "Wearable",
+    title: "Loved Worn Seen",
     logo: "/wearable_logo.png",
     main: "/wearable_main.png",
     type: "web",
     category: "Web Application",
+    stage: "TBD",
     team: "Solo Developer",
     client: "Personal Project",
     overview:
@@ -84,7 +197,12 @@ export const projects = [
       { label: "Site", url: "https://wearable-psi.vercel.app/" }
     ],
     gallery: [
-      // { title: "Screen name", image: "/path-to-image.png" },
+      { title: "Homepage", image: lwsHomepage },
+      { title: "Add Clothes", image: lwsAddclothes },
+      { title: "Clothes", image: lwsClothes },
+      { title: "Outfits", image: lwsOutfits },
+      { title: "Build Outfits", image: lwsBuildoutfits },
+      { title: "Preferences", image: lwsPrefs },
     ]
   },
 
@@ -95,6 +213,7 @@ export const projects = [
     main: "/soul_main.png",
     type: "web",
     category: "Web Application",
+    stage: "TBD",
     team: "Solo Developer",
     client: "Soul & Subconscious Hypnotherapy",
     overview:
@@ -124,6 +243,7 @@ export const projects = [
     qr: "/download_qr.jpg",
     type: "mobile",
     category: "Mobile Application",
+    stage: "TBD",
     team: "Solo Developer",
     client: "Personal Project",
     overview:
@@ -143,34 +263,14 @@ export const projects = [
       { label: "GitHub", url: "https://github.com/katag1001/Travlr" },
     ],
     gallery: [
-      { title: "Itinerary", image: "/travlr_itinerary.jpg" },
-      { title: "Day View", image: "/travlr_day.jpg" },
-      { title: "Hotel Booking", image: "/travlr_hotel.jpg" },
-      { title: "Transport", image: "/travlr_transport.jpg" },
-      { title: "Packing List", image: "/travlr_packing.jpg" },
-      { title: "Dynamic Theming - Dubai", image: "/travlr_dubai.jpg" },
-      { title: "Dynamic Theming - Japan", image: "/travlr_japan.jpg" },
+      { title: "Itinerary", image: travlrItinerary },
+      { title: "Day View", image: travlrDay },
+      { title: "Hotel Booking", image: travlrHotel },
+      { title: "Transport", image: travlrTransport },
+      { title: "Packing List", image: travlrPacking },
+      { title: "Dynamic Theming - Dubai", image: travlrDubai },
+      { title: "Dynamic Theming - Japan", image: travlrJapan },
     ]
-  },
-  {
-    id: 6,
-    title: "St Albans Evening Rehearsal Orchestra",
-    logo: "/sta_logo.png",
-    main: "/sta_main.png",
-    type: "web",
-    category: "Web Application",
-    team: "Solo Developer",
-    client: "St Albans Evening Rehearsal Orchestra",
-    overview:
-      "The official website for the St Albans Evening Rehearsal Crchestra, featuring event \
-      information, rehearsal schedules, galleries, and integrated maps for venue locations.",
-    technologies: ["React", "CSS", "Google Maps API"],
-    links: [
-      { label: "GitHub", url: "https://github.com/katag1001/sta_rehearsal_orchestra" },
-      { label: "Site", url: "https://stalbans-ero.org.uk/" }
-    ],
-    gallery: [
-      // { title: "Screen name", image: "/path-to-image.png" },
-    ]
-  },
+  }
+  
 ];
