@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 import './index.css';
 
+import ScrollToTop from './components/ScrollToTop';
 import MainLayout from './layouts/MainLayout';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -14,6 +15,7 @@ import Game from './pages/Game';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<Home />} />

@@ -25,10 +25,13 @@ import travlrDubai from "../../dist/gallery/travlr_dubai.jpg";
 import travlrLogo from "../../dist/gallery/travlr_logo.png";
 
 //Soul & Subconscious Screenshots
-import soulMain from "../../dist/gallery/soul_main.png";
-import staMain from "../../dist/gallery/sta_main.png";
-import wearableLogo from "../../dist/gallery/wearable_logo.png";
 import soulLogo2 from "../../dist/gallery/soul_logo2.jpg";
+import soulMain from "../../dist/gallery/soul_main.png";
+import soulHomepage from "../../dist/gallery/soul-homepage.png";
+import soulCarousel from "../../dist/gallery/soul-carousel.png";
+import soulServices from "../../dist/gallery/soul-services.png";
+import soulBook from "../../dist/gallery/soul-book.png";
+import soulFaqs from "../../dist/gallery/soul-faqs.png";
 
 //Cherry Screenshots
 import cherryLogo from "../../dist/gallery/cherry-logo.png";
@@ -53,6 +56,8 @@ import voIssues from "../../dist/gallery/vo-issues.png";
 
 
 //LWS Screenshots
+import lwsLogo from "../../dist/gallery/lws-logo.png";
+import wearableLogo from "../../dist/gallery/wearable_logo.png";
 import lwsHomepage from "../../dist/gallery/lws-homepage.png";
 import lwsAddclothes from "../../dist/gallery/lws-addclothes.png";
 import lwsClothes from "../../dist/gallery/lws-clothes.png";
@@ -62,10 +67,8 @@ import lwsPrefs from "../../dist/gallery/lws-prefs.png";
 
 
 
-
-
-
 export const projects = [
+  /*Chocolate Pistachio*/
   {
     id: 0,
     title: "Chocolate Pistachio",
@@ -95,6 +98,7 @@ export const projects = [
     ]
   },
 
+  /*Cherry Volunteer Organiser*/
   {
     id: 1,
     title: "Cherry Volunteer Organiser",
@@ -134,6 +138,7 @@ export const projects = [
     ]
   },
 
+  /*Cherry*/
   {
     id: 2,
     title: "Cherry",
@@ -172,18 +177,17 @@ export const projects = [
     ]
   },
 
+  /*LWS*/
   {
     id: 3,
     title: "Loved Worn Seen",
-    logo: "/wearable_logo.png",
-    main: "/wearable_main.png",
+    logo: lwsLogo,
+    main: lwsLogo,
     type: "web",
     category: "Web Application",
-    stage: "TBD",
-    team: "Solo Developer",
-    client: "Personal Project",
+    stage: "MVP shipped. In testing and iteration phase.",
     overview:
-      "Wearable is a full-stack web app designed to streamline outfit planning by allowing users \
+      "Loved worn Seen is a full-stack web app designed to streamline outfit planning by allowing users \
       to upload and categorize their clothing. Leveraging a React frontend and a Node.js backend \
       with Express, the app uses a bespoke algorithm to automatically generate outfit combinations \
       based on factors like color, print, season, and type. It integrates with a weather API to \
@@ -197,24 +201,25 @@ export const projects = [
       { label: "Site", url: "https://wearable-psi.vercel.app/" }
     ],
     gallery: [
-      { title: "Homepage", image: lwsHomepage },
-      { title: "Add Clothes", image: lwsAddclothes },
-      { title: "Clothes", image: lwsClothes },
-      { title: "Outfits", image: lwsOutfits },
-      { title: "Build Outfits", image: lwsBuildoutfits },
-      { title: "Preferences", image: lwsPrefs },
+      { title: "The app will automatically select appropriate outfits for you depending on the weather. It will then preference outfits that include items you haven't recently worn. The preferencing algorithm will also preference outfits created by the user themself.", image: lwsHomepage },
+      { title: "Clothing categorisation will automatically be suggested depending on the title and type", image: lwsAddclothes },
+      { title: "View all the clothes in your wardrobe by type. Adding new clothes will automatically pair them up into outfits.", image: lwsClothes },
+      { title: "View all the outfits created automatically by the algorithm. Items will be put together depending on style, colour, weather and season.", image: lwsOutfits },
+      { title: "Build your own outfits and submit to the collection.", image: lwsBuildoutfits },
+      { title: "Select your daily preferences for the types of outfits you recieve each day. Set here so that you will only be suggested 'Work' outfits during the week for example.", image: lwsPrefs },
     ]
   },
 
+  /*Soul & Subconscious*/
   {
     id: 4,
     title: "Soul & Subconscious",
-    logo: "/soul_logo2.jpg",
-    main: "/soul_main.png",
+    logo: soulLogo2,
+    main: soulLogo2,
     type: "web",
     category: "Web Application",
-    stage: "TBD",
-    team: "Solo Developer",
+    stage: "Fully Shipped",
+    team: "Bianca Dawson",
     client: "Soul & Subconscious Hypnotherapy",
     overview:
       "Soul Subconscious Hypnotherapy is a client-facing website built with React that offers an \
@@ -231,10 +236,15 @@ export const projects = [
       { label: "Site", url: "https://soul-subconscious.vercel.app/" },
     ],
     gallery: [
-      // { title: "Screen name", image: "/path-to-image.png" },
+      { title: "Homepage", image: soulHomepage },
+      { title: "Carousel", image: soulCarousel },
+      { title: "Services", image: soulServices },
+      { title: "Book a session", image: soulBook },
+      { title: "FAQs", image: soulFaqs },
     ]
   },
 
+  /*TravlrMe Mobile App*/
   {
     id: 5,
     title: "TravlrMe Mobile App",
