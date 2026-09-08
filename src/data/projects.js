@@ -248,8 +248,8 @@ export const projects = [
   {
     id: 5,
     title: "TravlrMe Mobile App",
-    logo: "/travlr_logo.png",
-    main: "/travlr_main.jpg",
+    logo: travlrLogo,
+    main: travlrLogo,
     qr: "/download_qr.jpg",
     type: "mobile",
     category: "Mobile Application",

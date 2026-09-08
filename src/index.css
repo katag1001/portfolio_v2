@@ -92,6 +92,25 @@
 
 --accent-soft: rgba(255, 150, 200, 0.2);
 --accent-strong: rgba(255, 150, 200, 1);
+/* iridescent hover treatment, opaque siblings of the bubble rim hues above */
+--accent-iridescent: linear-gradient(
+  120deg,
+  rgb(255, 158, 200) 0%,
+  rgb(197, 165, 251) 25%,
+  rgb(158, 189, 251) 50%,
+  rgb(181, 228, 216) 75%,
+  rgb(255, 208, 193) 100%
+);
+/* higher-saturation version for gradient-clipped text, which needs more
+   contrast against page backgrounds than a filled button background does */
+--accent-iridescent-text: linear-gradient(
+  120deg,
+  rgb(255, 90, 165) 0%,
+  rgb(165, 90, 240) 25%,
+  rgb(70, 130, 240) 50%,
+  rgb(35, 175, 145) 75%,
+  rgb(240, 125, 80) 100%
+);
 
 --accent-blue:  rgba(134, 119, 150, 0.8);
 --accent-blue-light:  rgba(134, 119, 150, 0.2);
@@ -157,9 +176,28 @@
 
   --accent-soft: rgba(255, 120, 185, 0.2);
   --accent-strong: rgba(255, 120, 185, 1);
+  /* iridescent hover treatment, opaque siblings of the bubble rim hues above */
+  --accent-iridescent: linear-gradient(
+    120deg,
+    rgb(255, 110, 180) 0%,
+    rgb(170, 130, 255) 25%,
+    rgb(110, 160, 255) 50%,
+    rgb(120, 210, 195) 75%,
+    rgb(255, 160, 140) 100%
+  );
+  /* higher-saturation version for gradient-clipped text, which needs more
+     contrast against page backgrounds than a filled button background does */
+  --accent-iridescent-text: linear-gradient(
+    120deg,
+    rgb(255, 130, 195) 0%,
+    rgb(195, 155, 255) 25%,
+    rgb(140, 185, 255) 50%,
+    rgb(140, 225, 205) 75%,
+    rgb(255, 185, 160) 100%
+  );
 
 
-  --accent-blue:  rgba(100, 80, 120, 0.8);   
+  --accent-blue:  rgba(100, 80, 120, 0.8);
   --accent-blue-light:  rgba(100, 80, 120, 0.2); 
 
   --glass-blur: blur(14px);

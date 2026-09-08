@@ -183,8 +183,13 @@
 }
 
 
-.download-cv-button:hover {
-  color: var(--accent-strong);
+.download-cv-button:hover,
+.download-cv-button:hover .download-cv-button-arrow {
+  background: var(--accent-iridescent-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 

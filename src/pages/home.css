@@ -91,8 +91,13 @@
   transition: transform var(--transition-main);
 }
 
-.home_link:hover {
-  color: var(--accent-strong);
+.home_link:hover,
+.home_link:hover .home_link-arrow {
+  background: var(--accent-iridescent-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .home_link:hover .home_link-arrow {

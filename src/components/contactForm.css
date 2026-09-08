@@ -76,8 +76,8 @@
 
 .contact-link-btn:hover {
   transform: translateY(-4px);
-  background: var(--accent-strong);
-  border-color: var(--accent-strong);
+  background: var(--accent-iridescent);
+  border-color: transparent;
   color: #fff;
 }
 
@@ -142,8 +142,8 @@
 }
 
 .contact-form button:hover {
-  background: var(--accent-strong);
-  border-color: var(--accent-strong);
+  background: var(--accent-iridescent);
+  border-color: transparent;
   color: #fff;
   transform: translateY(-3px);
 }

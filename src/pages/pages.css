@@ -67,8 +67,8 @@
 }
 
 .editorial-btn:hover {
-  background: var(--accent-strong);
-  border-color: var(--accent-strong);
+  background: var(--accent-iridescent);
+  border-color: transparent;
   color: #fff;
   transform: translateY(-3px);
 }

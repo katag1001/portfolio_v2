@@ -61,8 +61,13 @@
   transition: transform var(--transition-main);
 }
 
-.project-back-link:hover {
-  color: var(--accent-strong);
+.project-back-link:hover,
+.project-back-link:hover .project-back-arrow {
+  background: var(--accent-iridescent-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .project-back-link:hover .project-back-arrow {
@@ -101,8 +106,13 @@
   transition: transform var(--transition-main);
 }
 
-.project-next-link:hover {
-  color: var(--accent-strong);
+.project-next-link:hover,
+.project-next-link:hover .project-next-arrow {
+  background: var(--accent-iridescent-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 .project-next-link:hover .project-next-arrow {
@@ -185,7 +195,6 @@
   justify-content: center;
   align-items: center;
   border-radius: var(--radius-pill);
-  border: var(--line-w) solid var(--text-main);
   padding: var(--space-2xs);
   transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
 }
@@ -196,8 +205,8 @@
 
 .project-link-btn:hover {
   transform: translateY(-4px);
-  background: var(--accent-strong);
-  border-color: var(--accent-strong);
+  background: var(--accent-iridescent);
+  border-color: transparent;
   color: #fff;
 }
 
