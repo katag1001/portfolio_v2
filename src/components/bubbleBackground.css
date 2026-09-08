@@ -1,3 +1,28 @@
+/* Wrapper only groups the backdrop + bubble layers for the animation to
+   query; it must not create its own stacking context, otherwise the front
+   bubble layer could never rise above page content. */
+.bubble_root {
+  display: contents;
+}
+
+/* Bubbles are split across two full-screen layers so half of them can be
+   raised above page content independently of the other half. */
+.bubble_layer {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Only the homepage elevates the front layer above the homepage content
+   (.home_header_bubble / .home_links sit at z-index 100), while staying
+   below the header (900/1000) so navigation is never covered. Everywhere
+   else the front layer stays level with the back layer, behind everything. */
+.bubble_layer_front--elevated {
+  z-index: 101;
+}
+
 /* Full screen background: soft colour patches fading into one another,
    sitting on top of the base gradient */
 .bubble_background {
@@ -50,6 +75,14 @@
     0 0 6px var(--bubble-pink-glow),
     0 0 16px var(--bubble-rim-lavender),
     inset 0 0 30px rgba(255,255,255,0.08);
+  /* Refracts whatever sits behind the bubble - another bubble or, on the
+     homepage, page content - the way light bends through real bubble film.
+     The plain blur/saturate line is the fallback for browsers that can't
+     parse an SVG filter reference inside backdrop-filter; the url() line
+     overrides it where supported. */
+  backdrop-filter: blur(2px) saturate(1.35) contrast(1.05);
+  -webkit-backdrop-filter: blur(2px) saturate(1.35) contrast(1.05);
+  backdrop-filter: url(#bubble-distortion) blur(2px) saturate(1.35) contrast(1.05);
 }
 
 /* Iridescent rim: multiple hues layered around the edge only */
