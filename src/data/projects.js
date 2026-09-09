@@ -1,69 +1,69 @@
 //Chocolate Pistachio Screenshots
-import cpHomepage from "../../dist/gallery/cp-homepage.png";
-import cpFindcafe from "../../dist/gallery/cp-findcafe.png";
-import cpAddcafe from "../../dist/gallery/cp-addcafe.png";
-import cpConfirmdetails from "../../dist/gallery/cp-confirmdetails.png";
-import cpPending from "../../dist/gallery/cp-pending.png";
-import cpMyarea from "../../dist/gallery/cp-myarea.png";
-import cpMyprofile from "../../dist/gallery/cp-myprofile.png";
-import cpChangedetails from "../../dist/gallery/cp-changedetails.png";
-import cpUserfaves from "../../dist/gallery/cp-userfaves.png";
-import cpLogo from "../../dist/gallery/cp-logo.png";
-import cpCafe from "../../dist/gallery/cp-cafe.png";
-import cpRatecafe from "../../dist/gallery/cp-ratecafe.png";
-import cpCaferated from "../../dist/gallery/cp-caferated.png";
+import cpHomepage from "../assets/gallery/cp-homepage.png";
+import cpFindcafe from "../assets/gallery/cp-findcafe.png";
+import cpAddcafe from "../assets/gallery/cp-addcafe.png";
+import cpConfirmdetails from "../assets/gallery/cp-confirmdetails.png";
+import cpPending from "../assets/gallery/cp-pending.png";
+import cpMyarea from "../assets/gallery/cp-myarea.png";
+import cpMyprofile from "../assets/gallery/cp-myprofile.png";
+import cpChangedetails from "../assets/gallery/cp-changedetails.png";
+import cpUserfaves from "../assets/gallery/cp-userfaves.png";
+import cpLogo from "../assets/gallery/cp-logo.png";
+import cpCafe from "../assets/gallery/cp-cafe.png";
+import cpRatecafe from "../assets/gallery/cp-ratecafe.png";
+import cpCaferated from "../assets/gallery/cp-caferated.png";
 
 //TravlrMe Screenshots
-import travlrJapan from "../../dist/gallery/travlr_japan.jpg";
-import travlrItinerary from "../../dist/gallery/travlr_itinerary.jpg";
-import travlrHotel from "../../dist/gallery/travlr_hotel.jpg";
-import travlrTransport from "../../dist/gallery/travlr_transport.jpg";
-import travlrMain from "../../dist/gallery/travlr_main.jpg";
-import travlrPacking from "../../dist/gallery/travlr_packing.jpg";
-import travlrDay from "../../dist/gallery/travlr_day.jpg";
-import travlrDubai from "../../dist/gallery/travlr_dubai.jpg";
-import travlrLogo from "../../dist/gallery/travlr_logo.png";
+import travlrJapan from "../assets/gallery/travlr_japan.jpg";
+import travlrItinerary from "../assets/gallery/travlr_itinerary.jpg";
+import travlrHotel from "../assets/gallery/travlr_hotel.jpg";
+import travlrTransport from "../assets/gallery/travlr_transport.jpg";
+import travlrMain from "../assets/gallery/travlr_main.jpg";
+import travlrPacking from "../assets/gallery/travlr_packing.jpg";
+import travlrDay from "../assets/gallery/travlr_day.jpg";
+import travlrDubai from "../assets/gallery/travlr_dubai.jpg";
+import travlrLogo from "../assets/gallery/travlr_logo.png";
 
 //Soul & Subconscious Screenshots
-import soulLogo2 from "../../dist/gallery/soul_logo2.jpg";
-import soulMain from "../../dist/gallery/soul_main.png";
-import soulHomepage from "../../dist/gallery/soul-homepage.png";
-import soulCarousel from "../../dist/gallery/soul-carousel.png";
-import soulServices from "../../dist/gallery/soul-services.png";
-import soulBook from "../../dist/gallery/soul-book.png";
-import soulFaqs from "../../dist/gallery/soul-faqs.png";
+import soulLogo2 from "../assets/gallery/soul_logo2.jpg";
+import soulMain from "../assets/gallery/soul_main.png";
+import soulHomepage from "../assets/gallery/soul-homepage.png";
+import soulCarousel from "../assets/gallery/soul-carousel.png";
+import soulServices from "../assets/gallery/soul-services.png";
+import soulBook from "../assets/gallery/soul-book.png";
+import soulFaqs from "../assets/gallery/soul-faqs.png";
 
 //Cherry Screenshots
-import cherryLogo from "../../dist/gallery/cherry-logo.png";
-import cherryLogoLarge from "../../dist/gallery/cherry-logo-large.png";
-import cherryLogin from "../../dist/gallery/cherry-login.png";
-import cherryConfirm from "../../dist/gallery/cherry-confirm.png";
-import cherryExplore from "../../dist/gallery/cherry-explore.png";
-import cherryPurchase from "../../dist/gallery/cherry-purchase.png";
-import cherryBuy from "../../dist/gallery/cherry-buy.png";
-import cherryPickup from "../../dist/gallery/cherry-pickup.png";
-import cherrySecurepay from "../../dist/gallery/cherry-securepay.png";
-import cherryOrderplaced from "../../dist/gallery/cherry-orderplaced.png";
+import cherryLogo from "../assets/gallery/cherry-logo.png";
+import cherryLogoLarge from "../assets/gallery/cherry-logo-large.png";
+import cherryLogin from "../assets/gallery/cherry-login.png";
+import cherryConfirm from "../assets/gallery/cherry-confirm.png";
+import cherryExplore from "../assets/gallery/cherry-explore.png";
+import cherryPurchase from "../assets/gallery/cherry-purchase.png";
+import cherryBuy from "../assets/gallery/cherry-buy.png";
+import cherryPickup from "../assets/gallery/cherry-pickup.png";
+import cherrySecurepay from "../assets/gallery/cherry-securepay.png";
+import cherryOrderplaced from "../assets/gallery/cherry-orderplaced.png";
 
 // Volunteer Organiser Screenshots
-import voHome from "../../dist/gallery/vo-home.png";
-import voMyprofile from "../../dist/gallery/vo-myprofile.png";
-import voProjects from "../../dist/gallery/vo-projects.png";
-import voPolls from "../../dist/gallery/vo-polls.png";
-import voAdmin from "../../dist/gallery/vo-admin.png";
-import voApprovals from "../../dist/gallery/vo-approvals.png";
-import voIssues from "../../dist/gallery/vo-issues.png";
+import voHome from "../assets/gallery/vo-home.png";
+import voMyprofile from "../assets/gallery/vo-myprofile.png";
+import voProjects from "../assets/gallery/vo-projects.png";
+import voPolls from "../assets/gallery/vo-polls.png";
+import voAdmin from "../assets/gallery/vo-admin.png";
+import voApprovals from "../assets/gallery/vo-approvals.png";
+import voIssues from "../assets/gallery/vo-issues.png";
 
 
 //LWS Screenshots
-import lwsLogo from "../../dist/gallery/lws-logo.png";
-import wearableLogo from "../../dist/gallery/wearable_logo.png";
-import lwsHomepage from "../../dist/gallery/lws-homepage.png";
-import lwsAddclothes from "../../dist/gallery/lws-addclothes.png";
-import lwsClothes from "../../dist/gallery/lws-clothes.png";
-import lwsOutfits from "../../dist/gallery/lws-outfits.png";
-import lwsBuildoutfits from "../../dist/gallery/lws-buildoutfits.png";
-import lwsPrefs from "../../dist/gallery/lws-prefs.png";
+import lwsLogo from "../assets/gallery/lws-logo.png";
+import wearableLogo from "../assets/gallery/wearable_logo.png";
+import lwsHomepage from "../assets/gallery/lws-homepage.png";
+import lwsAddclothes from "../assets/gallery/lws-addclothes.png";
+import lwsClothes from "../assets/gallery/lws-clothes.png";
+import lwsOutfits from "../assets/gallery/lws-outfits.png";
+import lwsBuildoutfits from "../assets/gallery/lws-buildoutfits.png";
+import lwsPrefs from "../assets/gallery/lws-prefs.png";
 
 
 
