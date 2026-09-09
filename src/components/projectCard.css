@@ -340,15 +340,19 @@
   .gallery-mobile .gallery-item,
   .gallery-mobile .gallery-item:nth-child(even) {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: var(--space-sm);
   }
 
   .gallery-mobile .gallery-title,
   .gallery-mobile .gallery-item:nth-child(even) .gallery-title {
-    text-align: left;
+    flex: none;
+    text-align: center;
+    margin: 0;
   }
 
   .gallery-mobile .gallery-image {
+    flex: none;
     width: 60%;
     height: auto;
     aspect-ratio: 9 / 19.5;
