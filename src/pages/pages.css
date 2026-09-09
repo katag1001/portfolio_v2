@@ -14,7 +14,7 @@
 ============================== */
 .page-section {
   position: relative;
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -120,4 +120,9 @@
     justify-content: center;
     align-items: center;
   }
+  #projects .home-section-container {
+  margin-top: 90px;
+  margin-bottom: 0;
+  height: calc(100vh - 120px);
+}
 }

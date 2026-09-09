@@ -1,6 +1,8 @@
-import React, { useEffect, useMemo, useRef } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./bubbleBackground.css";
+
+const SMALL_SCREEN_QUERY = "(max-width: 600px)";
 
 export default function BubbleBackground({
   numBubbles = 20,
@@ -11,15 +13,32 @@ export default function BubbleBackground({
   const location = useLocation();
   const isHome = location.pathname === "/";
 
+  // Fewer, slightly smaller bubbles on small screens so they don't crowd
+  // the viewport.
+  const [isSmallScreen, setIsSmallScreen] = useState(
+    () => typeof window !== "undefined" && window.matchMedia(SMALL_SCREEN_QUERY).matches
+  );
+
+  useEffect(() => {
+    const mql = window.matchMedia(SMALL_SCREEN_QUERY);
+    const onChange = (e) => setIsSmallScreen(e.matches);
+    mql.addEventListener("change", onChange);
+    return () => mql.removeEventListener("change", onChange);
+  }, []);
+
+  const effectiveNumBubbles = isSmallScreen ? Math.round(numBubbles * 0.6) : numBubbles;
+  const effectiveMinSize = isSmallScreen ? minSize * 0.55 : minSize;
+  const effectiveMaxSize = isSmallScreen ? maxSize * 0.55 : maxSize;
+
   // Computed once per size/count props so route changes (which read
   // useLocation) don't reshuffle bubble sizes on every navigation.
   const bubbles = useMemo(() => {
     const colors = ["pink"];
-    return Array.from({ length: numBubbles }).map((_, i) => {
+    return Array.from({ length: effectiveNumBubbles }).map((_, i) => {
       const isExtraLarge = i < 3;
       const size = isExtraLarge
-        ? maxSize + maxSize * 0.15 + Math.random() * maxSize * 0.25
-        : minSize + Math.pow(Math.random(), 0.6) * (maxSize - minSize);
+        ? effectiveMaxSize + effectiveMaxSize * 0.15 + Math.random() * effectiveMaxSize * 0.25
+        : effectiveMinSize + Math.pow(Math.random(), 0.6) * (effectiveMaxSize - effectiveMinSize);
       return {
         id: i,
         size,
@@ -29,7 +48,7 @@ export default function BubbleBackground({
         layer: i % 2 === 0 ? "back" : "front"
       };
     });
-  }, [numBubbles, minSize, maxSize]);
+  }, [effectiveNumBubbles, effectiveMinSize, effectiveMaxSize]);
 
   useEffect(() => {
     const root = rootRef.current;

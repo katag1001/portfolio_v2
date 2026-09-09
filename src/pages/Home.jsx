@@ -1,31 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import useHeaderEyebrow from "../hooks/useHeaderEyebrow";
 import "./home.css";
 
 export default function Home() {
   useHeaderEyebrow("01", "Portfolio");
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 800);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
 
   return (
     <div className="page-section" id="home">
-      <div
-        className="home_header_bubble"
-        style={{
-          position: isMobile ? "absolute" : "fixed",
-          bottom: isMobile ? "24%" : "16%",
-          left: isMobile ? "50%" : "auto",
-          right: isMobile ? "auto" : "6%",
-          transform: isMobile ? "translateX(-50%)" : "none",
-        }}
-      >
+      <div className="home_header_bubble">
         <div className="home_title_row">
           <h1 className="home_title">
             Katarina
