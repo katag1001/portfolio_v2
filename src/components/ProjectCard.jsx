@@ -43,7 +43,7 @@ export default function ProjectCard({ project, onBack, onNext, nextProject }) {
       <div className="project-card-header">
         <h2 className="card-title">{project.title}</h2>
         <button className="project-back-link" onClick={onBack}>
-          <span className="project-back-arrow">←</span> Back
+          <span className="project-back-arrow">←</span> <span className="project-back-label">Back</span>
         </button>
       </div>
 
@@ -113,7 +113,7 @@ export default function ProjectCard({ project, onBack, onNext, nextProject }) {
       {onNext && (
         <div className="project-card-footer">
           <button className="project-next-link" onClick={onNext}>
-            Next{nextProject ? `: ${nextProject.title}` : " Project"}
+            <span className="project-next-label">Next{nextProject ? `: ${nextProject.title}` : " Project"}</span>
             <span className="project-next-arrow">→</span>
           </button>
         </div>

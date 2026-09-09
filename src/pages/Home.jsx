@@ -39,13 +39,13 @@ export default function Home() {
 
       <nav className="home_links">
         <Link to="/projects" className="home_link">
-          <span className="home_link-arrow">→</span> View my work
+          <span className="home_link-arrow">→</span> <span className="home_link-label">View my work</span>
         </Link>
         <Link to="/about" className="home_link">
-          <span className="home_link-arrow">→</span> Learn more about me
+          <span className="home_link-arrow">→</span> <span className="home_link-label">Learn more about me</span>
         </Link>
         <Link to="/game" className="home_link">
-          <span className="home_link-arrow">→</span> Pop some bubbles
+          <span className="home_link-arrow">→</span> <span className="home_link-label">Pop some bubbles</span>
         </Link>
       </nav>
     </div>

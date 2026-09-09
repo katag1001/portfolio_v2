@@ -30,7 +30,7 @@ export default function AboutMe() {
             className="download-cv-button"
           >
             <span className="download-cv-button-arrow">→</span>
-            Download my CV
+            <span className="download-cv-button-label">Download my CV</span>
           </a>
         </div>
       </div>

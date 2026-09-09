@@ -183,7 +183,7 @@
 }
 
 
-.download-cv-button:hover,
+.download-cv-button:hover .download-cv-button-label,
 .download-cv-button:hover .download-cv-button-arrow {
   background: var(--accent-iridescent-text);
   -webkit-background-clip: text;
@@ -197,4 +197,263 @@
   transform: translateX(4px);
 }
 
+/* =========================================================
+   SMALL SCREENS
+   ========================================================= */
 
+@media (max-width: 768px) {
+
+  /* ---------------------------------------------------------
+     ABOUT PAGE SETTINGS
+     --------------------------------------------------------- */
+
+  .about-container {
+    --about-image-width: 100%;
+    --about-image-height: 55vh;
+
+    --about-image-bottom: auto;
+    --about-image-left: auto;
+
+    --about-image-radius: 0 var(--radius-lg) 0 0;
+
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+
+    overflow-x: clip;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ---------------------------------------------------------
+     BOX SIZING
+     --------------------------------------------------------- */
+
+  .about-container,
+  .about-container * {
+    box-sizing: border-box;
+  }
+
+
+  /* ---------------------------------------------------------
+     IMAGE
+     --------------------------------------------------------- */
+
+  .about-left {
+    position: relative;
+
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    width: 100%;
+    max-width: 100%;
+    height: var(--about-image-height);
+
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+  }
+
+
+  .about-image {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: top;
+
+    border-radius: var(--about-image-radius);
+
+    border: var(--line-w) solid var(--line-color);
+  }
+
+
+  /* ---------------------------------------------------------
+     TEXT / CONTENT
+     --------------------------------------------------------- */
+
+  .about-right {
+    position: relative;
+
+    top: var(--space-md);
+    right: auto;
+    bottom: auto;
+    left: auto;
+
+    width: 100%;
+    max-width: 100%;
+
+    padding: var(--space-xl) var(--space-md) var(--space-xl);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    text-align: left;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ---------------------------------------------------------
+     TITLE
+     --------------------------------------------------------- */
+
+  .about-title {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: var(--fs-h6);
+    line-height: 1;
+
+    font-weight: 700;
+    letter-spacing: -0.01em;
+
+    color: var(--text-main);
+
+    margin: 0 0 var(--space-md);
+
+    text-align: left;
+
+    box-sizing: border-box;
+  }
+
+
+  /* ---------------------------------------------------------
+     DIVIDER
+     --------------------------------------------------------- */
+
+  .about-divider {
+    width: 100%;
+    max-width: 100%;
+
+    height: var(--line-w);
+
+    background-color: var(--line-color);
+
+    margin-bottom: var(--space-lg);
+
+    box-sizing: border-box;
+  }
+
+
+  /* ---------------------------------------------------------
+     BODY TEXT
+     --------------------------------------------------------- */
+
+  .about-text {
+    width: 100%;
+    max-width: 100%;
+
+    padding-right: 0;
+
+    line-height: 1.6;
+    font-size: var(--fs-body);
+
+    color: var(--text-muted);
+
+    text-align: left;
+
+    box-sizing: border-box;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+
+  .about-text p {
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 0 var(--space-sm);
+
+    text-align: left;
+
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+
+  /* ---------------------------------------------------------
+     DOWNLOAD CV BUTTON
+     --------------------------------------------------------- */
+
+  .download-cv-button {
+    display: inline-flex;
+    align-items: center;
+
+    gap: var(--space-2xs);
+
+    align-self: flex-start;
+
+    margin: var(--space-md) 0 0;
+
+    font-family: var(--font-main);
+    font-size: var(--fs-label);
+    font-weight: 600;
+    letter-spacing: var(--ls-label);
+    text-transform: uppercase;
+
+    text-decoration: none;
+
+    color: var(--text-main);
+    background: transparent;
+
+    border: none;
+    padding: 0;
+
+    cursor: pointer;
+
+    box-sizing: border-box;
+
+    transition:
+      color var(--transition-main),
+      gap var(--transition-main);
+  }
+
+
+  .download-cv-button-arrow {
+    transition: transform var(--transition-main);
+  }
+
+
+  .download-cv-button:hover .download-cv-button-label,
+  .download-cv-button:hover .download-cv-button-arrow {
+    background: var(--accent-iridescent-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+
+  .download-cv-button:hover .download-cv-button-arrow {
+    transform: translateX(4px);
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL SCREENS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .about-container {
+    --about-image-height: 45vh;
+  }
+
+  .about-title {
+    font-size: var(--fs-h6);
+  }
+}

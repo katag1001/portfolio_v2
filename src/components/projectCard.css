@@ -61,7 +61,7 @@
   transition: transform var(--transition-main);
 }
 
-.project-back-link:hover,
+.project-back-link:hover .project-back-label,
 .project-back-link:hover .project-back-arrow {
   background: var(--accent-iridescent-text);
   -webkit-background-clip: text;
@@ -106,7 +106,7 @@
   transition: transform var(--transition-main);
 }
 
-.project-next-link:hover,
+.project-next-link:hover .project-next-label,
 .project-next-link:hover .project-next-arrow {
   background: var(--accent-iridescent-text);
   -webkit-background-clip: text;

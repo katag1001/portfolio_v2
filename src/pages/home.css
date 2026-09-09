@@ -91,7 +91,7 @@
   transition: transform var(--transition-main);
 }
 
-.home_link:hover,
+.home_link:hover .home_link-label,
 .home_link:hover .home_link-arrow {
   background: var(--accent-iridescent-text);
   -webkit-background-clip: text;

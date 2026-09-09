@@ -273,13 +273,13 @@ export const projects = [
       { label: "GitHub", url: "https://github.com/katag1001/Travlr" },
     ],
     gallery: [
-      { title: "Itinerary", image: travlrItinerary },
-      { title: "Day View", image: travlrDay },
-      { title: "Hotel Booking", image: travlrHotel },
-      { title: "Transport", image: travlrTransport },
-      { title: "Packing List", image: travlrPacking },
-      { title: "Dynamic Theming - Dubai", image: travlrDubai },
-      { title: "Dynamic Theming - Japan", image: travlrJapan },
+      { title: "Show your itinerary in a calendar view", image: travlrItinerary },
+      { title: "See everything you've planned for that day", image: travlrDay },
+      { title: "Show all your hotel bookings in one place. The price is split automatically over the amount of days and sent through to the budget and the itinerary", image: travlrHotel },
+      { title: "Show all your transport bookings in one place. The price is sent through automatically to the budget and the itinerary", image: travlrTransport },
+      { title: "Organise and tick off all your packing lists", image: travlrPacking },
+      { title: "Dynamic Theming depending on the holiday location", image: travlrDubai },
+      { title: "Dynamic Theming depending on the holiday location", image: travlrJapan },
     ]
   }
   
