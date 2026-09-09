@@ -8,15 +8,27 @@
   height: 99%;
   overflow: hidden;
   border-radius: 8px;
-  background-color: transparent;
-  border: 1px solid var(--card-border-shadow);
   touch-action: manipulation;
   z-index: 100;
-  background: linear-gradient(
-    180deg,
-    var(--bg-gradient-top, rgba(45,23,76,1)),
-    var(--bg-gradient-bottom, rgba(22,11,38,1))
-  );
+  /* Same colour-patch formula as the page background (bubbleBackground.css),
+     just on a darker base so the game window reads as a distinct panel
+     rather than blending into the page behind it. */
+  background:
+    radial-gradient(ellipse 34% 30% at 50% 50%, rgba(255,255,255,0.5) 0%, transparent 62%),
+    radial-gradient(ellipse 54% 48% at 50% 50%, rgba(255,255,255,0.3) 0%, transparent 70%),
+    radial-gradient(ellipse 58% 52% at 10% 12%, rgba(255, 212, 229, 0.5) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 48% at 50% 4%, rgba(224, 208, 253, 0.44) 0%, transparent 70%),
+    radial-gradient(ellipse 58% 52% at 90% 10%, rgba(189, 216, 253, 0.4) 0%, transparent 70%),
+    radial-gradient(ellipse 52% 60% at 96% 50%, rgba(255, 226, 208, 0.4) 0%, transparent 70%),
+    radial-gradient(ellipse 58% 52% at 90% 90%, rgba(255, 200, 221, 0.44) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 48% at 50% 96%, rgba(208, 239, 228, 0.38) 0%, transparent 70%),
+    radial-gradient(ellipse 58% 52% at 10% 90%, rgba(224, 208, 253, 0.44) 0%, transparent 70%),
+    radial-gradient(ellipse 52% 60% at 4% 50%, rgba(189, 216, 253, 0.4) 0%, transparent 70%),
+    linear-gradient(
+      180deg,
+      rgb(204, 207, 217),
+      rgb(217, 207, 213)
+    );
 }
 
 /* Mobile */
@@ -38,37 +50,108 @@
   z-index: 100;
 }
 
+/* Glassy body: almost fully transparent centre, subtle inner depth -
+   matches the bubbleBackground pink-bubble treatment, light theme only */
 .game_bubble {
   position: absolute;
   pointer-events: auto;
   touch-action: manipulation;
-
   z-index: 100;
-    box-shadow:
-    0 0 4px var(--bubble-pink-glow),
-    inset 0 0 30px var(--accent-strong, --bubble-rim-light);
   border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 50%,
+    transparent 40%,
+    rgba(255,255,255,0.06) 70%,
+    transparent 100%
+  );
+  box-shadow:
+    0 0 6px rgba(255, 173, 212, 0.35),
+    0 0 16px rgba(197, 165, 251, 0.42),
+    inset 0 0 30px rgba(255,255,255,0.08);
+  backdrop-filter: blur(2px) saturate(1.35) contrast(1.05);
+  -webkit-backdrop-filter: blur(2px) saturate(1.35) contrast(1.05);
 }
 
-.game_bubble::before {
+/* Iridescent rim: multiple hues layered around the edge only */
+.game_bubble::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.6) 0%,
-    rgba(255,255,255,0) 70%
-  );
+  inset: 0;
   border-radius: 50%;
+  background: conic-gradient(
+    from 200deg,
+    rgba(255, 158, 200, 0.5) 0deg,
+    rgba(197, 165, 251, 0.42) 75deg,
+    rgba(158, 189, 251, 0.4) 150deg,
+    rgba(181, 228, 216, 0.32) 220deg,
+    rgba(255, 208, 193, 0.35) 290deg,
+    rgba(255, 158, 200, 0.5) 360deg
+  );
+  -webkit-mask: radial-gradient(circle, transparent 48%, black 66%, black 92%, transparent 100%);
+  mask: radial-gradient(circle, transparent 48%, black 66%, black 92%, transparent 100%);
   pointer-events: none;
 }
 
+/* Specular highlights: two bright points where light catches the glass */
+.game_bubble::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 28% 24%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.22) 6%, rgba(255,255,255,0) 15%),
+    radial-gradient(circle at 70% 74%, rgba(255,255,255,0.27) 0%, rgba(255,255,255,0) 9%);
+  pointer-events: none;
+}
 
+/* A little variety across bubbles so they don't all catch the light the same way */
+.game_bubble:nth-child(3n)::after {
+  background: conic-gradient(
+    from 40deg,
+    rgba(197, 165, 251, 0.42) 0deg,
+    rgba(255, 158, 200, 0.5) 90deg,
+    rgba(255, 208, 193, 0.35) 170deg,
+    rgba(158, 189, 251, 0.4) 250deg,
+    rgba(181, 228, 216, 0.32) 320deg,
+    rgba(197, 165, 251, 0.42) 360deg
+  );
+}
 
+.game_bubble:nth-child(3n)::before {
+  background:
+    radial-gradient(circle at 68% 22%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.22) 6%, rgba(255,255,255,0) 15%),
+    radial-gradient(circle at 30% 70%, rgba(255,255,255,0.27) 0%, rgba(255,255,255,0) 9%);
+}
 
+.game_bubble:nth-child(3n+1)::after {
+  background: conic-gradient(
+    from 300deg,
+    rgba(181, 228, 216, 0.32) 0deg,
+    rgba(158, 189, 251, 0.4) 80deg,
+    rgba(197, 165, 251, 0.42) 160deg,
+    rgba(255, 158, 200, 0.5) 240deg,
+    rgba(255, 208, 193, 0.35) 310deg,
+    rgba(181, 228, 216, 0.32) 360deg
+  );
+}
+
+.game_bubble:nth-child(3n+2)::after {
+  background: conic-gradient(
+    from 120deg,
+    rgba(158, 189, 251, 0.4) 0deg,
+    rgba(197, 165, 251, 0.42) 90deg,
+    rgba(255, 158, 200, 0.5) 170deg,
+    rgba(255, 208, 193, 0.35) 240deg,
+    rgba(181, 228, 216, 0.32) 300deg,
+    rgba(158, 189, 251, 0.4) 360deg
+  );
+}
+
+.game_bubble:nth-child(3n+2)::before {
+  background:
+    radial-gradient(circle at 24% 68%, rgba(255,255,255,0.55) 0%, rgba(255,255,255,0.22) 6%, rgba(255,255,255,0) 15%),
+    radial-gradient(circle at 74% 30%, rgba(255,255,255,0.27) 0%, rgba(255,255,255,0) 9%);
+}
 
 .game_bubble_popped {
   animation: game_pop 0.3s forwards;
@@ -88,12 +171,12 @@
 }
 
 .game_popup {
-  background: var(--card-bg);
+  background: rgba(254, 254, 254, 0.5);
   padding: 2.5rem 3rem;
   border-radius: 15px;
   text-align: center;
   width: 70%;
-  color: white;
+  color: rgba(45, 35, 65, 1);
 }
 
 .game_go {
@@ -103,8 +186,8 @@
   border: none;
   cursor: pointer;
   font-weight: 600;
-  background: var(--card-bg);
-  color: white;
+  background: rgba(254, 254, 254, 0.5);
+  color: rgba(45, 35, 65, 1);
 }
 
 /* ---------------- ANIMATIONS ---------------- */
@@ -122,14 +205,14 @@
     width: 100%;
     max-height: 300px;
     border-radius: 4px;
-    box-shadow: 0 4px 15px var(--bubble-rim-light); 
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.8);
   }
 
 
   .game_popup {
-    padding: 0.7rem; 
+    padding: 0.7rem;
     width: 80%;
-    font-size: 10px; 
+    font-size: 10px;
     font-weight: 100;
   }
 

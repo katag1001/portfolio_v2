@@ -9,7 +9,7 @@
 
 .bubble-section-title {
   font-size: var(--fs-h2);
-  color: var(--text-main);
+  color: rgba(45, 35, 65, 1);
   margin-bottom: var(--space-sm);
 }
 
@@ -38,7 +38,7 @@
   flex-direction: column;
   height: 100%;
   overflow: auto;
-  color: var(--text-muted);
+  color: rgba(90, 80, 120, 0.995);
   margin: 0;
   padding: 0;
 }
@@ -51,7 +51,7 @@
   text-transform: uppercase;
   font-weight: 700;
   margin-bottom: var(--space-xs);
-  color: var(--text-main);
+  color: rgba(45, 35, 65, 1);
 }
 
 /* Description */
@@ -68,10 +68,10 @@
   margin-top: var(--space-sm);
   padding: var(--space-sm);
   border-radius: var(--radius-md);
-  color: var(--text-muted);
+  color: rgba(90, 80, 120, 0.995);
   outline: none;
   background: transparent;
-  border: var(--line-w) solid var(--line-color);
+  border: var(--line-w) solid rgba(45, 35, 65, 0.22);
 }
 
 .bubble-score {
@@ -79,11 +79,11 @@
   justify-content: space-between;
   font-size: var(--fs-body);
   margin-bottom: var(--space-xs);
-  color: var(--text-main);
+  color: rgba(45, 35, 65, 1);
 }
 
 .bubble-score span {
-  color: var(--text-muted);
+  color: rgba(90, 80, 120, 0.995);
   font-size: var(--fs-label);
   letter-spacing: var(--ls-wide);
   text-transform: uppercase;
@@ -173,23 +173,23 @@
 
 /* Track of the scrollbar */
 .bubble-scroll-container::-webkit-scrollbar-track {
-  background: var(--bg-deep-purple); /* Color of the track */
+  background: rgba(240, 237, 250, 0.7); /* Color of the track */
   border-radius: 6px;
 }
 
 /* Thumb (the draggable part of the scrollbar) */
 .bubble-scroll-container::-webkit-scrollbar-thumb {
-  background-color: var(--accent-blue); /* Color of the thumb */
+  background-color: rgba(134, 119, 150, 0.8); /* Color of the thumb */
   border-radius: 6px;
-  border: 3px solid var(--bg-deep-purple); /* Border around thumb */
+  border: 3px solid rgba(240, 237, 250, 0.7); /* Border around thumb */
 }
 
 /* Thumb on hover */
 .bubble-scroll-container::-webkit-scrollbar-thumb:hover {
-  background-color: var(--accent-dark-blue); /* Darker color on hover */
+  background-color: rgba(104, 89, 120, 0.9); /* Darker color on hover */
 }
 
 /* Optional: Style for the corner (if both horizontal and vertical scrollbars appear) */
 .bubble-scroll-container::-webkit-scrollbar-corner {
-  background: var(--bg-deep-purple);
+  background: rgba(240, 237, 250, 0.7);
 }
