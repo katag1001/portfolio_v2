@@ -4,7 +4,7 @@
 
 .about-container {
   /* Text position */
-  --about-text-top: 25%;
+  --about-text-top: 35%;
   --about-text-right: 10%;
   --about-text-width: 55%;
 
@@ -44,42 +44,46 @@
   right: var(--about-text-right);
   width: var(--about-text-width);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-end;
+  justify-content: flex-end;
+  gap: var(--space-lg);
   text-align: right;
   padding-bottom: var(--space-lg);
 }
 
 
 /* =========================================================
-   TITLE
+   TITLE (vertical rail, desktop)
    ========================================================= */
 
 .about-title {
-  width: 100%;
-  font-size: var(--fs-h6);
-  line-height: 1;
-
+  font-family: var(--font-main);
   font-weight: 700;
-  letter-spacing: -0.01em;
-
+  order: 2;
+  flex-shrink: 0;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  
+  font-size: var(--fs-display);
+  letter-spacing: var(--ls-wide);
   color: var(--text-main);
-
-  margin: 0 0 var(--space-md);
-
-  text-align: right;
+  opacity: 0.9;
+  color: var(--text-main);
+  margin: 0;
+  white-space: nowrap;
 }
+
+  
+
 
 
 /* =========================================================
-   DIVIDER
+   DIVIDER (hidden on desktop, title has no divider next to it)
    ========================================================= */
 
 .about-divider {
-  width: 100%;
-  height: var(--line-w);
-  background-color: var(--line-color);
-  margin-bottom: var(--space-lg);
+  display: none;
 }
 
 
@@ -88,7 +92,9 @@
    ========================================================= */
 
 .about-text {
-  width: 100%;
+  order: 1;
+  flex: 1 1 auto;
+  min-width: 0;
 
   padding-right: 0;
 
@@ -200,6 +206,25 @@
 /* =========================================================
    SMALL SCREENS
    ========================================================= */
+@media (max-width: 1000px) {
+  
+  .about-right {
+    top: 25%;
+  }
+
+  .about-title {
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: var(--fs-display);
+  letter-spacing: var(--ls-wide);
+  color: var(--text-main);
+  opacity: 0.9;
+  color: var(--text-main);
+
+}
+
+
+}
 
 @media (max-width: 768px) {
 
@@ -226,6 +251,7 @@
   }
 
 
+
   /* ---------------------------------------------------------
      BOX SIZING
      --------------------------------------------------------- */
@@ -240,7 +266,7 @@
      IMAGE
      --------------------------------------------------------- */
 
-  .about-left {
+.about-left {
     position: relative;
 
     top: auto;
@@ -261,18 +287,17 @@
     z-index: 1;
   }
 
-
   .about-image {
     display: block;
 
-    width: 100%;
+    width: auto;
     max-width: 100%;
     height: 100%;
 
-    object-fit: cover;
-    object-position: top;
+    object-fit: contain;
+    object-position: center;
 
-    border-radius: var(--about-image-radius);
+    border-radius: var(--radius-lg);
 
     border: var(--line-w) solid var(--line-color);
   }
@@ -298,6 +323,8 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
 
     text-align: left;
 
@@ -310,6 +337,12 @@
      --------------------------------------------------------- */
 
   .about-title {
+    order: 0;
+    flex-shrink: initial;
+
+    writing-mode: horizontal-tb;
+    transform: none;
+
     width: 100%;
     max-width: 100%;
 
@@ -322,6 +355,7 @@
     color: var(--text-main);
 
     margin: 0 0 var(--space-md);
+    white-space: normal;
 
     text-align: left;
 
@@ -334,6 +368,10 @@
      --------------------------------------------------------- */
 
   .about-divider {
+    display: block;
+    flex-shrink: initial;
+    align-self: auto;
+
     width: 100%;
     max-width: 100%;
 
@@ -352,6 +390,10 @@
      --------------------------------------------------------- */
 
   .about-text {
+    order: 0;
+    flex: initial;
+    min-width: initial;
+
     width: 100%;
     max-width: 100%;
 
